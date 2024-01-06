@@ -1,3 +1,6 @@
+#Requirements for the project
+python >=3.10
 torch >= 2.1.0
 timm==0.9.12
 matplotlib==3.8.2
+kaggle >= 1.6.0 #installed with pip
