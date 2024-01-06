@@ -12,4 +12,4 @@ if __name__ == '__main__':
     with zipfile.ZipFile(f"{path_zip}/fruits.zip", 'r') as zip_ref:
     # Extract all contents to the specified directory
         zip_ref.extractall(path_extract)
-    pass
+    pass 
