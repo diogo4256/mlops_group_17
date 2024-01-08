@@ -1,9 +1,7 @@
 import os
 import torch
 import torchvision.transforms as transforms
-import torchvision.datasets as datasets
 import zipfile
-import numpy as np
 import matplotlib.pyplot as plt
 from kaggle.api.kaggle_api_extended import KaggleApi
 from PIL import Image
@@ -20,7 +18,7 @@ def retrieve_from_api(path_extract):
     
 def images_to_tensor(directory):
     tensor_list = []
-    for root, dirs, files in os.walk(directory):
+    for root, files in os.walk(directory):
         for filename in files:
             if filename.endswith(".jpg") or filename.endswith(".png"):  # Add more conditions if there are other image types
                 img_path = os.path.join(root, filename)
@@ -41,7 +39,6 @@ def show_image(tensor, index):
     plt.show()
    
 def labels_to_tensor(directory): 
-    tensor_list = []
     labels = []
     folder_names = []
     i = 0
@@ -57,18 +54,18 @@ def labels_to_tensor(directory):
         if os.path.isdir(subdir_path):
             # Count the number of files in the subdirectory
             num_files = len(os.listdir(subdir_path))
-            array = [i] * num_files
-            sum += num_files
+            # Fill 
+            index_n = [i] * num_files
             i += 1
-            labels += array
-
+            labels += index_n
+    
     # Concatenate all tensors in the list
     return torch.Tensor(labels)
 
 if __name__ == '__main__':
     # Get the data and process it
-    # path_extract = "./data/raw"
-    # #retrieve_from_api(path_extract)
+    path_extract = "./data/raw"
+    retrieve_from_api(path_extract)
 
     transform = transforms.Compose([transforms.ToTensor(),
                                 transforms.Normalize((0,), (1,))])
