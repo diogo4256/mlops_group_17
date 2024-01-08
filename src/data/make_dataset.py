@@ -42,7 +42,6 @@ def labels_to_tensor(directory):
     labels = []
     folder_names = []
     i = 0
-    sum = 0
     folder_names = os.listdir(directory) 
     
     
