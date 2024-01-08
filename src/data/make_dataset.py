@@ -18,7 +18,6 @@ def retrieve_from_api(path_extract):
     # Extract all contents to the specified directory
         zip_ref.extractall(path_extract)
     
-    
 def images_to_tensor(directory):
     tensor_list = []
     for root, dirs, files in os.walk(directory):
