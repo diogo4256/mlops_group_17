@@ -37,10 +37,10 @@ clean:
 #################################################################################
 
 ## Process raw data into processed data
-data:
-	python $(PROJECT_NAME)/data/make_dataset.py
+data: requirements
+	$(PYTHON_INTERPRETER) src/data/make_dataset.py
 
-train:
+train: requirements
 	$(PYTHON_INTERPRETER) src/train_model.py
 
 #################################################################################
