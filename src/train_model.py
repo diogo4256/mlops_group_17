@@ -4,10 +4,20 @@ import os
 from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 from torch import nn, optim
+import hydra
+import logging
 
-def train():
+log = logging.getLogger(__name__)
 
+
+@hydra.main(config_path="config", config_name="config.yaml")
+def train(config):
+    """Train the model on resnet50"""
     model_name = 'resnet50'
+
+    hparams = config
+    log.info(f"Hyperparameters: {hparams}")
+
 
 # Load the ResNet model using timm
     model = timm.create_model(model_name, pretrained=False)  
@@ -36,17 +46,18 @@ def train():
             return image, label
 
     dataset = CustomDataset(images, labels)
-    batch_size = 64
+    
+    
     shuffle = True
-    trainloader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
+    trainloader = DataLoader(dataset, batch_size=hparams["batch_size"], shuffle=shuffle)
     criterion = nn.NLLLoss()
-    optimizer = optim.SGD(model.parameters(), lr=0.003)
+    optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"])
     optimizer.zero_grad()
-    epochs = 10
+    
     error = []
     steps = []
     count = 0
-    for e in range(epochs):
+    for e in range(epochs=hparams["epochs"]):
         running_loss = 0
         for images, labels in trainloader:
             # Flatten MNIST images into a 784 long vector
