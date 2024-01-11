@@ -18,7 +18,7 @@ def retrieve_from_api(path_extract):
     
 def images_to_tensor(directory):
     tensor_list = []
-    for root, files in os.walk(directory):
+    for root, dirs, files in os.walk(directory):
         for filename in files:
             if filename.endswith(".jpg") or filename.endswith(".png"):  # Add more conditions if there are other image types
                 img_path = os.path.join(root, filename)
@@ -38,26 +38,33 @@ def show_image(tensor, index):
     plt.imshow(img_tensor)
     plt.show()
    
-def labels_to_tensor(directory): 
+def labels_to_tensor(directory, dataset_name="."): 
     labels = []
     folder_names = []
     i = 0
-    folder_names = os.listdir(directory) 
     
-    
-    # Loop over all subdirectories in the root directory
-    for subdir in folder_names:
-        subdir_path = os.path.join(directory, subdir)
+    if dataset_name == ".":
+        folder_names = os.listdir(directory) 
+        # Loop over all subdirectories in the root directory
+        for subdir in folder_names:
+            subdir_path = os.path.join(directory, subdir)
+            
+            # Check if it's a directory  
+            if os.path.isdir(subdir_path):
+                # Count the number of files in the subdirectory
+                num_files = len(os.listdir(subdir_path))
+                # Fill 
+                index_n = [i] * num_files
+                i += 1
+                labels += index_n
+    else:
+        subdir_path = os.path.join(directory, dataset_name)
+        num_files = len(os.listdir(subdir_path))
+        index_n = [i] * num_files
+        i += 1
+        labels += index_n
+        print(labels)
         
-        # Check if it's a directory  
-        if os.path.isdir(subdir_path):
-            # Count the number of files in the subdirectory
-            num_files = len(os.listdir(subdir_path))
-            # Fill 
-            index_n = [i] * num_files
-            i += 1
-            labels += index_n
-    
     # Concatenate all tensors in the list
     return torch.Tensor(labels)
 
@@ -75,9 +82,5 @@ if __name__ == '__main__':
     # Save dataset
     torch.save(training_images, "./data/processed/fruit_training_images.pt")
     torch.save(training_labels, "./data/processed/fruit_training_labels.pt")
-    
-    # Show one of the images
-    print(training_images.shape)
-    print(training_labels.shape)
     
     pass

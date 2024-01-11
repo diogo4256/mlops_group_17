@@ -17,13 +17,9 @@ def train():
 # Use os.path.join to join the paths
     data_folder = os.path.join(path, subfolder)
     print(data_folder)
-    #print(path)
-    #print(os.path.join(path, "/data/processed"))
-    #data_folder = os.path.join(path, "/data/processed")
-    #print(data_folder)
 
-    images = torch.load(os.path.join(data_folder, "train_images.pt"))
-    labels = torch.load(os.path.join(data_folder, "train_target.pt"))
+    images = torch.load(os.path.join(data_folder, "fruit_training_images.pt"))
+    labels = torch.load(os.path.join(data_folder, "fruit_training_labels.pt"))
 
     class CustomDataset(Dataset):
         def __init__(self, images, labels, transform=None):
@@ -54,13 +50,13 @@ def train():
         running_loss = 0
         for images, labels in trainloader:
             # Flatten MNIST images into a 784 long vector
-            #images = images.view(images.shape[0], -1)
-            print(images.shape)
-            #images = images.view(64, 3, 28, 28)
+
             # TODO: Training pass
+            
             log_probs = model(images)
 
             # Calculate the loss
+            labels = labels.long()
             loss = criterion(log_probs, labels)
 
             # Backward pass
@@ -75,6 +71,9 @@ def train():
             error.append(running_loss / len(trainloader))
             steps.append(count)
             print(f"Training loss: {running_loss/len(trainloader)}")
+        
+        print("Epoch number: ", e)
+    
     plt.figure()
     plt.plot(steps, error)
 
@@ -91,6 +90,5 @@ def train():
 
     print(save_path)
     torch.save(model.state_dict(), save_path)
-
 
 train()
