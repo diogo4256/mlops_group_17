@@ -15,7 +15,11 @@ requires-python = ">=3.10"
 dynamic = ["dependencies", "optional-dependencies"]
 
 [tool.setuptools]
-packages = ["mlops_group_17"]
+packages = ["src"]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
