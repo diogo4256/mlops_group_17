@@ -1,0 +1,6 @@
+# make_data parameters
+
+kaggle_dataset: "moltean/fruits/"
+path_extract : "data/raw/"
+raw_dataset: "fruits-360_dataset/fruits-360/Training/"
+processed_dataset: "data/processed/"
