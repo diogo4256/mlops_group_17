@@ -18,18 +18,22 @@ def train(config):
     hparams = config.train
     log.info(f"Hyperparameters: {hparams}")
 
-# Load the ResNet model using timm
+
+    log.info(f"Loading model: {model_name}")
+
     model = timm.create_model(model_name, pretrained=False)  
     model.Dropout = nn.Dropout(hparams['dropout_rate'])
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
     subfolder = os.path.join(hparams['processed_dataset'], hparams['dataset_name'])
 
-# Use os.path.join to join the paths
+    # Use os.path.join to join the paths
     data_folder = os.path.join(root, subfolder)
-    print(data_folder)
+    log.info(f"Data folder: {data_folder}")
 
+    log.info("Loading images and labels...")
     images = torch.load(os.path.join(data_folder, "fruit_training_images.pt"))
     labels = torch.load(os.path.join(data_folder, "fruit_training_labels.pt"))
+    log.info("Images and labels loaded.")
 
     class CustomDataset(Dataset):
         def __init__(self, images, labels, transform=None):
@@ -45,23 +49,26 @@ def train(config):
 
             return image, label
 
+    log.info("Creating DataLoader...")
     dataset = CustomDataset(images, labels)
     
     trainloader = DataLoader(dataset, batch_size=hparams["batch_size"], shuffle=hparams["shuffle"])
+    log.info("DataLoader created.")
+
+    log.info("Setting up loss function and optimizer...")
     criterion = nn.NLLLoss()
     optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"], weight_decay=hparams["weight_decay"])
     optimizer.zero_grad()
+    log.info("Loss function and optimizer set up.")
     
     error = []
     steps = []
     count = 0
+    log.info("Starting training...")
     for e in range(hparams["epochs"]):
         running_loss = 0
         for images, labels in trainloader:
-            # Flatten MNIST images into a 784 long vector
 
-            # TODO: Training pass
-            
             log_probs = model(images)
 
             # Calculate the loss
@@ -75,30 +82,35 @@ def train(config):
             # Update weights
             optimizer.step()
             running_loss += loss.item()
-            print("Loss: ", loss.item())
+            log.info(f"Loss: {loss.item()}")
         else:
             count += 1
             error.append(running_loss / len(trainloader))
             steps.append(count)
-            print(f"Training loss: {running_loss/len(trainloader)}")
+            log.info(f"Training loss: {running_loss/len(trainloader)}")
         
-        print("Epoch number: ", e)
+        log.info(f"Epoch {e}")
     
+    log.info("Training complete.")
+    log.info("Plotting training loss...")
     plt.figure()
     plt.plot(steps, error)
+    log.info("Plot created.")
 
     fig_path = "reports/figures/training_loss.png"
+    log.info(f"Saving plot to {fig_path}...")
     plt.savefig(
         os.path.join(root, fig_path)
     )
-
-    path = os.getcwd()
+    log.info("Plot saved.")
+    
     save_path = os.path.join(root, "models/trained_model.pth")
 
     # Ensure the directory exists
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
-    print(save_path)
+    log.info(f"Saving model to {save_path}...")
     torch.save(model.state_dict(), save_path)
+    log.info("Model saved.")
 
 train()
