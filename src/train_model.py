@@ -15,12 +15,13 @@ def train(config):
     """Train the model on resnet50"""
     model_name = 'resnet50'
 
-    hparams = config
+    hparams = config.train
     log.info(f"Hyperparameters: {hparams}")
 
 
 # Load the ResNet model using timm
     model = timm.create_model(model_name, pretrained=False)  
+    model.Dropout = nn.Dropout(hparams["dropout_rate"])
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
     subfolder = "data/processed/"
 
@@ -47,11 +48,9 @@ def train(config):
 
     dataset = CustomDataset(images, labels)
     
-    
-    shuffle = True
-    trainloader = DataLoader(dataset, batch_size=hparams["batch_size"], shuffle=shuffle)
+    trainloader = DataLoader(dataset, batch_size=hparams["batch_size"], shuffle=hparams["shuffle"])
     criterion = nn.NLLLoss()
-    optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"])
+    optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"], weight_decay=hparams["weight_decay"])
     optimizer.zero_grad()
     
     error = []

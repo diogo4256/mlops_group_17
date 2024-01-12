@@ -1,5 +1,5 @@
 #config/config.yaml
 
-batch_size: 64
-learning_rate: 0.003
-epochs: 10
+defaults:
+  - train: train
+  - test: test
