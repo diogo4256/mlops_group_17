@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from torch import nn, optim
 import hydra
 import logging
+import wandb
 
 log = logging.getLogger(__name__)
 
@@ -15,6 +16,9 @@ def train(config):
     """Train the model on resnet50"""
     model_name = 'resnet50'
 
+    #wandb.init(project="group_17", config=config)
+
+    # Get the hyperparameters from the config file
     hparams = config.train
     log.info(f"Hyperparameters: {hparams}")
 
@@ -82,12 +86,15 @@ def train(config):
             # Update weights
             optimizer.step()
             running_loss += loss.item()
-            log.info(f"Loss: {loss.item()}")
+            # Log the loss
+            #wandb.log({"loss": loss.item()})
         else:
             count += 1
             error.append(running_loss / len(trainloader))
             steps.append(count)
-            log.info(f"Training loss: {running_loss/len(trainloader)}")
+            
+            # Log the training loss
+            #wandb.log({"training_loss": running_loss/len(trainloader)})
         
         log.info(f"Epoch {e}")
     

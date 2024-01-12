@@ -18,7 +18,7 @@ def main(config):
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
     
     log.info("Starting data retrieval from API...")
-    retrieve_from_api(os.path.join(root, hparams["path_extract"]), hparams["kaggle_dataset"])
+    #retrieve_from_api(os.path.join(root, hparams["path_extract"]), hparams["kaggle_dataset"])
     log.info("Data retrieval complete.")
     
     transform = transforms.Compose([transforms.ToTensor(),
@@ -28,6 +28,8 @@ def main(config):
     training_images = images_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"]), transform=transform)
     training_labels = labels_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"]))
     log.info("Image loading and transformation complete.")
+    
+    os.makedirs(os.path.dirname(os.path.join(root, hparams["processed_dataset"])), exist_ok=True)
     
     log.info("Saving dataset...")
     torch.save(training_images, os.path.join(root, hparams["processed_dataset"], 'fruit_training_images.pt'))
