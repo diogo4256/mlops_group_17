@@ -5,27 +5,64 @@ import zipfile
 import matplotlib.pyplot as plt
 from kaggle.api.kaggle_api_extended import KaggleApi
 from PIL import Image
+import hydra
+import logging
 
-def retrieve_from_api(path_extract):
-    path_zip =f"{path_extract}/zips"
+log = logging.getLogger(__name__)
+
+@hydra.main(config_path="../config", config_name="config.yaml")
+def main(config):
+    
+    hparams = config.make_data
+    log.info(f"Hyperparameters: {hparams}")
+    root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
+    
+    log.info("Starting data retrieval from API...")
+    retrieve_from_api(os.path.join(root, hparams["path_extract"]), hparams["kaggle_dataset"])
+    log.info("Data retrieval complete.")
+    
+    transform = transforms.Compose([transforms.ToTensor(),
+                            transforms.Normalize((0,), (1,))])
+    
+    log.info("Loading and transforming images...")
+    training_images = images_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"]), transform=transform)
+    training_labels = labels_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"]))
+    log.info("Image loading and transformation complete.")
+    
+    log.info("Saving dataset...")
+    torch.save(training_images, os.path.join(root, hparams["processed_dataset"], 'fruit_training_images.pt'))
+    torch.save(training_labels, os.path.join(root, hparams["processed_dataset"], 'fruit_training_labels.pt'))
+    log.info("Dataset saved.")
+
+def retrieve_from_api(path_extract, kaggle_dataset):
+
+    log.info(f"Authenticating API for dataset: {kaggle_dataset}")
     api = KaggleApi()
     api.authenticate()
-    api.dataset_download_files("moltean/fruits" , path_zip)
+    log.info("API authentication successful.")
     
-    with zipfile.ZipFile(f"{path_zip}/fruits.zip", 'r') as zip_ref:
-    # Extract all contents to the specified directory
+    log.info(f"Downloading files for dataset: {kaggle_dataset}")
+    api.dataset_download_files(kaggle_dataset , os.path.join(path_extract) , 'zips')
+    log.info("File download complete.")
+    
+    log.info("Extracting files...")
+    with zipfile.ZipFile(os.path.join(path_extract, 'zips/fruits.zip'), 'r') as zip_ref:
         zip_ref.extractall(path_extract)
+    log.info("File extraction complete.")
     
-def images_to_tensor(directory):
+def images_to_tensor(directory, transform=None):
+    log.info(f"Converting images in {directory} to tensors...")
     tensor_list = []
     for root, dirs, files in os.walk(directory):
         for filename in files:
-            if filename.endswith(".jpg") or filename.endswith(".png"):  # Add more conditions if there are other image types
-                img_path = os.path.join(root, filename)
-                img = Image.open(img_path)
-                tensor = transform(img)
-                tensor_list.append(tensor)
-    return torch.stack(tensor_list)  # Stacks the list of tensors along a new dimension
+            if filename.endswith('.jpg'):
+                path = os.path.join(root, filename)
+                image = Image.open(path)
+                if transform is not None:
+                    image = transform(image)
+                tensor_list.append(image)
+    log.info(f"Converted {len(tensor_list)} images to tensors.")
+    return torch.stack(tensor_list)
 
 def show_image(tensor, index):
     # Select the image by index
@@ -39,6 +76,7 @@ def show_image(tensor, index):
     plt.show()
    
 def labels_to_tensor(directory, dataset_name="."): 
+    log.info(f"Converting labels in {directory} to tensors...")
     labels = []
     folder_names = []
     i = 0
@@ -57,30 +95,18 @@ def labels_to_tensor(directory, dataset_name="."):
                 index_n = [i] * num_files
                 i += 1
                 labels += index_n
+        log.info(f"Converted labels for {len(folder_names)} subdirectories to tensors.")
     else:
         subdir_path = os.path.join(directory, dataset_name)
         num_files = len(os.listdir(subdir_path))
         index_n = [i] * num_files
         i += 1
         labels += index_n
-        print(labels)
+        log.info(f"Converted labels for 1 subdirectory to tensors.")
         
     # Concatenate all tensors in the list
+    log.info(f"Converted {len(labels)} labels to tensors.")
     return torch.Tensor(labels)
 
 if __name__ == '__main__':
-    # Get the data and process it
-    path_extract = "./data/raw"
-    retrieve_from_api(path_extract)
-
-    transform = transforms.Compose([transforms.ToTensor(),
-                                transforms.Normalize((0,), (1,))])
-    
-    # Load the images from the folder and apply the transformation
-    training_images = images_to_tensor('./data/raw/fruits-360_dataset/fruits-360/Training/')
-    training_labels = labels_to_tensor('./data/raw/fruits-360_dataset/fruits-360/Training/')
-    # Save dataset
-    torch.save(training_images, "./data/processed/fruit_training_images.pt")
-    torch.save(training_labels, "./data/processed/fruit_training_labels.pt")
-    
-    pass
+    main()

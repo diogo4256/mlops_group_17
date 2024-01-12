@@ -18,12 +18,11 @@ def train(config):
     hparams = config.train
     log.info(f"Hyperparameters: {hparams}")
 
-
 # Load the ResNet model using timm
     model = timm.create_model(model_name, pretrained=False)  
-    model.Dropout = nn.Dropout(hparams["dropout_rate"])
+    model.Dropout = nn.Dropout(hparams['dropout_rate'])
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
-    subfolder = "data/processed/"
+    subfolder = os.path.join(hparams['processed_dataset'], hparams['dataset_name'])
 
 # Use os.path.join to join the paths
     data_folder = os.path.join(root, subfolder)
