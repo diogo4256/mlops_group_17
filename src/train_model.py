@@ -21,11 +21,11 @@ def train(config):
 
 # Load the ResNet model using timm
     model = timm.create_model(model_name, pretrained=False)  
-    path = os.getcwd()
-    subfolder = "data/processed"
+    root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
+    subfolder = "data/processed/"
 
 # Use os.path.join to join the paths
-    data_folder = os.path.join(path, subfolder)
+    data_folder = os.path.join(root, subfolder)
     print(data_folder)
 
     images = torch.load(os.path.join(data_folder, "fruit_training_images.pt"))
@@ -57,7 +57,7 @@ def train(config):
     error = []
     steps = []
     count = 0
-    for e in range(epochs=hparams["epochs"]):
+    for e in range(hparams["epochs"]):
         running_loss = 0
         for images, labels in trainloader:
             # Flatten MNIST images into a 784 long vector
@@ -77,6 +77,7 @@ def train(config):
             # Update weights
             optimizer.step()
             running_loss += loss.item()
+            print("Loss: ", loss.item())
         else:
             count += 1
             error.append(running_loss / len(trainloader))
@@ -90,11 +91,11 @@ def train(config):
 
     fig_path = "reports/figures/training_loss.png"
     plt.savefig(
-        os.path.join(path, fig_path)
+        os.path.join(root, fig_path)
     )
 
     path = os.getcwd()
-    save_path = os.path.join(path, "models/trained_model.pth")
+    save_path = os.path.join(root, "models/trained_model.pth")
 
     # Ensure the directory exists
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
