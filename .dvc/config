@@ -1,4 +1,5 @@
 [core]
-    remote = storage
-['remote "storage"']
-    url = gdrive://1USRGM3p8DRwhAueCUSGTRW-zEzdRW7Dt
+    remote = remote_storage
+['remote "remote_storage"']
+    url = gs://fruit_bucket_mlops/
+    version_aware = true
