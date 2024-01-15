@@ -11,7 +11,7 @@ import wandb
 log = logging.getLogger(__name__)
 
 
-@hydra.main(config_path="config", config_name="config.yaml")
+@hydra.main(config_path="config", config_name="config.yaml", version_base=None)
 def train(config):
     """Train the model on resnet50"""
     model_name = 'resnet50'
