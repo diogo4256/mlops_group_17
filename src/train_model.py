@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 from torch import nn, optim
 import hydra
 import logging
-import wandb
+from torch.profiler import profile, ProfilerActivity, tensorboard_trace_handler
+#import wandb
 
 log = logging.getLogger(__name__)
 
@@ -72,29 +73,34 @@ def train(config):
     for e in range(hparams["epochs"]):
         running_loss = 0
         for images, labels in trainloader:
+            #Profiling
+            with profile(activities=[ProfilerActivity.CPU], record_shapes=True,on_trace_ready=tensorboard_trace_handler("./log/resnet50")) as prof:
+            
+                log_probs = model(images)
+                     
 
-            log_probs = model(images)
+                # Calculate the loss
+                labels = labels.long()
+                loss = criterion(log_probs, labels)
 
-            # Calculate the loss
-            labels = labels.long()
-            loss = criterion(log_probs, labels)
+                # Backward pass
+                optimizer.zero_grad()
+                loss.backward()
 
-            # Backward pass
-            optimizer.zero_grad()
-            loss.backward()
-
-            # Update weights
-            optimizer.step()
-            running_loss += loss.item()
-            # Log the loss
-            #wandb.log({"loss": loss.item()})
+                # Update weights
+                optimizer.step()
+                running_loss += loss.item()
+                # Log the loss
+                print({"loss": loss.item()})
+            #Step the profiler    
+            prof.step()
         else:
             count += 1
             error.append(running_loss / len(trainloader))
             steps.append(count)
             
             # Log the training loss
-            #wandb.log({"training_loss": running_loss/len(trainloader)})
+            print({"training_loss": running_loss/len(trainloader)})
         
         log.info(f"Epoch {e}")
     
