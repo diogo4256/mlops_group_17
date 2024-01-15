@@ -7,6 +7,7 @@ from torch import nn, optim
 import hydra
 import logging
 import wandb
+import omegaconf
 
 log = logging.getLogger(__name__)
 
@@ -16,12 +17,21 @@ def train(config):
     """Train the model on resnet50"""
     model_name = 'resnet50'
 
-    #wandb.init(project="group_17", config=config)
+    wandbconfig = config.wandb
+    wandb.config = omegaconf.OmegaConf.to_container(
+        wandbconfig, resolve=True, throw_on_missing=True
+    )
+
+    # Get the API key from the environment variables
+    wandb_api_key = os.environ['WANDB_API_KEY']
+
+    # Use the API key when initializing wandb
+    wandb.login(key=wandb_api_key)
+    wandb.init(project=wandbconfig["project"], entity=wandbconfig["entity"])
 
     # Get the hyperparameters from the config file
     hparams = config.train
     log.info(f"Hyperparameters: {hparams}")
-
 
     log.info(f"Loading model: {model_name}")
 
@@ -72,7 +82,7 @@ def train(config):
     for e in range(hparams["epochs"]):
         running_loss = 0
         for images, labels in trainloader:
-
+            wandb.log({"example_image": wandb.Image(images[0])})
             log_probs = model(images)
 
             # Calculate the loss
@@ -87,15 +97,14 @@ def train(config):
             optimizer.step()
             running_loss += loss.item()
             # Log the loss
-            #wandb.log({"loss": loss.item()})
+            wandb.log({"loss": loss.item()})
         else:
             count += 1
             error.append(running_loss / len(trainloader))
             steps.append(count)
             
-            # Log the training loss
-            #wandb.log({"training_loss": running_loss/len(trainloader)})
-        
+        # Log the training loss
+        wandb.log({"training_loss": running_loss/len(trainloader)}) 
         log.info(f"Epoch {e}")
     
     log.info("Training complete.")
@@ -117,6 +126,7 @@ def train(config):
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
     log.info(f"Saving model to {save_path}...")
+    
     torch.save(model.state_dict(), save_path)
     log.info("Model saved.")
 
