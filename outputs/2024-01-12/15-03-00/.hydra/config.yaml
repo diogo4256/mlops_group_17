@@ -1,0 +1,15 @@
+make_data:
+  kaggle_dataset: moltean/fruits/
+  path_extract: data/raw/
+  raw_dataset: fruits-360_dataset/fruits-360/Training/Avocado/
+  processed_dataset: data/processed/Avocado/
+train:
+  shuffle: true
+  batch_size: 64
+  learning_rate: 0.003
+  epochs: 10
+  weight_decay: 0.0005
+  dropout_rate: 0.5
+  processed_dataset: data/processed/
+  dataset_name: ''
+test: {}
