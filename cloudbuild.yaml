@@ -3,3 +3,6 @@ steps:
       args: ['build', '-t', 'gcr.io/mlops-project-411316/training:latest', 'mlops_group_17/dockerfiles/train_model.dockerfile']
     - name: 'gcr.io/cloud-builders/docker'
       args: ['push', 'gcr.io/mlops-project-411316/training:latest']
+options:
+  build:
+    default_logs_bucket_behavior: 'REGIONAL_USER_OWNED_BUCKET'
