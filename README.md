@@ -20,4 +20,4 @@ The project is built within a Pytorch ecosystem. Both the data preparation, a mo
 
 ResNet is one of the most chosen model types for the image classification tasks due to its ability to address the challenges of training very deep neural networks. ResNet architectures, especially variants like ResNet50 and ResNet101, have demonstrated state-of-the-art performance on various benchmark datasets for image classification tasks. On top of that ResNet has shown good generalization capabilities across a wide range of image classification tasks, making them versatile for different applications.
 
-For this project a ResNet model implementation from [PyTorch Image Models](https://github.com/huggingface/pytorch-image-models) was implemented in the pipline..
+For this project a ResNet model implementation from [PyTorch Image Models](https://github.com/huggingface/pytorch-image-models) was implemented in the pipline.
