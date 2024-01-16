@@ -18,7 +18,7 @@ def main(config):
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
     
     log.info("Starting data retrieval from API...")
-    retrieve_from_api(os.path.join(root, hparams["path_extract"]), hparams["kaggle_dataset"])
+    #retrieve_from_api(os.path.join(root, hparams["path_extract"]), hparams["kaggle_dataset"])
     log.info("Data retrieval complete.")
     
     transform = transforms.Compose([transforms.ToTensor(),
@@ -44,7 +44,7 @@ def retrieve_from_api(path_extract, kaggle_dataset):
     log.info("API authentication successful.")
     
     log.info(f"Downloading files for dataset: {kaggle_dataset}")
-    api.dataset_download_files(kaggle_dataset , os.path.join(path_extract , 'zips'))
+    api.dataset_download_files(kaggle_dataset , os.path.join(path_extract) , 'zips')
     log.info("File download complete.")
     
     log.info("Extracting files...")
