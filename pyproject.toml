@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "setuptools-scm"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -16,10 +16,6 @@ dynamic = ["dependencies", "optional-dependencies"]
 
 [tool.setuptools]
 packages = ["src"]
-
-[tool.setuptools_scm]
-version_scheme = "post-release"
-local_scheme = "node-and-date"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
