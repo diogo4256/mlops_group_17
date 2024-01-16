@@ -1,6 +1,3483 @@
 outs:
-- md5: de419e88975e5383839da1dc91bd4cc5.dir
-  size: 10938230288
-  nfiles: 102978
-  hash: md5
+- hash: md5
   path: data
+  files:
+  - relpath: processed/fruit_training_images.pt
+    md5: 4e9952cfb924ec9b10def12a8788c844
+    size: 144721250
+    cloud:
+      test_storage:
+        etag: 08b7b0ab80c9e083031001
+        version_id: '1705362131179575'
+  - relpath: processed/fruit_training_labels.pt
+    md5: a66e73d97a7c47f658efb931123e453e
+    size: 6050
+    cloud:
+      test_storage:
+        etag: 08c6a5b580c9e083031001
+        version_id: '1705362131342022'
+  - relpath: raw/.DS_Store
+    md5: 9ff0dfd92296f3f1610bd20d5363e5d3
+    size: 6148
+    cloud:
+      test_storage:
+        etag: 08e89fc9a2dfe283031001
+        version_id: '1705436828028904'
+  - relpath: raw/fruits-360_dataset/fruits-360/LICENSE
+    md5: 08324c1680c0e1a367f45f7cddc92d17
+    size: 1143
+    cloud:
+      test_storage:
+        etag: 0895c1d8a2dfe283031001
+        version_id: '1705436828278933'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/0_100.jpg
+    md5: 2247c5e506d29555ba9bcd403cf29330
+    size: 4773
+    cloud:
+      test_storage:
+        etag: 08adcd8fa3dfe283031001
+        version_id: '1705436829181613'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/100_100.jpg
+    md5: 324fa5ff9895272562590258c73ffe18
+    size: 4748
+    cloud:
+      test_storage:
+        etag: 08d9bdb6a3dfe283031001
+        version_id: '1705436829818585'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/101_100.jpg
+    md5: 89be271901b31fd97e7f9eb48a08d7c2
+    size: 4755
+    cloud:
+      test_storage:
+        etag: 08b4f2c0a3dfe283031001
+        version_id: '1705436829989172'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/102_100.jpg
+    md5: 34266228b542ce3c5db8b920b175af8f
+    size: 4750
+    cloud:
+      test_storage:
+        etag: 08b3f799a3dfe283031001
+        version_id: '1705436829350835'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/103_100.jpg
+    md5: d4a65ac4b2fb4beb3b2231a69d810ade
+    size: 4717
+    cloud:
+      test_storage:
+        etag: 08ccc5b4a3dfe283031001
+        version_id: '1705436829786828'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/104_100.jpg
+    md5: b0271d97438e3579ee8f262e2eabc144
+    size: 4756
+    cloud:
+      test_storage:
+        etag: 08ada189a3dfe283031001
+        version_id: '1705436829077677'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/105_100.jpg
+    md5: 51453aeb952b796e4d0b88a68136c6a5
+    size: 4742
+    cloud:
+      test_storage:
+        etag: 08e8d1eea2dfe283031001
+        version_id: '1705436828641512'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/106_100.jpg
+    md5: 4960e69db7a585355093eac3f4dc586f
+    size: 4757
+    cloud:
+      test_storage:
+        etag: 08d8b6f2a2dfe283031001
+        version_id: '1705436828703576'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/107_100.jpg
+    md5: 9c304917e08f5dec86b98f5b1c80fc00
+    size: 4787
+    cloud:
+      test_storage:
+        etag: 08aebcffa2dfe283031001
+        version_id: '1705436828917294'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/108_100.jpg
+    md5: 520e35559281f2a756ed1c7913f12b8f
+    size: 4813
+    cloud:
+      test_storage:
+        etag: 08e7d3fda2dfe283031001
+        version_id: '1705436828887527'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/109_100.jpg
+    md5: 562fb71e112bec530ac9d6b9b2b4393d
+    size: 4750
+    cloud:
+      test_storage:
+        etag: 08cf8db5a3dfe283031001
+        version_id: '1705436829796047'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/10_100.jpg
+    md5: be50c2391162217e50f114547bb547ee
+    size: 4708
+    cloud:
+      test_storage:
+        etag: 08c687b8a3dfe283031001
+        version_id: '1705436829844422'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/110_100.jpg
+    md5: b7a2302c396247195afd1b6e82f17df8
+    size: 4711
+    cloud:
+      test_storage:
+        etag: 08f0bcd8a2dfe283031001
+        version_id: '1705436828278384'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/111_100.jpg
+    md5: b41085892fb0c042c39babb90e4a9a9d
+    size: 4745
+    cloud:
+      test_storage:
+        etag: 08ccc3fca2dfe283031001
+        version_id: '1705436828869068'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/112_100.jpg
+    md5: 0e3c11f43810d5759cbfa531eb94e265
+    size: 4743
+    cloud:
+      test_storage:
+        etag: 08c6c2f2a2dfe283031001
+        version_id: '1705436828705094'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/113_100.jpg
+    md5: e19c7a5f0d7f592d5717ce81b8769796
+    size: 4740
+    cloud:
+      test_storage:
+        etag: 08ed82bda3dfe283031001
+        version_id: '1705436829925741'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/114_100.jpg
+    md5: 7cf34812ea7a996dc80d00cb3337d808
+    size: 4705
+    cloud:
+      test_storage:
+        etag: 0890a1fda2dfe283031001
+        version_id: '1705436828881040'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/115_100.jpg
+    md5: dece334d695bdf8a9d23f0430e454772
+    size: 4694
+    cloud:
+      test_storage:
+        etag: 08eacbc1a3dfe283031001
+        version_id: '1705436830000618'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/116_100.jpg
+    md5: 66d31585fb6334a776eec1802179b009
+    size: 4710
+    cloud:
+      test_storage:
+        etag: 08e08bc8a3dfe283031001
+        version_id: '1705436830107104'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/117_100.jpg
+    md5: 9a34f5f8e42690d3496ff4d6ec60e467
+    size: 4706
+    cloud:
+      test_storage:
+        etag: 088da3bfa3dfe283031001
+        version_id: '1705436829962637'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/118_100.jpg
+    md5: 0e4e77fe49388b6139dad1363c06a2ae
+    size: 4674
+    cloud:
+      test_storage:
+        etag: 088587a9a3dfe283031001
+        version_id: '1705436829598597'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/119_100.jpg
+    md5: 78f0622a138edd3563470bc4e199656b
+    size: 4672
+    cloud:
+      test_storage:
+        etag: 08a1dad7a2dfe283031001
+        version_id: '1705436828265761'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/11_100.jpg
+    md5: 0c1b3833423536209168b2eab2d07f7b
+    size: 4774
+    cloud:
+      test_storage:
+        etag: 08e4acfaa2dfe283031001
+        version_id: '1705436828833380'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/120_100.jpg
+    md5: 258a2889d2d70faaf904638689e2249c
+    size: 4751
+    cloud:
+      test_storage:
+        etag: 0890a1a7a3dfe283031001
+        version_id: '1705436829569168'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/121_100.jpg
+    md5: 8f2b47d9c11da15af455087e13ac60dc
+    size: 4690
+    cloud:
+      test_storage:
+        etag: 08ffb3b8a3dfe283031001
+        version_id: '1705436829850111'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/122_100.jpg
+    md5: 2a285d101acd3662df51bc62d00fd655
+    size: 4707
+    cloud:
+      test_storage:
+        etag: 0895eebaa3dfe283031001
+        version_id: '1705436829890325'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/123_100.jpg
+    md5: 317af35aeed78d9a629e3199dc229f10
+    size: 4717
+    cloud:
+      test_storage:
+        etag: 08afe3e5a2dfe283031001
+        version_id: '1705436828496303'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/124_100.jpg
+    md5: f8db3d38edbf7b53fc62bef47a6dd05e
+    size: 4661
+    cloud:
+      test_storage:
+        etag: 08e9febaa3dfe283031001
+        version_id: '1705436829892457'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/125_100.jpg
+    md5: 81021f0552a4ed79e175ce6821bf06fe
+    size: 4629
+    cloud:
+      test_storage:
+        etag: 08d2cb9ba3dfe283031001
+        version_id: '1705436829378002'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/126_100.jpg
+    md5: 2d4a60b0a9e0805fb7f13fc8fec301cd
+    size: 4639
+    cloud:
+      test_storage:
+        etag: 08d387aea3dfe283031001
+        version_id: '1705436829680595'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/127_100.jpg
+    md5: 661f7eddbc74df5a01c00ce277c8e147
+    size: 4588
+    cloud:
+      test_storage:
+        etag: 089787d8a2dfe283031001
+        version_id: '1705436828271511'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/128_100.jpg
+    md5: 6a8cf8f7e14fc8fb856e8a572cfeb827
+    size: 4643
+    cloud:
+      test_storage:
+        etag: 0888ece4a2dfe283031001
+        version_id: '1705436828481032'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/129_100.jpg
+    md5: 4e9e67f5df11ffe7816d77c2258d10c3
+    size: 4632
+    cloud:
+      test_storage:
+        etag: 08b8f6a6a3dfe283031001
+        version_id: '1705436829563704'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/12_100.jpg
+    md5: 2998f12b547c7da750c6d3f46dfe433b
+    size: 4743
+    cloud:
+      test_storage:
+        etag: 08efe3e5a2dfe283031001
+        version_id: '1705436828496367'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/130_100.jpg
+    md5: 4df528f2021f8384e042d82379c912f7
+    size: 4689
+    cloud:
+      test_storage:
+        etag: 08b5a685a3dfe283031001
+        version_id: '1705436829012789'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/131_100.jpg
+    md5: 4e186c211a5e48279072702a4e6d2e79
+    size: 4692
+    cloud:
+      test_storage:
+        etag: 088f99e1a2dfe283031001
+        version_id: '1705436828421263'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/132_100.jpg
+    md5: 305590a387c223e04eb8ecf79b36171f
+    size: 4685
+    cloud:
+      test_storage:
+        etag: 0897a9bea3dfe283031001
+        version_id: '1705436829947031'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/133_100.jpg
+    md5: a4235dcc832603b2e665035499a2cccb
+    size: 4637
+    cloud:
+      test_storage:
+        etag: 08f7c4efa2dfe283031001
+        version_id: '1705436828656247'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/134_100.jpg
+    md5: 0bc79c97661f879fa92fe5c0a9abf4e1
+    size: 4670
+    cloud:
+      test_storage:
+        etag: 08d7a092a3dfe283031001
+        version_id: '1705436829225047'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/135_100.jpg
+    md5: b5bcca78ab9dd7b3b5dae7576a48febd
+    size: 4651
+    cloud:
+      test_storage:
+        etag: 08838af4a2dfe283031001
+        version_id: '1705436828730627'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/136_100.jpg
+    md5: c4c9a68abb21e74f5a2cdb7f7b04c779
+    size: 4639
+    cloud:
+      test_storage:
+        etag: 08c7b1d7a2dfe283031001
+        version_id: '1705436828260551'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/137_100.jpg
+    md5: 9975ee5493ec9c98846f03cbc7b0659c
+    size: 4671
+    cloud:
+      test_storage:
+        etag: 08c3f9e8a2dfe283031001
+        version_id: '1705436828548291'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/138_100.jpg
+    md5: 46ba3d4dcdf4adb8c7ed7d4602a2d6cf
+    size: 4679
+    cloud:
+      test_storage:
+        etag: 08e0d3f2a2dfe283031001
+        version_id: '1705436828707296'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/139_100.jpg
+    md5: fc893871e78509558f84eeb198c25737
+    size: 4680
+    cloud:
+      test_storage:
+        etag: 08afaffda2dfe283031001
+        version_id: '1705436828882863'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/13_100.jpg
+    md5: 61a8be3b7c8e3454c2dbf5889324b75a
+    size: 4766
+    cloud:
+      test_storage:
+        etag: 08a58899a3dfe283031001
+        version_id: '1705436829336613'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/140_100.jpg
+    md5: 67d0d6a57b765ad8c574c44768ab243e
+    size: 4706
+    cloud:
+      test_storage:
+        etag: 08a0d385a3dfe283031001
+        version_id: '1705436829018528'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/141_100.jpg
+    md5: 39dd6d850f5ef2d19b982bb9c20c9e20
+    size: 4700
+    cloud:
+      test_storage:
+        etag: 0899fbb8a3dfe283031001
+        version_id: '1705436829859225'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/142_100.jpg
+    md5: e0c292c3a1e0666f7b3d379aac8ebe28
+    size: 4728
+    cloud:
+      test_storage:
+        etag: 0896feb4a3dfe283031001
+        version_id: '1705436829794070'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/143_100.jpg
+    md5: 692f9b3fc6f061617a67b77c3830d910
+    size: 4707
+    cloud:
+      test_storage:
+        etag: 08d7c29ba3dfe283031001
+        version_id: '1705436829376855'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/144_100.jpg
+    md5: 2b90fc67ba2e429e3cb8f0b45914160b
+    size: 4719
+    cloud:
+      test_storage:
+        etag: 088ba393a3dfe283031001
+        version_id: '1705436829241739'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/145_100.jpg
+    md5: 2e01121090135013f84cd87ab6c6c88e
+    size: 4677
+    cloud:
+      test_storage:
+        etag: 088ad19ea3dfe283031001
+        version_id: '1705436829427850'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/146_100.jpg
+    md5: 9416fe64711b60d52ce1003fff9ba015
+    size: 4730
+    cloud:
+      test_storage:
+        etag: 089dba9da3dfe283031001
+        version_id: '1705436829408541'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/147_100.jpg
+    md5: 929e7726ac215fada3071d120e00437e
+    size: 4692
+    cloud:
+      test_storage:
+        etag: 088983bda3dfe283031001
+        version_id: '1705436829925769'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/148_100.jpg
+    md5: 93c2d97f5ebaf975a47cb49c08955e70
+    size: 4710
+    cloud:
+      test_storage:
+        etag: 0894f7a6a3dfe283031001
+        version_id: '1705436829563796'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/149_100.jpg
+    md5: d40b94b4071824cd06ee4e2be24b767e
+    size: 4716
+    cloud:
+      test_storage:
+        etag: 08c890f9a2dfe283031001
+        version_id: '1705436828813384'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/14_100.jpg
+    md5: 6e399f2c8132ea1857984e2e8c96bbc0
+    size: 4727
+    cloud:
+      test_storage:
+        etag: 08a4cbb2a3dfe283031001
+        version_id: '1705436829754788'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/150_100.jpg
+    md5: 093720491c189f172185e74ac80502af
+    size: 4676
+    cloud:
+      test_storage:
+        etag: 0899cfbaa3dfe283031001
+        version_id: '1705436829886361'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/151_100.jpg
+    md5: f332e88d7a6b7e0a1a3c53a11f4d2c05
+    size: 4700
+    cloud:
+      test_storage:
+        etag: 08dcc2e7a2dfe283031001
+        version_id: '1705436828524892'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/152_100.jpg
+    md5: d20dc247a17c96b380c63cafd462a28e
+    size: 4726
+    cloud:
+      test_storage:
+        etag: 0899d58ca3dfe283031001
+        version_id: '1705436829133465'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/153_100.jpg
+    md5: 885878c0a3c2022b2d18491454c2b53a
+    size: 4732
+    cloud:
+      test_storage:
+        etag: 08d4f9f8a2dfe283031001
+        version_id: '1705436828810452'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/154_100.jpg
+    md5: 06257f9ab20d169964e2a2dc46cf50b8
+    size: 4741
+    cloud:
+      test_storage:
+        etag: 08c887e5a2dfe283031001
+        version_id: '1705436828484552'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/155_100.jpg
+    md5: 5508df74f2a859b6de531f7de2f15984
+    size: 4726
+    cloud:
+      test_storage:
+        etag: 08b3e8bea3dfe283031001
+        version_id: '1705436829955123'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/156_100.jpg
+    md5: 0bb953be143956dc8a40c5f9c669d122
+    size: 4766
+    cloud:
+      test_storage:
+        etag: 088fd9bfa3dfe283031001
+        version_id: '1705436829969551'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/157_100.jpg
+    md5: 45e59f42021e7dc1e76233144fbeb75d
+    size: 4764
+    cloud:
+      test_storage:
+        etag: 08e6b0b6a3dfe283031001
+        version_id: '1705436829816934'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/158_100.jpg
+    md5: ce80c82800b8a78c3f504d343d658fa1
+    size: 4792
+    cloud:
+      test_storage:
+        etag: 08c7c5d8a2dfe283031001
+        version_id: '1705436828279495'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/159_100.jpg
+    md5: 0c50a010cb3429299fc16b98635800ac
+    size: 4843
+    cloud:
+      test_storage:
+        etag: 08dccf8ea3dfe283031001
+        version_id: '1705436829165532'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/15_100.jpg
+    md5: 43d5055fc5f3062e419b509859fb4d1c
+    size: 4707
+    cloud:
+      test_storage:
+        etag: 08a1e4e5a2dfe283031001
+        version_id: '1705436828496417'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/160_100.jpg
+    md5: 2296fecd121c67207c72cc6bea3b5108
+    size: 4881
+    cloud:
+      test_storage:
+        etag: 08fb8b8fa3dfe283031001
+        version_id: '1705436829173243'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/161_100.jpg
+    md5: 8182e03c921b60949d5cce6fcbdf48d2
+    size: 4894
+    cloud:
+      test_storage:
+        etag: 08a2e08fa3dfe283031001
+        version_id: '1705436829184034'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/162_100.jpg
+    md5: 588b0399b1c2042743dd605a1d071611
+    size: 4932
+    cloud:
+      test_storage:
+        etag: 08d5b58ca3dfe283031001
+        version_id: '1705436829129429'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/163_100.jpg
+    md5: dd8a730037cda6b40a616a7aa44c4038
+    size: 4903
+    cloud:
+      test_storage:
+        etag: 08bafbb9a3dfe283031001
+        version_id: '1705436829875642'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/164_100.jpg
+    md5: d5a2deec9f8c1238106bf1a639c33067
+    size: 4954
+    cloud:
+      test_storage:
+        etag: 08839bb4a3dfe283031001
+        version_id: '1705436829781379'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/165_100.jpg
+    md5: 88737725b7829cf447736d8880d2d1dc
+    size: 4955
+    cloud:
+      test_storage:
+        etag: 08c99bf3a2dfe283031001
+        version_id: '1705436828716489'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/166_100.jpg
+    md5: f3acd55bd9a6d292e6614aa664d663b4
+    size: 4952
+    cloud:
+      test_storage:
+        etag: 089ffae6a2dfe283031001
+        version_id: '1705436828515615'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/167_100.jpg
+    md5: 89b56845cc4ed0028e643419903dc19a
+    size: 4926
+    cloud:
+      test_storage:
+        etag: 08fbdce1a2dfe283031001
+        version_id: '1705436828429947'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/168_100.jpg
+    md5: e544f897008b8905a91f7d5d7490da5a
+    size: 4915
+    cloud:
+      test_storage:
+        etag: 08fceda1a3dfe283031001
+        version_id: '1705436829480700'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/169_100.jpg
+    md5: dbc8f4719e4b903164cdf8a4a52b7010
+    size: 4913
+    cloud:
+      test_storage:
+        etag: 08878897a3dfe283031001
+        version_id: '1705436829303815'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/16_100.jpg
+    md5: 5b789d46ff204438105cc77faf200a3d
+    size: 4778
+    cloud:
+      test_storage:
+        etag: 08d7f085a3dfe283031001
+        version_id: '1705436829022295'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/170_100.jpg
+    md5: daff6f54043162b301f10f3dcca9835f
+    size: 4937
+    cloud:
+      test_storage:
+        etag: 089ca0daa2dfe283031001
+        version_id: '1705436828307484'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/171_100.jpg
+    md5: e34479272036781e2326057b598bd6f1
+    size: 4955
+    cloud:
+      test_storage:
+        etag: 08f380eaa2dfe283031001
+        version_id: '1705436828565619'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/172_100.jpg
+    md5: af8336aabf3c85470d92de248bfda694
+    size: 4982
+    cloud:
+      test_storage:
+        etag: 08fd818da3dfe283031001
+        version_id: '1705436829139197'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/173_100.jpg
+    md5: b8e8e4689d5c5d3786297b1848b214ff
+    size: 5026
+    cloud:
+      test_storage:
+        etag: 08a09bf3a2dfe283031001
+        version_id: '1705436828716448'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/174_100.jpg
+    md5: a3f1c429a5e0f7ab7ddc18f103100740
+    size: 5013
+    cloud:
+      test_storage:
+        etag: 08f6e5a7a3dfe283031001
+        version_id: '1705436829577974'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/175_100.jpg
+    md5: 5c04fa971099cf0816ac71867559eca5
+    size: 5027
+    cloud:
+      test_storage:
+        etag: 08c0eae9a2dfe283031001
+        version_id: '1705436828562752'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/176_100.jpg
+    md5: ef836d5100252326d2b6748a55f131da
+    size: 5074
+    cloud:
+      test_storage:
+        etag: 08d7caa7a3dfe283031001
+        version_id: '1705436829574487'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/177_100.jpg
+    md5: 115f59099170c4f57f62a39ffac1a2df
+    size: 5057
+    cloud:
+      test_storage:
+        etag: 08f885e2a2dfe283031001
+        version_id: '1705436828435192'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/178_100.jpg
+    md5: f717ea82deded1c683db1c4a820b50e5
+    size: 5003
+    cloud:
+      test_storage:
+        etag: 089688a9a3dfe283031001
+        version_id: '1705436829598742'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/179_100.jpg
+    md5: ef0086f35ac6b1898fed03ae9a499d3e
+    size: 4999
+    cloud:
+      test_storage:
+        etag: 0889d1b7a3dfe283031001
+        version_id: '1705436829837449'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/17_100.jpg
+    md5: 246c5723873edbc185ab6353c82e1ec5
+    size: 4742
+    cloud:
+      test_storage:
+        etag: 0889dc8ba3dfe283031001
+        version_id: '1705436829117961'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/180_100.jpg
+    md5: b4eec1d7a06b09119d31ab2d9b3fd42c
+    size: 4984
+    cloud:
+      test_storage:
+        etag: 0880d8c3a3dfe283031001
+        version_id: '1705436830034944'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/181_100.jpg
+    md5: da3984425d4508a532283d48232658f6
+    size: 4970
+    cloud:
+      test_storage:
+        etag: 08d5b4b0a3dfe283031001
+        version_id: '1705436829719125'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/182_100.jpg
+    md5: 81b99a814bcd8a057d0c0dae849cfaae
+    size: 5077
+    cloud:
+      test_storage:
+        etag: 0886c5c8a3dfe283031001
+        version_id: '1705436830114438'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/183_100.jpg
+    md5: f13d3bb7096ec06140e0c4f4c81a6514
+    size: 4988
+    cloud:
+      test_storage:
+        etag: 08adaa84a3dfe283031001
+        version_id: '1705436828996909'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/184_100.jpg
+    md5: 6fc74652dd1c86765883937c8edc253e
+    size: 5007
+    cloud:
+      test_storage:
+        etag: 08cb9e85a3dfe283031001
+        version_id: '1705436829011787'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/185_100.jpg
+    md5: e3a917ef77b1e91f65787df91beabaeb
+    size: 4978
+    cloud:
+      test_storage:
+        etag: 08f8b1b6a3dfe283031001
+        version_id: '1705436829817080'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/186_100.jpg
+    md5: 31086d3857b51cf72b7e8e480431e7bb
+    size: 5024
+    cloud:
+      test_storage:
+        etag: 08db9f80a3dfe283031001
+        version_id: '1705436828930011'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/187_100.jpg
+    md5: b28ad79d2d290432fe1f6c941f493837
+    size: 5035
+    cloud:
+      test_storage:
+        etag: 089cc5e5a2dfe283031001
+        version_id: '1705436828492444'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/188_100.jpg
+    md5: b5cf9c0e182e45a368d7530404dd76a6
+    size: 4952
+    cloud:
+      test_storage:
+        etag: 0887cb9ba3dfe283031001
+        version_id: '1705436829377927'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/189_100.jpg
+    md5: 2cdea458153b0fa71be8ebe4dc02bb68
+    size: 4931
+    cloud:
+      test_storage:
+        etag: 08fba0fda2dfe283031001
+        version_id: '1705436828881019'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/18_100.jpg
+    md5: c0dd0316c3a6ae1bf9c775888ccfddf1
+    size: 4704
+    cloud:
+      test_storage:
+        etag: 08b6acfaa2dfe283031001
+        version_id: '1705436828833334'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/190_100.jpg
+    md5: 0fc4f2291387ba6289c25af427b9626e
+    size: 4861
+    cloud:
+      test_storage:
+        etag: 08baacc1a3dfe283031001
+        version_id: '1705436829996602'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/191_100.jpg
+    md5: be8d3b4cf1f6052b204edb559be4f85f
+    size: 4886
+    cloud:
+      test_storage:
+        etag: 08d3aeefa2dfe283031001
+        version_id: '1705436828653395'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/192_100.jpg
+    md5: e0e92a732d221b2a9733703a17e484ad
+    size: 4849
+    cloud:
+      test_storage:
+        etag: 08ffe6d7a2dfe283031001
+        version_id: '1705436828267391'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/193_100.jpg
+    md5: 1b79f79df90a36c23c89dac4b553f4ee
+    size: 4854
+    cloud:
+      test_storage:
+        etag: 08cff0f4a2dfe283031001
+        version_id: '1705436828743759'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/194_100.jpg
+    md5: dfdc83106a365176511168eee8ccc3e7
+    size: 4923
+    cloud:
+      test_storage:
+        etag: 08d5e3e9a2dfe283031001
+        version_id: '1705436828561877'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/195_100.jpg
+    md5: 4aa0b0039da1263b1b0e215df736eae8
+    size: 4863
+    cloud:
+      test_storage:
+        etag: 08b8adc5a3dfe283031001
+        version_id: '1705436830062264'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/196_100.jpg
+    md5: 08c47256019e470898b09d6c8ae0bd4f
+    size: 4907
+    cloud:
+      test_storage:
+        etag: 08e6cc96a3dfe283031001
+        version_id: '1705436829296230'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/197_100.jpg
+    md5: b322d9a3c59fd29c392308c20bfe6ec0
+    size: 4898
+    cloud:
+      test_storage:
+        etag: 08a9adbda3dfe283031001
+        version_id: '1705436829931177'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/198_100.jpg
+    md5: a625d26810b8414dfd49c1c5bc80a2ec
+    size: 4921
+    cloud:
+      test_storage:
+        etag: 08dad4fda2dfe283031001
+        version_id: '1705436828887642'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/199_100.jpg
+    md5: d73cc2e69a664f694d94bb7a643bb422
+    size: 4886
+    cloud:
+      test_storage:
+        etag: 08b287cea3dfe283031001
+        version_id: '1705436830204850'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/19_100.jpg
+    md5: f5418106843eacc12a2cf28255d6d415
+    size: 4737
+    cloud:
+      test_storage:
+        etag: 08bfeebaa3dfe283031001
+        version_id: '1705436829890367'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/1_100.jpg
+    md5: f956647e7273856d26ed2629f9191368
+    size: 4792
+    cloud:
+      test_storage:
+        etag: 08e0f692a3dfe283031001
+        version_id: '1705436829236064'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/200_100.jpg
+    md5: bf4034c13fbd37a91b3c356b3647bab5
+    size: 4881
+    cloud:
+      test_storage:
+        etag: 08bce2afa3dfe283031001
+        version_id: '1705436829708604'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/201_100.jpg
+    md5: 0e43fe7d13adf9cf2e59abba273f9abc
+    size: 4917
+    cloud:
+      test_storage:
+        etag: 0893ebc5a3dfe283031001
+        version_id: '1705436830070163'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/202_100.jpg
+    md5: 848f077631606ff7db0b60286637ae17
+    size: 4926
+    cloud:
+      test_storage:
+        etag: 08e295bea3dfe283031001
+        version_id: '1705436829944546'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/203_100.jpg
+    md5: dedaf8327ffa6da3c6ae7719288bb7cc
+    size: 4842
+    cloud:
+      test_storage:
+        etag: 08f58790a3dfe283031001
+        version_id: '1705436829189109'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/204_100.jpg
+    md5: b2f71369b8bdb3ff152498846753b930
+    size: 4809
+    cloud:
+      test_storage:
+        etag: 088ae7a1a3dfe283031001
+        version_id: '1705436829479818'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/205_100.jpg
+    md5: 927ea5275ce510d417d1de5579e3030f
+    size: 4839
+    cloud:
+      test_storage:
+        etag: 089e97f9a2dfe283031001
+        version_id: '1705436828814238'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/206_100.jpg
+    md5: 9a0a2a94bb41e311942771574cea0e5b
+    size: 4794
+    cloud:
+      test_storage:
+        etag: 08d3a694a3dfe283031001
+        version_id: '1705436829258579'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/207_100.jpg
+    md5: ae72202befaccec100190d1f97b95493
+    size: 4844
+    cloud:
+      test_storage:
+        etag: 08ce8ee7a2dfe283031001
+        version_id: '1705436828518222'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/208_100.jpg
+    md5: 574b04a4807b483318dc3bcebbfa3b70
+    size: 4862
+    cloud:
+      test_storage:
+        etag: 0888cb95a3dfe283031001
+        version_id: '1705436829279624'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/209_100.jpg
+    md5: 626fc1cd32e84f6b6385c1b8e0ec171c
+    size: 4837
+    cloud:
+      test_storage:
+        etag: 08abf1a5a3dfe283031001
+        version_id: '1705436829546667'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/20_100.jpg
+    md5: a7d77828a5f23fcda3104a2cb6687f72
+    size: 4687
+    cloud:
+      test_storage:
+        etag: 08d1bda9a3dfe283031001
+        version_id: '1705436829605585'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/210_100.jpg
+    md5: ba2867c709e1cd1610d82ec9080916af
+    size: 4796
+    cloud:
+      test_storage:
+        etag: 08949d9ca3dfe283031001
+        version_id: '1705436829388436'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/211_100.jpg
+    md5: e05aa00cb372c6e83a70ba703ef42ef7
+    size: 4772
+    cloud:
+      test_storage:
+        etag: 08998987a3dfe283031001
+        version_id: '1705436829041817'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/212_100.jpg
+    md5: 50375d4875d61d640183ef240d9510da
+    size: 4818
+    cloud:
+      test_storage:
+        etag: 08faf9baa3dfe283031001
+        version_id: '1705436829891834'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/213_100.jpg
+    md5: 4fe022ccee6869ae712849fec227f632
+    size: 4826
+    cloud:
+      test_storage:
+        etag: 08fbedcca3dfe283031001
+        version_id: '1705436830185211'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/214_100.jpg
+    md5: 46395f78bb9be0728d8801e68d007b15
+    size: 4793
+    cloud:
+      test_storage:
+        etag: 0899a192a3dfe283031001
+        version_id: '1705436829225113'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/215_100.jpg
+    md5: 8eaf0b6590244759452b07055e6f5b0e
+    size: 4869
+    cloud:
+      test_storage:
+        etag: 08b5bdc7a3dfe283031001
+        version_id: '1705436830097077'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/216_100.jpg
+    md5: 7d18ccfd8bfe804fa8ef5cc33930c6cf
+    size: 4826
+    cloud:
+      test_storage:
+        etag: 08b68885a3dfe283031001
+        version_id: '1705436829008950'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/217_100.jpg
+    md5: 159a65eae8dc1956d8ce26b67068d31e
+    size: 4835
+    cloud:
+      test_storage:
+        etag: 089ee0a6a3dfe283031001
+        version_id: '1705436829560862'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/218_100.jpg
+    md5: 421dcf00ff52b519e9f64103a92bfa01
+    size: 4819
+    cloud:
+      test_storage:
+        etag: 08d2c9afa3dfe283031001
+        version_id: '1705436829705426'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/219_100.jpg
+    md5: ae9fe08297693efd53d9098e34b3f777
+    size: 4782
+    cloud:
+      test_storage:
+        etag: 0894d385a3dfe283031001
+        version_id: '1705436829018516'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/21_100.jpg
+    md5: 6c98f5ecdda12a7a18a8cfc24f38b54b
+    size: 4690
+    cloud:
+      test_storage:
+        etag: 08b3c0b4a3dfe283031001
+        version_id: '1705436829786163'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/220_100.jpg
+    md5: d0398e91a50d6046dde26c1226be1bae
+    size: 4791
+    cloud:
+      test_storage:
+        etag: 08e7ed9ca3dfe283031001
+        version_id: '1705436829398759'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/221_100.jpg
+    md5: 81c287e34683fb0d5c421c87a6a65b3b
+    size: 4762
+    cloud:
+      test_storage:
+        etag: 0883fdb4a3dfe283031001
+        version_id: '1705436829793923'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/222_100.jpg
+    md5: cea476071c1b2b08298ce89c85962102
+    size: 4801
+    cloud:
+      test_storage:
+        etag: 08ccf4a6a3dfe283031001
+        version_id: '1705436829563468'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/223_100.jpg
+    md5: 13776022abbaadc4ac4ef6520817cf7e
+    size: 4834
+    cloud:
+      test_storage:
+        etag: 08e687c4a3dfe283031001
+        version_id: '1705436830041062'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/224_100.jpg
+    md5: b36760c5b600dcadc0b158463630282f
+    size: 4794
+    cloud:
+      test_storage:
+        etag: 08a5a3b2a3dfe283031001
+        version_id: '1705436829749669'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/225_100.jpg
+    md5: cceb4efa6d63d323003d2d21c192f188
+    size: 4777
+    cloud:
+      test_storage:
+        etag: 08f3dce1a2dfe283031001
+        version_id: '1705436828429939'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/226_100.jpg
+    md5: 50e1019ff5652efc3f64d41e723bb7a9
+    size: 4782
+    cloud:
+      test_storage:
+        etag: 08d3d38ba3dfe283031001
+        version_id: '1705436829116883'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/227_100.jpg
+    md5: d0fb51e7e00d0b4b00fcc94e7d1125f5
+    size: 4785
+    cloud:
+      test_storage:
+        etag: 08e7f9f8a2dfe283031001
+        version_id: '1705436828810471'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/228_100.jpg
+    md5: 52cfefe065499fef258ed26dae240734
+    size: 4786
+    cloud:
+      test_storage:
+        etag: 08919fd8a2dfe283031001
+        version_id: '1705436828274577'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/229_100.jpg
+    md5: fc20038a95c7b4d3e950612895371989
+    size: 4761
+    cloud:
+      test_storage:
+        etag: 0888acbaa3dfe283031001
+        version_id: '1705436829881864'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/22_100.jpg
+    md5: 12b47ff5de3c635c12839086fdcd62cb
+    size: 4661
+    cloud:
+      test_storage:
+        etag: 08acb3d7a2dfe283031001
+        version_id: '1705436828260780'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/230_100.jpg
+    md5: 9f97364ee7b6802a1f341caf231e5f87
+    size: 4804
+    cloud:
+      test_storage:
+        etag: 08b0afaca3dfe283031001
+        version_id: '1705436829652912'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/231_100.jpg
+    md5: c26f10b9fc5424007020b4d601a8f996
+    size: 4734
+    cloud:
+      test_storage:
+        etag: 08afb6fca2dfe283031001
+        version_id: '1705436828867375'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/232_100.jpg
+    md5: caea6bc4d66ad12a75809e20619ef6a6
+    size: 4789
+    cloud:
+      test_storage:
+        etag: 08cdcaa3a3dfe283031001
+        version_id: '1705436829508941'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/233_100.jpg
+    md5: 3cad7d9bba6138863329fbdbf3bb6df1
+    size: 4743
+    cloud:
+      test_storage:
+        etag: 08dfa491a3dfe283031001
+        version_id: '1705436829209183'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/234_100.jpg
+    md5: ee26e76e8316f78bfdc89288e2821108
+    size: 4744
+    cloud:
+      test_storage:
+        etag: 08d2d7cba3dfe283031001
+        version_id: '1705436830165970'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/235_100.jpg
+    md5: 27c136a07beb815a4e0daf5edb7d071d
+    size: 4752
+    cloud:
+      test_storage:
+        etag: 08edbfa3a3dfe283031001
+        version_id: '1705436829507565'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/236_100.jpg
+    md5: 504fc53ef5d6bcdba8c83f892e856c69
+    size: 4800
+    cloud:
+      test_storage:
+        etag: 08c1e8e6a2dfe283031001
+        version_id: '1705436828513345'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/237_100.jpg
+    md5: 83c848027d9e0dfe4a209a6f13dbe8ba
+    size: 4789
+    cloud:
+      test_storage:
+        etag: 08f9dde1a2dfe283031001
+        version_id: '1705436828430073'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/238_100.jpg
+    md5: 33c56b81b0169aca27e8ab9781e85716
+    size: 4831
+    cloud:
+      test_storage:
+        etag: 08fea9a8a3dfe283031001
+        version_id: '1705436829586686'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/239_100.jpg
+    md5: 92d4c85a1f25e50cafaaebbb07bfd00c
+    size: 4829
+    cloud:
+      test_storage:
+        etag: 08e792d9a2dfe283031001
+        version_id: '1705436828289383'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/23_100.jpg
+    md5: 6bae8e810b9a080b8ab7e5022406d958
+    size: 4721
+    cloud:
+      test_storage:
+        etag: 08dab2b3a3dfe283031001
+        version_id: '1705436829768026'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/240_100.jpg
+    md5: d211b4426bfb8145be8da9a7f4044d31
+    size: 4795
+    cloud:
+      test_storage:
+        etag: 08e0adbca3dfe283031001
+        version_id: '1705436829914848'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/241_100.jpg
+    md5: 0b7a6e4396594df844de93a0b537a5b3
+    size: 4769
+    cloud:
+      test_storage:
+        etag: 08c4c7efa2dfe283031001
+        version_id: '1705436828656580'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/242_100.jpg
+    md5: db357e67930a1a74f194a6cfc5175634
+    size: 4780
+    cloud:
+      test_storage:
+        etag: 08e4d6aba3dfe283031001
+        version_id: '1705436829641572'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/243_100.jpg
+    md5: 2b66313d567c00ecce85e359ba70d895
+    size: 4808
+    cloud:
+      test_storage:
+        etag: 08d4d9f2a2dfe283031001
+        version_id: '1705436828708052'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/244_100.jpg
+    md5: 6cd3e1c6465ddb3848ae132c56bd3449
+    size: 4807
+    cloud:
+      test_storage:
+        etag: 08a2a583a3dfe283031001
+        version_id: '1705436828979874'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/245_100.jpg
+    md5: e258e0e9f251bb7dd1e2135180041597
+    size: 4789
+    cloud:
+      test_storage:
+        etag: 088688caa3dfe283031001
+        version_id: '1705436830139398'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/246_100.jpg
+    md5: ea37ee51321213737434d062755a2a3d
+    size: 4801
+    cloud:
+      test_storage:
+        etag: 08bb8690a3dfe283031001
+        version_id: '1705436829188923'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/247_100.jpg
+    md5: b2d71f317043bdf1df50673ff6c8ff53
+    size: 4818
+    cloud:
+      test_storage:
+        etag: 08ebf0f2a2dfe283031001
+        version_id: '1705436828711019'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/248_100.jpg
+    md5: cfecd4eb4e4b578dba196e0d400dc713
+    size: 4807
+    cloud:
+      test_storage:
+        etag: 0894ef94a3dfe283031001
+        version_id: '1705436829267860'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/249_100.jpg
+    md5: 4849efb4108ad24efce0b73d8b5be896
+    size: 4816
+    cloud:
+      test_storage:
+        etag: 08d6db91a3dfe283031001
+        version_id: '1705436829216214'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/24_100.jpg
+    md5: d95f12b5eefb079ac6960457515b8057
+    size: 4719
+    cloud:
+      test_storage:
+        etag: 08f5c09da3dfe283031001
+        version_id: '1705436829409397'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/250_100.jpg
+    md5: 28a2e69cbb3d8530a01e1c8cfa402dcf
+    size: 4782
+    cloud:
+      test_storage:
+        etag: 08c0acfaa2dfe283031001
+        version_id: '1705436828833344'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/251_100.jpg
+    md5: eea05d91552850eb1c4b771242bfcfae
+    size: 4782
+    cloud:
+      test_storage:
+        etag: 08e69fa9a3dfe283031001
+        version_id: '1705436829601766'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/252_100.jpg
+    md5: bf89a2b2815c6c7bb3fcbb1810813956
+    size: 4780
+    cloud:
+      test_storage:
+        etag: 08bfb49aa3dfe283031001
+        version_id: '1705436829358655'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/253_100.jpg
+    md5: fc1d5c52395fafde00519cd67fe0a729
+    size: 4835
+    cloud:
+      test_storage:
+        etag: 08c0a9a8a3dfe283031001
+        version_id: '1705436829586624'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/254_100.jpg
+    md5: ce24d864d3edb6683a43e9e246be5ed4
+    size: 4807
+    cloud:
+      test_storage:
+        etag: 08b988b9a3dfe283031001
+        version_id: '1705436829860921'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/255_100.jpg
+    md5: 92607db8cfa20678031857c66d88a4b4
+    size: 4811
+    cloud:
+      test_storage:
+        etag: 08c7b582a3dfe283031001
+        version_id: '1705436828965575'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/256_100.jpg
+    md5: 4fcc1d0b4eb5c3735b2f35dcd2b35f29
+    size: 4787
+    cloud:
+      test_storage:
+        etag: 08f4d4a0a3dfe283031001
+        version_id: '1705436829461108'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/257_100.jpg
+    md5: 84bd47790046a34d415643c904d50045
+    size: 4729
+    cloud:
+      test_storage:
+        etag: 08c9a39ba3dfe283031001
+        version_id: '1705436829372873'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/258_100.jpg
+    md5: 7fea3e83fa11eb02c6f00659d46dc735
+    size: 4775
+    cloud:
+      test_storage:
+        etag: 08849ffea2dfe283031001
+        version_id: '1705436828897156'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/259_100.jpg
+    md5: 1657671149e341c0128e2a50a722f172
+    size: 4794
+    cloud:
+      test_storage:
+        etag: 08e2959da3dfe283031001
+        version_id: '1705436829403874'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/25_100.jpg
+    md5: 7828084dac2e8f5484f459dda7822a98
+    size: 4726
+    cloud:
+      test_storage:
+        etag: 0880b3b3a3dfe283031001
+        version_id: '1705436829768064'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/260_100.jpg
+    md5: 8693b4e511a37a02c7962bab8c55033d
+    size: 4819
+    cloud:
+      test_storage:
+        etag: 08909dc5a3dfe283031001
+        version_id: '1705436830060176'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/261_100.jpg
+    md5: 037a6cb568ae2b1508949a98a9878c47
+    size: 4838
+    cloud:
+      test_storage:
+        etag: 08c4e299a3dfe283031001
+        version_id: '1705436829348164'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/262_100.jpg
+    md5: a7f1d5aa81d59d749b9dfd348db46438
+    size: 4771
+    cloud:
+      test_storage:
+        etag: 089999cba3dfe283031001
+        version_id: '1705436830157977'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/263_100.jpg
+    md5: 1a83f68b3d3c30581cd225983969a525
+    size: 4765
+    cloud:
+      test_storage:
+        etag: 08a4e2d7a2dfe283031001
+        version_id: '1705436828266788'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/264_100.jpg
+    md5: bb9b2e05a68fee56a2b0c9cfe8ae55be
+    size: 4789
+    cloud:
+      test_storage:
+        etag: 0887ffa1a3dfe283031001
+        version_id: '1705436829482887'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/265_100.jpg
+    md5: 6deb483c7d5675e2ac48a2df65b47f55
+    size: 4848
+    cloud:
+      test_storage:
+        etag: 0882e78ca3dfe283031001
+        version_id: '1705436829135746'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/266_100.jpg
+    md5: bb61a62ac17ae4dbd44534d13aa17556
+    size: 4812
+    cloud:
+      test_storage:
+        etag: 08c8b695a3dfe283031001
+        version_id: '1705436829277000'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/267_100.jpg
+    md5: 9f06812f082176199c1e62aa038125c8
+    size: 4823
+    cloud:
+      test_storage:
+        etag: 08e0b1efa2dfe283031001
+        version_id: '1705436828653792'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/268_100.jpg
+    md5: 4e1c7f63afc876531c0f24c34f2177fa
+    size: 4866
+    cloud:
+      test_storage:
+        etag: 08d88e80a3dfe283031001
+        version_id: '1705436828927832'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/269_100.jpg
+    md5: a78caa8d49f58816c7785b214b5b76bb
+    size: 4850
+    cloud:
+      test_storage:
+        etag: 08c3d58ca3dfe283031001
+        version_id: '1705436829133507'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/26_100.jpg
+    md5: 051ff09b4acdeb92364b59ab53ead699
+    size: 4710
+    cloud:
+      test_storage:
+        etag: 088f84c3a3dfe283031001
+        version_id: '1705436830024207'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/270_100.jpg
+    md5: 70aa3f8dcfdda8d98ea49cf3d3183738
+    size: 4845
+    cloud:
+      test_storage:
+        etag: 08c9ca87a3dfe283031001
+        version_id: '1705436829050185'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/271_100.jpg
+    md5: f2e0f7132ff7590a7b90d26f74dd8f15
+    size: 4873
+    cloud:
+      test_storage:
+        etag: 08d4a387a3dfe283031001
+        version_id: '1705436829045204'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/272_100.jpg
+    md5: 317e6101161f8a608104c369fb51f134
+    size: 4910
+    cloud:
+      test_storage:
+        etag: 08f09af2a2dfe283031001
+        version_id: '1705436828700016'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/273_100.jpg
+    md5: 657da553bfb2193354d6057f855e9fc4
+    size: 4906
+    cloud:
+      test_storage:
+        etag: 08eda2baa3dfe283031001
+        version_id: '1705436829880685'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/274_100.jpg
+    md5: 2508c2600f35a011cc44fecc11d064a4
+    size: 4969
+    cloud:
+      test_storage:
+        etag: 08e3d6f0a2dfe283031001
+        version_id: '1705436828674915'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/275_100.jpg
+    md5: 362ca7148f53b94596d7693cafb5da7a
+    size: 4934
+    cloud:
+      test_storage:
+        etag: 08ebf9f9a2dfe283031001
+        version_id: '1705436828826859'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/276_100.jpg
+    md5: e82f6fe6fb701ae320f7b1e9a4d38486
+    size: 4887
+    cloud:
+      test_storage:
+        etag: 08cfd68ea3dfe283031001
+        version_id: '1705436829166415'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/277_100.jpg
+    md5: 47dd8ac54d32a1ee78d71bf9e545d8c5
+    size: 4931
+    cloud:
+      test_storage:
+        etag: 0882adbca3dfe283031001
+        version_id: '1705436829914754'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/278_100.jpg
+    md5: ec925c03723421b85b2e5e7a5829fc64
+    size: 4848
+    cloud:
+      test_storage:
+        etag: 08c8ebe8a2dfe283031001
+        version_id: '1705436828546504'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/279_100.jpg
+    md5: 00b7149ba1b686e628cc5ecc8588cbce
+    size: 4856
+    cloud:
+      test_storage:
+        etag: 08b5c4e6a2dfe283031001
+        version_id: '1705436828508725'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/27_100.jpg
+    md5: ddb3fb6f327b757291a4cab7862b3583
+    size: 4690
+    cloud:
+      test_storage:
+        etag: 08ecd8bfa3dfe283031001
+        version_id: '1705436829969516'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/280_100.jpg
+    md5: 98f2dfbdf5f413dc563610ae3a88f12f
+    size: 4837
+    cloud:
+      test_storage:
+        etag: 089fd8baa3dfe283031001
+        version_id: '1705436829887519'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/281_100.jpg
+    md5: 6d3ceb13e2b1d432cf51c9774a81e45c
+    size: 4931
+    cloud:
+      test_storage:
+        etag: 08ecbe8ca3dfe283031001
+        version_id: '1705436829130604'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/282_100.jpg
+    md5: e5e608f74afacfb90263ceeeb835a03c
+    size: 4891
+    cloud:
+      test_storage:
+        etag: 08ecc59ba3dfe283031001
+        version_id: '1705436829377260'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/283_100.jpg
+    md5: 03290cab741ff4d62d837e069db59306
+    size: 4913
+    cloud:
+      test_storage:
+        etag: 08ea8cada3dfe283031001
+        version_id: '1705436829664874'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/284_100.jpg
+    md5: 799f49ea818160f5d54ce0bbe5b61ebe
+    size: 4909
+    cloud:
+      test_storage:
+        etag: 08a18ce8a2dfe283031001
+        version_id: '1705436828534305'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/285_100.jpg
+    md5: 62bb5e501927441a6516788fff4632cd
+    size: 4915
+    cloud:
+      test_storage:
+        etag: 08caf9f9a2dfe283031001
+        version_id: '1705436828826826'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/286_100.jpg
+    md5: 4bca94905c1820cb9fcd9f6bb5296643
+    size: 4882
+    cloud:
+      test_storage:
+        etag: 0883a683a3dfe283031001
+        version_id: '1705436828979971'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/287_100.jpg
+    md5: c13b8f0a662e3f0cca06db557996e752
+    size: 4853
+    cloud:
+      test_storage:
+        etag: 08b0cdf4a2dfe283031001
+        version_id: '1705436828739248'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/288_100.jpg
+    md5: 4f5c522def2333671ce50e5d28bd686a
+    size: 4847
+    cloud:
+      test_storage:
+        etag: 08969ee8a2dfe283031001
+        version_id: '1705436828536598'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/289_100.jpg
+    md5: a446c9e51d45c16139eb8854bd6c1a25
+    size: 4854
+    cloud:
+      test_storage:
+        etag: 08e9e4e5a2dfe283031001
+        version_id: '1705436828496489'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/28_100.jpg
+    md5: 30ef88292199ad3328173c540f0705ae
+    size: 4698
+    cloud:
+      test_storage:
+        etag: 08f2dd85a3dfe283031001
+        version_id: '1705436829019890'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/290_100.jpg
+    md5: 547be940b998dd9085f2eadbf21c2fa2
+    size: 4837
+    cloud:
+      test_storage:
+        etag: 08f8eba0a3dfe283031001
+        version_id: '1705436829464056'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/291_100.jpg
+    md5: 5a3b604fedd2163c36f43f3a655cd39d
+    size: 4880
+    cloud:
+      test_storage:
+        etag: 08b7acfaa2dfe283031001
+        version_id: '1705436828833335'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/292_100.jpg
+    md5: 027b95a35ee7121091c42e5b8cde90c1
+    size: 4900
+    cloud:
+      test_storage:
+        etag: 0894a694a3dfe283031001
+        version_id: '1705436829258516'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/293_100.jpg
+    md5: b30093a60fb86240c934da7832edae80
+    size: 4859
+    cloud:
+      test_storage:
+        etag: 08dcd9d8a2dfe283031001
+        version_id: '1705436828282076'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/294_100.jpg
+    md5: 04eb53caac3133ea14373ba733a5a4ed
+    size: 4874
+    cloud:
+      test_storage:
+        etag: 08e3c8aaa3dfe283031001
+        version_id: '1705436829623395'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/295_100.jpg
+    md5: b61284768e2d901b2d95c1623c8e07b2
+    size: 4853
+    cloud:
+      test_storage:
+        etag: 08e7fdb2a3dfe283031001
+        version_id: '1705436829761255'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/296_100.jpg
+    md5: 42d1fb4a4ae4e33cf52ea2776e200760
+    size: 4887
+    cloud:
+      test_storage:
+        etag: 08dac89ba3dfe283031001
+        version_id: '1705436829377626'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/297_100.jpg
+    md5: 1eaed78559a88931ecc83c807dc75426
+    size: 4834
+    cloud:
+      test_storage:
+        etag: 0882a8f1a2dfe283031001
+        version_id: '1705436828685314'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/298_100.jpg
+    md5: 2579aba63d15babda0226795a04db294
+    size: 4848
+    cloud:
+      test_storage:
+        etag: 08eba1a6a3dfe283031001
+        version_id: '1705436829552875'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/299_100.jpg
+    md5: 79626a7135bc07b07db91fc41496f5d5
+    size: 4859
+    cloud:
+      test_storage:
+        etag: 08e6bfc2a3dfe283031001
+        version_id: '1705436830015462'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/29_100.jpg
+    md5: 8dd76544084ef9845d6fa7cf450f5c25
+    size: 4703
+    cloud:
+      test_storage:
+        etag: 08e5bf94a3dfe283031001
+        version_id: '1705436829261797'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/2_100.jpg
+    md5: 469520ff051585bfe2c967e0ebe1ff93
+    size: 4800
+    cloud:
+      test_storage:
+        etag: 089dccf2a2dfe283031001
+        version_id: '1705436828706333'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/300_100.jpg
+    md5: ceb846872734d3a551a1488a4405f647
+    size: 4793
+    cloud:
+      test_storage:
+        etag: 0886cddea2dfe283031001
+        version_id: '1705436828378758'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/301_100.jpg
+    md5: 3463a7a11ccc3fc91382b87efd6901c7
+    size: 4804
+    cloud:
+      test_storage:
+        etag: 08d8eac5a3dfe283031001
+        version_id: '1705436830070104'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/302_100.jpg
+    md5: fc76ea1dd5179cf95c29ee676dd5546b
+    size: 4839
+    cloud:
+      test_storage:
+        etag: 0884ab84a3dfe283031001
+        version_id: '1705436828996996'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/303_100.jpg
+    md5: 7219612a87f67bf6ab49b66de4e0ce39
+    size: 4837
+    cloud:
+      test_storage:
+        etag: 08e9dbf5a2dfe283031001
+        version_id: '1705436828757481'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/304_100.jpg
+    md5: b85e83eb041ba3eccd20cee5c1510817
+    size: 4868
+    cloud:
+      test_storage:
+        etag: 08b1eecca3dfe283031001
+        version_id: '1705436830185265'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/305_100.jpg
+    md5: aaf487d1db016ad20cdada5f3bf8ac2e
+    size: 4847
+    cloud:
+      test_storage:
+        etag: 08ab9fc2a3dfe283031001
+        version_id: '1705436830011307'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/306_100.jpg
+    md5: 99314b397095261139169563d4926777
+    size: 4863
+    cloud:
+      test_storage:
+        etag: 08c794e8a2dfe283031001
+        version_id: '1705436828535367'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/307_100.jpg
+    md5: 1c7a597599b7c668158b6a4a44a3333b
+    size: 4882
+    cloud:
+      test_storage:
+        etag: 089ae6baa3dfe283031001
+        version_id: '1705436829889306'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/308_100.jpg
+    md5: 1d06fe5eb0d669f59c2d62ad83b65107
+    size: 4866
+    cloud:
+      test_storage:
+        etag: 08e4acfaa2dfe283031001
+        version_id: '1705436828833380'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/309_100.jpg
+    md5: e894e4d24a7fe1a0089cfe7ee6871e76
+    size: 4880
+    cloud:
+      test_storage:
+        etag: 08dee3f0a2dfe283031001
+        version_id: '1705436828676574'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/30_100.jpg
+    md5: cda1864d193d793ef22b773e9e26da34
+    size: 4705
+    cloud:
+      test_storage:
+        etag: 08aac0a1a3dfe283031001
+        version_id: '1705436829474858'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/310_100.jpg
+    md5: aecc397b9f6304af6d067fb6c93c05be
+    size: 4850
+    cloud:
+      test_storage:
+        etag: 08dbd294a3dfe283031001
+        version_id: '1705436829264219'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/311_100.jpg
+    md5: 7ecf9102485423c702e4f8600c999e79
+    size: 4795
+    cloud:
+      test_storage:
+        etag: 0897cf83a3dfe283031001
+        version_id: '1705436828985239'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/312_100.jpg
+    md5: d1ef622af27e5f3ed2fa2597efb562da
+    size: 4804
+    cloud:
+      test_storage:
+        etag: 0885efa0a3dfe283031001
+        version_id: '1705436829464453'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/313_100.jpg
+    md5: 7e8f3c1426df3022dd99ff05a645fb41
+    size: 4761
+    cloud:
+      test_storage:
+        etag: 08a8d8f0a2dfe283031001
+        version_id: '1705436828675112'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/314_100.jpg
+    md5: 7e909712523f549ef6ef791f1ea1e0ed
+    size: 4795
+    cloud:
+      test_storage:
+        etag: 08bee382a3dfe283031001
+        version_id: '1705436828971454'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/315_100.jpg
+    md5: 6eced2761b959ef19b1b780a499daacf
+    size: 4820
+    cloud:
+      test_storage:
+        etag: 08ebcbd8a2dfe283031001
+        version_id: '1705436828280299'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/316_100.jpg
+    md5: c7f039439af3e57222e9bd0edae01e9f
+    size: 4843
+    cloud:
+      test_storage:
+        etag: 089bdd91a3dfe283031001
+        version_id: '1705436829216411'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/317_100.jpg
+    md5: 26670dc40ee67dd6a394d9ed15d0f8ef
+    size: 4795
+    cloud:
+      test_storage:
+        etag: 0880d4c3a3dfe283031001
+        version_id: '1705436830034432'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/318_100.jpg
+    md5: 185c527d590391bfe75eb2f685481299
+    size: 4830
+    cloud:
+      test_storage:
+        etag: 08e2f7b8a3dfe283031001
+        version_id: '1705436829858786'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/319_100.jpg
+    md5: 90140d6de9f5fa2e2c893f30dc546e79
+    size: 4747
+    cloud:
+      test_storage:
+        etag: 08c6bdefa2dfe283031001
+        version_id: '1705436828655302'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/31_100.jpg
+    md5: cd6fad6ad210cbcef62437d4c8bba93a
+    size: 4727
+    cloud:
+      test_storage:
+        etag: 08cbaae2a2dfe283031001
+        version_id: '1705436828439883'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/320_100.jpg
+    md5: 2445c0c1d3079b5f67b5f6a0f4e1358e
+    size: 4753
+    cloud:
+      test_storage:
+        etag: 08aff7f9a2dfe283031001
+        version_id: '1705436828826543'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_0_100.jpg
+    md5: ccce0aa2d6f08755f43e6532485f2e2c
+    size: 5394
+    cloud:
+      test_storage:
+        etag: 08b98fb3a3dfe283031001
+        version_id: '1705436829763513'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_100_100.jpg
+    md5: 752748daee4fdd50c574af525b143db3
+    size: 5208
+    cloud:
+      test_storage:
+        etag: 08e7a098a3dfe283031001
+        version_id: '1705436829323367'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_101_100.jpg
+    md5: 9022f3eb0517d3631c5d819466fd07f0
+    size: 5180
+    cloud:
+      test_storage:
+        etag: 08cdde92a3dfe283031001
+        version_id: '1705436829232973'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_102_100.jpg
+    md5: 06d6ba4a1eb8e21d76bccdc3c1b8014c
+    size: 5180
+    cloud:
+      test_storage:
+        etag: 08f4a6bfa3dfe283031001
+        version_id: '1705436829963124'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_103_100.jpg
+    md5: d6941f81438d7e5855023046d3351200
+    size: 5132
+    cloud:
+      test_storage:
+        etag: 08d1e7e0a2dfe283031001
+        version_id: '1705436828414929'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_104_100.jpg
+    md5: b046ae0676df0339ca18e8c64af14248
+    size: 5167
+    cloud:
+      test_storage:
+        etag: 08928a9ba3dfe283031001
+        version_id: '1705436829369618'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_105_100.jpg
+    md5: 6acb3cfbecfe51f125942a0b515686ed
+    size: 5213
+    cloud:
+      test_storage:
+        etag: 08bff1b7a3dfe283031001
+        version_id: '1705436829841599'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_106_100.jpg
+    md5: 5f0acc549bebcaa39dd1aed9f74a927d
+    size: 5229
+    cloud:
+      test_storage:
+        etag: 0890d599a3dfe283031001
+        version_id: '1705436829346448'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_107_100.jpg
+    md5: 825b305328eb93a3ad51bf7336a2797c
+    size: 5240
+    cloud:
+      test_storage:
+        etag: 08bf8fb2a3dfe283031001
+        version_id: '1705436829747135'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_108_100.jpg
+    md5: 986dcdeb0f43d7954eff30d889e74189
+    size: 5248
+    cloud:
+      test_storage:
+        etag: 08f5b0f3a2dfe283031001
+        version_id: '1705436828719221'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_109_100.jpg
+    md5: 53338ca2da5096e49f30448e271703fc
+    size: 5161
+    cloud:
+      test_storage:
+        etag: 08929ea6a3dfe283031001
+        version_id: '1705436829552402'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_10_100.jpg
+    md5: 5bc32909f310953b8e277b9f2f08814e
+    size: 5499
+    cloud:
+      test_storage:
+        etag: 089696a0a3dfe283031001
+        version_id: '1705436829453078'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_110_100.jpg
+    md5: c0b0d2b69f51ea2b4b983dc6bc9954cc
+    size: 5309
+    cloud:
+      test_storage:
+        etag: 08abcbe7a2dfe283031001
+        version_id: '1705436828525995'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_111_100.jpg
+    md5: 5b69ee2c2b90c207f11823962d4ee634
+    size: 5335
+    cloud:
+      test_storage:
+        etag: 08ebc39fa3dfe283031001
+        version_id: '1705436829442539'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_112_100.jpg
+    md5: ddc9409a6f47b1940efce653262d5314
+    size: 5284
+    cloud:
+      test_storage:
+        etag: 08ed94bea3dfe283031001
+        version_id: '1705436829944429'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_113_100.jpg
+    md5: 75ebeec20d5903ab05ca4bea5068671c
+    size: 5227
+    cloud:
+      test_storage:
+        etag: 08829daba3dfe283031001
+        version_id: '1705436829634178'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_114_100.jpg
+    md5: 9178c6e846a5a2bfc5a2f3cd7983887c
+    size: 5380
+    cloud:
+      test_storage:
+        etag: 08efcee8a2dfe283031001
+        version_id: '1705436828542831'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_115_100.jpg
+    md5: 63e6af6ea0c443ff0a305f07b7ed7620
+    size: 5328
+    cloud:
+      test_storage:
+        etag: 08c989e5a2dfe283031001
+        version_id: '1705436828484809'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_116_100.jpg
+    md5: 9de221746cd751a9fcfdd3393757879a
+    size: 5281
+    cloud:
+      test_storage:
+        etag: 08cf9ba7a3dfe283031001
+        version_id: '1705436829568463'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_117_100.jpg
+    md5: fdd63d8cac2530fa25a4f9cbc77c538a
+    size: 5325
+    cloud:
+      test_storage:
+        etag: 08cee2bea3dfe283031001
+        version_id: '1705436829954382'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_118_100.jpg
+    md5: cfc79ef4a73270414d93af7de5aa4249
+    size: 5382
+    cloud:
+      test_storage:
+        etag: 08de889fa3dfe283031001
+        version_id: '1705436829434974'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_119_100.jpg
+    md5: f9ff7d05ff7f82e1e2fae1959058415e
+    size: 5399
+    cloud:
+      test_storage:
+        etag: 08bca8ada3dfe283031001
+        version_id: '1705436829668412'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_11_100.jpg
+    md5: 6d91cfa7a687f0afe5392846bddab1b9
+    size: 5497
+    cloud:
+      test_storage:
+        etag: 08929ed9a2dfe283031001
+        version_id: '1705436828290834'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_120_100.jpg
+    md5: 66958e17b17808511401436091ce98d1
+    size: 5413
+    cloud:
+      test_storage:
+        etag: 08c2dff7a2dfe283031001
+        version_id: '1705436828790722'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_121_100.jpg
+    md5: 7998a9a0b401f81c71e556064ae4ec06
+    size: 5465
+    cloud:
+      test_storage:
+        etag: 08c48d9ca3dfe283031001
+        version_id: '1705436829386436'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_122_100.jpg
+    md5: 1e3320222595fc8dd55f9fd2dee12618
+    size: 5433
+    cloud:
+      test_storage:
+        etag: 08e9dadea2dfe283031001
+        version_id: '1705436828380521'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_123_100.jpg
+    md5: 45eb4fc074a1689d06ec63be6dbaf9e8
+    size: 5416
+    cloud:
+      test_storage:
+        etag: 08c2b49aa3dfe283031001
+        version_id: '1705436829358658'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_124_100.jpg
+    md5: bd8f3c03cb9c20735d5097160a3f6f5f
+    size: 5426
+    cloud:
+      test_storage:
+        etag: 08af9bafa3dfe283031001
+        version_id: '1705436829699503'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_125_100.jpg
+    md5: e759ff3dbd4627cbde85cda69b095ef0
+    size: 5462
+    cloud:
+      test_storage:
+        etag: 088d84d8a2dfe283031001
+        version_id: '1705436828271117'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_126_100.jpg
+    md5: 9d8226172e37ab62343bacb840839a81
+    size: 5500
+    cloud:
+      test_storage:
+        etag: 08a993b2a3dfe283031001
+        version_id: '1705436829747625'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_127_100.jpg
+    md5: fafd7e51c4af7f7fa484131f2e16bf07
+    size: 5453
+    cloud:
+      test_storage:
+        etag: 0880cfa9a3dfe283031001
+        version_id: '1705436829607808'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_128_100.jpg
+    md5: 6b26c9ca9035056fe787cfc0535b1177
+    size: 5473
+    cloud:
+      test_storage:
+        etag: 08d88fc0a3dfe283031001
+        version_id: '1705436829976536'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_129_100.jpg
+    md5: 570044322b97e9b3d64c451685f0fbd4
+    size: 5432
+    cloud:
+      test_storage:
+        etag: 08e5dcdfa2dfe283031001
+        version_id: '1705436828397157'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_12_100.jpg
+    md5: 366010be463653ce54041df78e17938a
+    size: 5454
+    cloud:
+      test_storage:
+        etag: 08808b92a3dfe283031001
+        version_id: '1705436829222272'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_130_100.jpg
+    md5: d3ac37e0108414886a64207ef14d0731
+    size: 5537
+    cloud:
+      test_storage:
+        etag: 08b6ba99a3dfe283031001
+        version_id: '1705436829343030'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_131_100.jpg
+    md5: b99476e05fb5d324474a0eddf7502a68
+    size: 5522
+    cloud:
+      test_storage:
+        etag: 0890f788a3dfe283031001
+        version_id: '1705436829072272'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_132_100.jpg
+    md5: f6c616f20b2ead5d41c7a4f274beb4c5
+    size: 5550
+    cloud:
+      test_storage:
+        etag: 08aa8b8fa3dfe283031001
+        version_id: '1705436829173162'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_133_100.jpg
+    md5: 9f93770f4e6db226e59e8147950d3660
+    size: 5565
+    cloud:
+      test_storage:
+        etag: 08afacfaa2dfe283031001
+        version_id: '1705436828833327'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_134_100.jpg
+    md5: 7be4d95a48198590fb246c763265391c
+    size: 5552
+    cloud:
+      test_storage:
+        etag: 088fc588a3dfe283031001
+        version_id: '1705436829065871'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_135_100.jpg
+    md5: e92452369c18490816921c77321e2945
+    size: 5561
+    cloud:
+      test_storage:
+        etag: 08ec8ab0a3dfe283031001
+        version_id: '1705436829713772'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_136_100.jpg
+    md5: e22de8fd05db47975cb9c90a23123b5b
+    size: 5541
+    cloud:
+      test_storage:
+        etag: 08cdd5eea2dfe283031001
+        version_id: '1705436828641997'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_137_100.jpg
+    md5: d962372b78a3c63275b665a065ca182b
+    size: 5574
+    cloud:
+      test_storage:
+        etag: 0887dc91a3dfe283031001
+        version_id: '1705436829216263'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_138_100.jpg
+    md5: a2a171530951b87782b97046d2835c99
+    size: 5533
+    cloud:
+      test_storage:
+        etag: 08c6d9dea2dfe283031001
+        version_id: '1705436828380358'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_139_100.jpg
+    md5: 80167f324468888c0a4bbe2d3ab3d1ae
+    size: 5602
+    cloud:
+      test_storage:
+        etag: 08e0e29ca3dfe283031001
+        version_id: '1705436829397344'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_13_100.jpg
+    md5: ae7b36a73a2b3d32be728a2ae0207fba
+    size: 5447
+    cloud:
+      test_storage:
+        etag: 08d7c6eea2dfe283031001
+        version_id: '1705436828640087'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_140_100.jpg
+    md5: e513bb37d00a0a6d7af3fe2091e7ef7c
+    size: 5656
+    cloud:
+      test_storage:
+        etag: 08d6d9e4a2dfe283031001
+        version_id: '1705436828478678'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_141_100.jpg
+    md5: caa07cad4d11a924858064a074d64447
+    size: 5594
+    cloud:
+      test_storage:
+        etag: 08d09da6a3dfe283031001
+        version_id: '1705436829552336'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_142_100.jpg
+    md5: d39820e9b0b34df0f6188e57e54313c0
+    size: 5606
+    cloud:
+      test_storage:
+        etag: 08ece7e6a2dfe283031001
+        version_id: '1705436828513260'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_143_100.jpg
+    md5: 4f5f510a0bd5badc2c5397de1b438f79
+    size: 5591
+    cloud:
+      test_storage:
+        etag: 08c7cba7a3dfe283031001
+        version_id: '1705436829574599'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_144_100.jpg
+    md5: 5b71c1d23c8f80e0cab58d9fac7ae7fa
+    size: 5613
+    cloud:
+      test_storage:
+        etag: 08fcae9aa3dfe283031001
+        version_id: '1705436829357948'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_145_100.jpg
+    md5: 7a1a20fbdca08166b1c8dc8d4d2071ef
+    size: 5584
+    cloud:
+      test_storage:
+        etag: 08abbbb3a3dfe283031001
+        version_id: '1705436829769131'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_146_100.jpg
+    md5: d2b80de7b069111961e3b40dea390acd
+    size: 5554
+    cloud:
+      test_storage:
+        etag: 08fbedbaa3dfe283031001
+        version_id: '1705436829890299'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_147_100.jpg
+    md5: b8dc36a7b00b677427a6e5eb8bdd5bdb
+    size: 5580
+    cloud:
+      test_storage:
+        etag: 08cdefc2a3dfe283031001
+        version_id: '1705436830021581'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_148_100.jpg
+    md5: d80eeb046c7cd97b3e19a9ab000b6a95
+    size: 5564
+    cloud:
+      test_storage:
+        etag: 08fe9acaa3dfe283031001
+        version_id: '1705436830141822'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_149_100.jpg
+    md5: e27311f2a3ae3d01ffc1e646704f27e2
+    size: 5597
+    cloud:
+      test_storage:
+        etag: 088398c4a3dfe283031001
+        version_id: '1705436830043139'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_14_100.jpg
+    md5: d1fe509356c1824e490b7b6893abc65f
+    size: 5440
+    cloud:
+      test_storage:
+        etag: 08cff392a3dfe283031001
+        version_id: '1705436829235663'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_150_100.jpg
+    md5: df7da855e39cfb3e28d213715257cf9f
+    size: 5606
+    cloud:
+      test_storage:
+        etag: 08caf5f6a2dfe283031001
+        version_id: '1705436828777162'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_151_100.jpg
+    md5: 9e11c7b1d7b5e9fcb2d3eca95848fb49
+    size: 5611
+    cloud:
+      test_storage:
+        etag: 08aeb0e0a2dfe283031001
+        version_id: '1705436828407854'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_152_100.jpg
+    md5: c6067d4b9cba6ba3c964b0ded3e2da05
+    size: 5599
+    cloud:
+      test_storage:
+        etag: 08d4bffca2dfe283031001
+        version_id: '1705436828868564'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_153_100.jpg
+    md5: a97b75dd4b5623c27be79f2a03dc6200
+    size: 5589
+    cloud:
+      test_storage:
+        etag: 089dadbca3dfe283031001
+        version_id: '1705436829914781'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_154_100.jpg
+    md5: 7636797f354c408919aa0426077c7ded
+    size: 5572
+    cloud:
+      test_storage:
+        etag: 08f9a78ea3dfe283031001
+        version_id: '1705436829160441'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_155_100.jpg
+    md5: b4d0c40516c3b82efd0faf68b3a406cd
+    size: 5565
+    cloud:
+      test_storage:
+        etag: 08d1ab96a3dfe283031001
+        version_id: '1705436829291985'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_156_100.jpg
+    md5: 021b1f1ee5f2bbb1e6548f4ac62561c1
+    size: 5584
+    cloud:
+      test_storage:
+        etag: 08e9bebfa3dfe283031001
+        version_id: '1705436829966185'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_157_100.jpg
+    md5: d39d0885da2f55a80ba8e7a63c39b210
+    size: 5566
+    cloud:
+      test_storage:
+        etag: 089aba9da3dfe283031001
+        version_id: '1705436829408538'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_158_100.jpg
+    md5: d2f33acc0c6bd71659e920465d221b0b
+    size: 5538
+    cloud:
+      test_storage:
+        etag: 08cea0fda2dfe283031001
+        version_id: '1705436828880974'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_159_100.jpg
+    md5: 7604978d54f87bfe15ba6a775b474e93
+    size: 5559
+    cloud:
+      test_storage:
+        etag: 08aca689a3dfe283031001
+        version_id: '1705436829078316'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_15_100.jpg
+    md5: 9cad8d1e0eb3e9c2f0bf1c689496ce1a
+    size: 5474
+    cloud:
+      test_storage:
+        etag: 08a794a6a3dfe283031001
+        version_id: '1705436829551143'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_160_100.jpg
+    md5: 159c696e3d42a37041949c9099f54223
+    size: 5575
+    cloud:
+      test_storage:
+        etag: 08e5aaf2a2dfe283031001
+        version_id: '1705436828702053'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_161_100.jpg
+    md5: 828ff25ca2af2a0e8fc9d2452df4a54c
+    size: 5576
+    cloud:
+      test_storage:
+        etag: 08adcddea2dfe283031001
+        version_id: '1705436828378797'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_162_100.jpg
+    md5: 4489d58ef33958c1ca31c6a13642e63a
+    size: 5611
+    cloud:
+      test_storage:
+        etag: 08c9c7cba3dfe283031001
+        version_id: '1705436830163913'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_163_100.jpg
+    md5: 241eb03112ef223bfe58662e2f1d1e52
+    size: 5627
+    cloud:
+      test_storage:
+        etag: 08b5fccaa3dfe283031001
+        version_id: '1705436830154293'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_164_100.jpg
+    md5: 6c3e09e6e16f6c60942e437590ebd10b
+    size: 5562
+    cloud:
+      test_storage:
+        etag: 08ecd3baa3dfe283031001
+        version_id: '1705436829886956'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_165_100.jpg
+    md5: 55dab15b3f395bc01318be6c58e850b4
+    size: 5529
+    cloud:
+      test_storage:
+        etag: 08b5dd91a3dfe283031001
+        version_id: '1705436829216437'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_166_100.jpg
+    md5: 67a5e9f1f13339188e33d86f2a5a8c3b
+    size: 5529
+    cloud:
+      test_storage:
+        etag: 0893aceea2dfe283031001
+        version_id: '1705436828636691'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_167_100.jpg
+    md5: 6cc0c0dadd9d36211e90d91283eab16a
+    size: 5502
+    cloud:
+      test_storage:
+        etag: 088ae08ba3dfe283031001
+        version_id: '1705436829118474'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_168_100.jpg
+    md5: e3827b0901081f158494a1ab2a3b133a
+    size: 5499
+    cloud:
+      test_storage:
+        etag: 08be8ee7a2dfe283031001
+        version_id: '1705436828518206'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_169_100.jpg
+    md5: 30fb11b626a65b7cb89fe8e2ab3dad5b
+    size: 5460
+    cloud:
+      test_storage:
+        etag: 08add2aaa3dfe283031001
+        version_id: '1705436829624621'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_16_100.jpg
+    md5: 9d984ea854fc028762bd0cfd04b60258
+    size: 5469
+    cloud:
+      test_storage:
+        etag: 08b08387a3dfe283031001
+        version_id: '1705436829041072'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_170_100.jpg
+    md5: cc4a71ed7cde201ac1440b400fa2fd15
+    size: 5410
+    cloud:
+      test_storage:
+        etag: 089f849da3dfe283031001
+        version_id: '1705436829401631'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_171_100.jpg
+    md5: 1881bcacb3926396fb6d727fd9887948
+    size: 5442
+    cloud:
+      test_storage:
+        etag: 08e18afaa2dfe283031001
+        version_id: '1705436828829025'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_172_100.jpg
+    md5: 1cc24e08dea0e1d7570e8d09ab2bce1e
+    size: 5396
+    cloud:
+      test_storage:
+        etag: 08c2d3c3a3dfe283031001
+        version_id: '1705436830034370'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_173_100.jpg
+    md5: 346efc880d5a97ef96935084df1dd5e6
+    size: 5350
+    cloud:
+      test_storage:
+        etag: 0897dbf1a2dfe283031001
+        version_id: '1705436828691863'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_174_100.jpg
+    md5: 00e2eef18b0eacb780f4fbf37c82827b
+    size: 5391
+    cloud:
+      test_storage:
+        etag: 08b2e3e5a2dfe283031001
+        version_id: '1705436828496306'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_175_100.jpg
+    md5: e8273ce378aef1943ac6a6e81456f616
+    size: 5371
+    cloud:
+      test_storage:
+        etag: 08e7cfc0a3dfe283031001
+        version_id: '1705436829984743'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_176_100.jpg
+    md5: 57eb502468974b4065ba4111fcd6ea51
+    size: 5383
+    cloud:
+      test_storage:
+        etag: 08fcc2a0a3dfe283031001
+        version_id: '1705436829458812'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_177_100.jpg
+    md5: 437a525df784c6888044fb761ec1eef3
+    size: 5310
+    cloud:
+      test_storage:
+        etag: 0895eeb2a3dfe283031001
+        version_id: '1705436829759253'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_178_100.jpg
+    md5: 780febdeeabd87e144d90d94feb7f294
+    size: 5315
+    cloud:
+      test_storage:
+        etag: 0884affaa2dfe283031001
+        version_id: '1705436828833668'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_179_100.jpg
+    md5: aae6b66f1ddde17fd566f0396e1da864
+    size: 5272
+    cloud:
+      test_storage:
+        etag: 08e3c7e5a2dfe283031001
+        version_id: '1705436828492771'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_17_100.jpg
+    md5: c226de07fa6ddb8a6e8659575e3e094f
+    size: 5465
+    cloud:
+      test_storage:
+        etag: 08cbcaf2a2dfe283031001
+        version_id: '1705436828706123'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_180_100.jpg
+    md5: 9fdd926ab6f18247c729129e047a20e4
+    size: 5278
+    cloud:
+      test_storage:
+        etag: 08c8eac5a3dfe283031001
+        version_id: '1705436830070088'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_181_100.jpg
+    md5: 27f76ecec8535a4bebb5e66c7872b083
+    size: 5251
+    cloud:
+      test_storage:
+        etag: 089af190a3dfe283031001
+        version_id: '1705436829202586'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_182_100.jpg
+    md5: 355fc5726ef8dd9b3e68698822d7335e
+    size: 5197
+    cloud:
+      test_storage:
+        etag: 088e8ad8a2dfe283031001
+        version_id: '1705436828271886'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_183_100.jpg
+    md5: a0f854622214c632439312f9db1b8860
+    size: 5149
+    cloud:
+      test_storage:
+        etag: 0884a487a3dfe283031001
+        version_id: '1705436829045252'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_184_100.jpg
+    md5: 7d06aac7e61453a58f1df8885ab4bcde
+    size: 5204
+    cloud:
+      test_storage:
+        etag: 08f5d285a3dfe283031001
+        version_id: '1705436829018485'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_185_100.jpg
+    md5: 96e848f98c5a4c5ddc167d0e81af7e6e
+    size: 5116
+    cloud:
+      test_storage:
+        etag: 08cf8b9ca3dfe283031001
+        version_id: '1705436829386191'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_186_100.jpg
+    md5: 536c0ee3abdf7eb7bbe1b63fad7dc034
+    size: 5068
+    cloud:
+      test_storage:
+        etag: 0885f3e7a2dfe283031001
+        version_id: '1705436828531077'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_187_100.jpg
+    md5: 7c5354514665e7797ba75cf2ee9d27d1
+    size: 5086
+    cloud:
+      test_storage:
+        etag: 08da81c1a3dfe283031001
+        version_id: '1705436829991130'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_188_100.jpg
+    md5: 72be70477affcfae4579387e2efe487c
+    size: 5067
+    cloud:
+      test_storage:
+        etag: 08d28286a3dfe283031001
+        version_id: '1705436829024594'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_189_100.jpg
+    md5: d5e9c67ced0a99bc30a530b83f0bbafc
+    size: 5090
+    cloud:
+      test_storage:
+        etag: 08a4b298a3dfe283031001
+        version_id: '1705436829325604'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_18_100.jpg
+    md5: 93faaae1ee6f7605b6f4b762a26e0dcd
+    size: 5498
+    cloud:
+      test_storage:
+        etag: 08b2ccc5a3dfe283031001
+        version_id: '1705436830066226'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_190_100.jpg
+    md5: d1b8c3d231f766663aacbdda54756abe
+    size: 5044
+    cloud:
+      test_storage:
+        etag: 08f2ccaaa3dfe283031001
+        version_id: '1705436829623922'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_191_100.jpg
+    md5: 5185f6302ee7a661e7f8b9c2460a384a
+    size: 4999
+    cloud:
+      test_storage:
+        etag: 08f2d1b7a3dfe283031001
+        version_id: '1705436829837554'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_192_100.jpg
+    md5: 8f5dd001ec68445040412d909dd69c13
+    size: 4974
+    cloud:
+      test_storage:
+        etag: 08f2a585a3dfe283031001
+        version_id: '1705436829012722'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_193_100.jpg
+    md5: 193e2396a21bfcc7dbba7c23377c2647
+    size: 4992
+    cloud:
+      test_storage:
+        etag: 089ed9d8a2dfe283031001
+        version_id: '1705436828282014'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_194_100.jpg
+    md5: fabc5c1af87817863ec1a0a4e1c54b7b
+    size: 4953
+    cloud:
+      test_storage:
+        etag: 08948790a3dfe283031001
+        version_id: '1705436829189012'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_195_100.jpg
+    md5: 4a19e5c5836e6c384d6bcd1757c353ab
+    size: 4862
+    cloud:
+      test_storage:
+        etag: 08ea8ee0a2dfe283031001
+        version_id: '1705436828403562'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_196_100.jpg
+    md5: f2f59e7c1bb1992bee14145dcf656052
+    size: 4852
+    cloud:
+      test_storage:
+        etag: 08a5c0c1a3dfe283031001
+        version_id: '1705436829999141'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_197_100.jpg
+    md5: ff4fcf6392e778b9ba951511c080d869
+    size: 4880
+    cloud:
+      test_storage:
+        etag: 08fe87a9a3dfe283031001
+        version_id: '1705436829598718'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_198_100.jpg
+    md5: 6a15aee440880a0f667e10a15261ddad
+    size: 4878
+    cloud:
+      test_storage:
+        etag: 08c5bab4a3dfe283031001
+        version_id: '1705436829785413'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_199_100.jpg
+    md5: 346047bbb5b5388298a11c364a3f7500
+    size: 4728
+    cloud:
+      test_storage:
+        etag: 08e086c7a3dfe283031001
+        version_id: '1705436830090080'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_19_100.jpg
+    md5: 5adeeb9a9cf20b9745882b8f4e9b3ca1
+    size: 5460
+    cloud:
+      test_storage:
+        etag: 08a6aaaba3dfe283031001
+        version_id: '1705436829635878'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_1_100.jpg
+    md5: 20d66a08a31855673c6e6bf6ed574aa0
+    size: 5401
+    cloud:
+      test_storage:
+        etag: 08e4a28fa3dfe283031001
+        version_id: '1705436829176164'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_200_100.jpg
+    md5: 6b41b168ac684ec0f1466e8ede75ed8e
+    size: 4724
+    cloud:
+      test_storage:
+        etag: 08a98086a3dfe283031001
+        version_id: '1705436829024297'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_201_100.jpg
+    md5: 06b8ac200f63cfb57d21ea165bc17dd2
+    size: 4679
+    cloud:
+      test_storage:
+        etag: 089d83dfa2dfe283031001
+        version_id: '1705436828385693'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_202_100.jpg
+    md5: 33e2a96ea07f8b2c3858a02734404545
+    size: 4701
+    cloud:
+      test_storage:
+        etag: 08b6d8b9a3dfe283031001
+        version_id: '1705436829871158'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_203_100.jpg
+    md5: 6b777f008a4275339e58c562bf549c79
+    size: 4674
+    cloud:
+      test_storage:
+        etag: 08cca9f1a2dfe283031001
+        version_id: '1705436828685516'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_204_100.jpg
+    md5: 8ec0524708b37566da8bb24f4c872250
+    size: 4686
+    cloud:
+      test_storage:
+        etag: 08a390a9a3dfe283031001
+        version_id: '1705436829599779'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_205_100.jpg
+    md5: 5ebe903f099b497f9d646c57989687ce
+    size: 4647
+    cloud:
+      test_storage:
+        etag: 08f2dcdfa2dfe283031001
+        version_id: '1705436828397170'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_206_100.jpg
+    md5: 7a83b38ea242e9d49fee44edd80806d7
+    size: 4641
+    cloud:
+      test_storage:
+        etag: 08b6d0afa3dfe283031001
+        version_id: '1705436829706294'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_207_100.jpg
+    md5: bd32dc955efa7981993a97d2e1d1828a
+    size: 4553
+    cloud:
+      test_storage:
+        etag: 08cc8594a3dfe283031001
+        version_id: '1705436829254348'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_208_100.jpg
+    md5: 38da6e09566421a7caafb21d7a5bba4a
+    size: 4588
+    cloud:
+      test_storage:
+        etag: 08b7cd89a3dfe283031001
+        version_id: '1705436829083319'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_209_100.jpg
+    md5: 749673cf57a9fbabedbe6e72dad080b8
+    size: 4531
+    cloud:
+      test_storage:
+        etag: 0889e6a6a3dfe283031001
+        version_id: '1705436829561609'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_20_100.jpg
+    md5: ff942fc5abdc49da0e36f8c8edd478b5
+    size: 5470
+    cloud:
+      test_storage:
+        etag: 08d2f6d7a2dfe283031001
+        version_id: '1705436828269394'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_210_100.jpg
+    md5: 56089485461781b9d03193f99dfdc45f
+    size: 4542
+    cloud:
+      test_storage:
+        etag: 08a0b088a3dfe283031001
+        version_id: '1705436829063200'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_211_100.jpg
+    md5: 26d26445a42aa4bfc4a8c8f338a2fb1b
+    size: 4546
+    cloud:
+      test_storage:
+        etag: 08ccacfaa2dfe283031001
+        version_id: '1705436828833356'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_212_100.jpg
+    md5: 94caf7285e199aff06caab319159f320
+    size: 4571
+    cloud:
+      test_storage:
+        etag: 08f1deaaa3dfe283031001
+        version_id: '1705436829626225'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_213_100.jpg
+    md5: eeced4ae7e3bc8e7ea3e9fd1eb8b0c73
+    size: 4651
+    cloud:
+      test_storage:
+        etag: 08ebb580a3dfe283031001
+        version_id: '1705436828932843'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_214_100.jpg
+    md5: 1fdbc35d2c4e6366a386a98d7b1f6f18
+    size: 4657
+    cloud:
+      test_storage:
+        etag: 08f688b3a3dfe283031001
+        version_id: '1705436829762678'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_215_100.jpg
+    md5: cf66dce7d559d38a4d4604d799723772
+    size: 4687
+    cloud:
+      test_storage:
+        etag: 08b0e8c7a3dfe283031001
+        version_id: '1705436830102576'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_216_100.jpg
+    md5: 5e675d0665e28fa94c4ec0a0270a3863
+    size: 4659
+    cloud:
+      test_storage:
+        etag: 08eed6dfa2dfe283031001
+        version_id: '1705436828396398'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_217_100.jpg
+    md5: 90c7f4939ac0cac3eaed6111ef39fedb
+    size: 4650
+    cloud:
+      test_storage:
+        etag: 08c8b695a3dfe283031001
+        version_id: '1705436829277000'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_218_100.jpg
+    md5: 579020ebd8d0f1b0dda70b1c39759f24
+    size: 4700
+    cloud:
+      test_storage:
+        etag: 08cbc9eaa2dfe283031001
+        version_id: '1705436828574923'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_219_100.jpg
+    md5: 98e34f0cd73ad5b1f1846a3262501a6c
+    size: 4666
+    cloud:
+      test_storage:
+        etag: 08f4a9d8a2dfe283031001
+        version_id: '1705436828275956'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_21_100.jpg
+    md5: 6eb4acd7975b2d4d1cb9fb78596c7fd0
+    size: 5441
+    cloud:
+      test_storage:
+        etag: 08f8d3f2a2dfe283031001
+        version_id: '1705436828707320'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_220_100.jpg
+    md5: 02533a988cf2d957fb9ad7a2d5018cea
+    size: 4668
+    cloud:
+      test_storage:
+        etag: 08f2eac5a3dfe283031001
+        version_id: '1705436830070130'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_221_100.jpg
+    md5: 154bbf2908efe9d53fa8d9aa98285576
+    size: 4630
+    cloud:
+      test_storage:
+        etag: 08ca8b98a3dfe283031001
+        version_id: '1705436829320650'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_222_100.jpg
+    md5: b777e550ffaa033418951b02d497f52c
+    size: 4590
+    cloud:
+      test_storage:
+        etag: 0897ebc5a3dfe283031001
+        version_id: '1705436830070167'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_223_100.jpg
+    md5: 27a89938a8b63ac6b784df754f1c03e8
+    size: 4577
+    cloud:
+      test_storage:
+        etag: 0882dc91a3dfe283031001
+        version_id: '1705436829216258'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_224_100.jpg
+    md5: f5fcb81f44eb74bba43c1c05213ff850
+    size: 4721
+    cloud:
+      test_storage:
+        etag: 08ddbbf7a2dfe283031001
+        version_id: '1705436828786141'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_225_100.jpg
+    md5: 5599119cac579866dafb3af5b1ae15e8
+    size: 4719
+    cloud:
+      test_storage:
+        etag: 08fafca6a3dfe283031001
+        version_id: '1705436829564538'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_226_100.jpg
+    md5: c5174aa5022d418fce78c4b99b4a9994
+    size: 4705
+    cloud:
+      test_storage:
+        etag: 088493b1a3dfe283031001
+        version_id: '1705436829731204'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_227_100.jpg
+    md5: 1118949187f98b625b8f3332f83850a4
+    size: 4735
+    cloud:
+      test_storage:
+        etag: 08db8884a3dfe283031001
+        version_id: '1705436828992603'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_228_100.jpg
+    md5: 5dc5d8b33e14b4d2fee7a93fb4e5a776
+    size: 4719
+    cloud:
+      test_storage:
+        etag: 08c4d19da3dfe283031001
+        version_id: '1705436829411524'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_229_100.jpg
+    md5: 6571e92e9dd320f14a7e3d5b482d7cba
+    size: 4738
+    cloud:
+      test_storage:
+        etag: 08a1b3fca2dfe283031001
+        version_id: '1705436828866977'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_22_100.jpg
+    md5: 083455ba8e3d8d8a5fcd2fab90707164
+    size: 5459
+    cloud:
+      test_storage:
+        etag: 08dedebca3dfe283031001
+        version_id: '1705436829921118'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_230_100.jpg
+    md5: c2ad3f8f06d87efbce20487b9791a759
+    size: 4752
+    cloud:
+      test_storage:
+        etag: 08bae5a2a3dfe283031001
+        version_id: '1705436829495994'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_231_100.jpg
+    md5: 730dbc49a8a5ca378be51fa721f0b461
+    size: 4759
+    cloud:
+      test_storage:
+        etag: 08c7c39ea3dfe283031001
+        version_id: '1705436829426119'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_232_100.jpg
+    md5: 5f6e5839689e8368988807150e0459ad
+    size: 4876
+    cloud:
+      test_storage:
+        etag: 089ef2b0a3dfe283031001
+        version_id: '1705436829727006'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_233_100.jpg
+    md5: 260adfa0bb8aa82f2539f799df3c44c6
+    size: 4849
+    cloud:
+      test_storage:
+        etag: 089ed1f5a2dfe283031001
+        version_id: '1705436828756126'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_234_100.jpg
+    md5: 446fe188c29051a106730c436b05a734
+    size: 4894
+    cloud:
+      test_storage:
+        etag: 08eae0aaa3dfe283031001
+        version_id: '1705436829626474'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_235_100.jpg
+    md5: 5b33b9ef912a783fcf2c927a31a81bf4
+    size: 4869
+    cloud:
+      test_storage:
+        etag: 088efe81a3dfe283031001
+        version_id: '1705436828958478'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_236_100.jpg
+    md5: 0edf0bcae60300124d87787b726e36e3
+    size: 4815
+    cloud:
+      test_storage:
+        etag: 08c58f84a3dfe283031001
+        version_id: '1705436828993477'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_237_100.jpg
+    md5: 991ab2e783fe1b8e57e2c8be7cf03ea0
+    size: 4868
+    cloud:
+      test_storage:
+        etag: 08ac88a9a3dfe283031001
+        version_id: '1705436829598764'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_238_100.jpg
+    md5: c4db2326ec2c21b1d24b03df79f52801
+    size: 4933
+    cloud:
+      test_storage:
+        etag: 08acf182a3dfe283031001
+        version_id: '1705436828973228'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_239_100.jpg
+    md5: fa52eec99939386d57c11e08870aa172
+    size: 4970
+    cloud:
+      test_storage:
+        etag: 0894fef2a2dfe283031001
+        version_id: '1705436828712724'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_23_100.jpg
+    md5: 94bcb8107601ba4002a06b6c832ee8c5
+    size: 5517
+    cloud:
+      test_storage:
+        etag: 08c48990a3dfe283031001
+        version_id: '1705436829189316'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_240_100.jpg
+    md5: dab5f001c6104967a176f9fdc83fb9db
+    size: 4947
+    cloud:
+      test_storage:
+        etag: 08cd8b85a3dfe283031001
+        version_id: '1705436829009357'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_241_100.jpg
+    md5: f8c32561f451fd5514651dd21a7177a3
+    size: 4974
+    cloud:
+      test_storage:
+        etag: 08a59ae4a2dfe283031001
+        version_id: '1705436828470565'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_242_100.jpg
+    md5: 4aa8feefdc9d79ebac9facbc6b7c35e2
+    size: 4976
+    cloud:
+      test_storage:
+        etag: 08d2cbeaa2dfe283031001
+        version_id: '1705436828575186'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_243_100.jpg
+    md5: 20e88b974119fd1efa43d7d54ac16f5a
+    size: 4972
+    cloud:
+      test_storage:
+        etag: 08a7fcb5a3dfe283031001
+        version_id: '1705436829810215'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_244_100.jpg
+    md5: 1ed13bea9110f7f750f147ae0495025b
+    size: 4994
+    cloud:
+      test_storage:
+        etag: 0887dce1a2dfe283031001
+        version_id: '1705436828429831'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_245_100.jpg
+    md5: 3a8dc81758c80cec63ae7920bb07619a
+    size: 5047
+    cloud:
+      test_storage:
+        etag: 08c9d89ca3dfe283031001
+        version_id: '1705436829396041'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_246_100.jpg
+    md5: 733de63eb9254f5d9bf51b6ac54302c8
+    size: 5011
+    cloud:
+      test_storage:
+        etag: 088bbf84a3dfe283031001
+        version_id: '1705436828999563'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_247_100.jpg
+    md5: 4238ff3730d22ebd92adeb0b971e7dbe
+    size: 5018
+    cloud:
+      test_storage:
+        etag: 08a9a1e5a2dfe283031001
+        version_id: '1705436828487849'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_248_100.jpg
+    md5: 75a3dd35fb9d4b85dedf9d09e1ccb754
+    size: 4994
+    cloud:
+      test_storage:
+        etag: 08ddf083a3dfe283031001
+        version_id: '1705436828989533'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_249_100.jpg
+    md5: b54f96e0d6140e0e466ef8cf057875aa
+    size: 5012
+    cloud:
+      test_storage:
+        etag: 088fc3d9a2dfe283031001
+        version_id: '1705436828295567'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_24_100.jpg
+    md5: 0ccfb2ef63b3bd80d49bd1ecfe9c171b
+    size: 5496
+    cloud:
+      test_storage:
+        etag: 08b7a6ffa2dfe283031001
+        version_id: '1705436828914487'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_250_100.jpg
+    md5: 10fa3f451641c3943cef03cb09ae8a46
+    size: 4950
+    cloud:
+      test_storage:
+        etag: 08f3f9b0a3dfe283031001
+        version_id: '1705436829727987'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_251_100.jpg
+    md5: 0f8a9c9ef9a44e5a83d61802de86fbd5
+    size: 4968
+    cloud:
+      test_storage:
+        etag: 08f49ffea2dfe283031001
+        version_id: '1705436828897268'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_252_100.jpg
+    md5: 273cc49236a99f0ac1b745d395c6fbfc
+    size: 4981
+    cloud:
+      test_storage:
+        etag: 08bfc3daa2dfe283031001
+        version_id: '1705436828311999'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_253_100.jpg
+    md5: 50b79580e622e74c854579b9c01cdfe5
+    size: 5053
+    cloud:
+      test_storage:
+        etag: 08f7979ba3dfe283031001
+        version_id: '1705436829371383'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_254_100.jpg
+    md5: 1b4a4d15eb056b88ca5f5087735e2549
+    size: 5080
+    cloud:
+      test_storage:
+        etag: 08a7ac82a3dfe283031001
+        version_id: '1705436828964391'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_255_100.jpg
+    md5: 2081c77dea35d10aed34783151b5390c
+    size: 5029
+    cloud:
+      test_storage:
+        etag: 08b7f2fba2dfe283031001
+        version_id: '1705436828858679'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_256_100.jpg
+    md5: 1f8d37160607c8c9dec268fa40988bca
+    size: 5029
+    cloud:
+      test_storage:
+        etag: 08a8e7e0a2dfe283031001
+        version_id: '1705436828414888'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_257_100.jpg
+    md5: 6aa7ccf1f0b962ff5b16368f6cf90230
+    size: 4992
+    cloud:
+      test_storage:
+        etag: 08b4bbc0a3dfe283031001
+        version_id: '1705436829982132'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_258_100.jpg
+    md5: 8b3814f63c7180abf29adc6587dd0ebb
+    size: 5051
+    cloud:
+      test_storage:
+        etag: 08878afda2dfe283031001
+        version_id: '1705436828878087'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_259_100.jpg
+    md5: 689468dbfc4d06846c48ae4c3b127598
+    size: 5045
+    cloud:
+      test_storage:
+        etag: 08f387a1a3dfe283031001
+        version_id: '1705436829467635'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_25_100.jpg
+    md5: fa7ab515ed37a0aede731d7dd36477da
+    size: 5497
+    cloud:
+      test_storage:
+        etag: 08d3f7b8a3dfe283031001
+        version_id: '1705436829858771'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_260_100.jpg
+    md5: 23f847f9e9a4c43a73d96babda3e18c0
+    size: 5034
+    cloud:
+      test_storage:
+        etag: 08aabaeaa2dfe283031001
+        version_id: '1705436828572970'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_261_100.jpg
+    md5: f79cd797f09593a3fc2726ae0cb95329
+    size: 5053
+    cloud:
+      test_storage:
+        etag: 08cefe8ba3dfe283031001
+        version_id: '1705436829122382'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_262_100.jpg
+    md5: 79526b57637596170d9627ced4267e28
+    size: 5069
+    cloud:
+      test_storage:
+        etag: 08b5b7e0a2dfe283031001
+        version_id: '1705436828408757'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_263_100.jpg
+    md5: c9c6e170b2d05fbf0f2e10f8952ff94c
+    size: 5038
+    cloud:
+      test_storage:
+        etag: 08a48cd8a2dfe283031001
+        version_id: '1705436828272164'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_264_100.jpg
+    md5: cdb220118087b39d507a8cc9b65c8fb2
+    size: 5029
+    cloud:
+      test_storage:
+        etag: 08d4f78ea3dfe283031001
+        version_id: '1705436829170644'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_265_100.jpg
+    md5: 01201b40ef1959119f5828c05d5dcf47
+    size: 5055
+    cloud:
+      test_storage:
+        etag: 08cfb7f7a2dfe283031001
+        version_id: '1705436828785615'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_266_100.jpg
+    md5: a9ec9310a2c6919d8d36b80707581c8b
+    size: 5027
+    cloud:
+      test_storage:
+        etag: 08c3ebc5a3dfe283031001
+        version_id: '1705436830070211'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_267_100.jpg
+    md5: b8d90e6dc9dc13e7d8ad9d907c432398
+    size: 5075
+    cloud:
+      test_storage:
+        etag: 08ecf4b4a3dfe283031001
+        version_id: '1705436829792876'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_268_100.jpg
+    md5: 1d17306c2bc59a70e62820aadb486e97
+    size: 5066
+    cloud:
+      test_storage:
+        etag: 0884df9ba3dfe283031001
+        version_id: '1705436829380484'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_269_100.jpg
+    md5: 519f601626cce50d512ffd0d10115d60
+    size: 5094
+    cloud:
+      test_storage:
+        etag: 08f58fbfa3dfe283031001
+        version_id: '1705436829960181'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_26_100.jpg
+    md5: ffa510b35812cdd85db86529d96f95c4
+    size: 5495
+    cloud:
+      test_storage:
+        etag: 08a1f883a3dfe283031001
+        version_id: '1705436828990497'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_270_100.jpg
+    md5: 728bbbd623513bea46c8c63311af2e6b
+    size: 5082
+    cloud:
+      test_storage:
+        etag: 08cca594a3dfe283031001
+        version_id: '1705436829258444'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_271_100.jpg
+    md5: 2165d5f97db93f2fa4a7de252ff2e193
+    size: 5084
+    cloud:
+      test_storage:
+        etag: 08d7ba9ba3dfe283031001
+        version_id: '1705436829375831'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_272_100.jpg
+    md5: efe49379e1b0d391db80a8e162e756d5
+    size: 5071
+    cloud:
+      test_storage:
+        etag: 08da989ca3dfe283031001
+        version_id: '1705436829387866'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_273_100.jpg
+    md5: 79940008e2fe698373737f5821a09154
+    size: 5067
+    cloud:
+      test_storage:
+        etag: 0896f1b0a3dfe283031001
+        version_id: '1705436829726870'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_274_100.jpg
+    md5: 728ae7a4884e80f43d93acd73776d440
+    size: 5058
+    cloud:
+      test_storage:
+        etag: 08d9b1a7a3dfe283031001
+        version_id: '1705436829571289'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_275_100.jpg
+    md5: 75c98d7cc02ccb92ee58ed3b16bb76a5
+    size: 5096
+    cloud:
+      test_storage:
+        etag: 0892f99ba3dfe283031001
+        version_id: '1705436829383826'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_276_100.jpg
+    md5: 8718208f91c6b190193569ff56403a39
+    size: 5128
+    cloud:
+      test_storage:
+        etag: 089cd18ea3dfe283031001
+        version_id: '1705436829165724'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_277_100.jpg
+    md5: 2e3deb3aa6b60c621d055ba9ec1715cd
+    size: 5084
+    cloud:
+      test_storage:
+        etag: 089882c9a3dfe283031001
+        version_id: '1705436830122264'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_278_100.jpg
+    md5: b336891c087f7f928add347e0e8e12ea
+    size: 5150
+    cloud:
+      test_storage:
+        etag: 08bbe8d7a2dfe283031001
+        version_id: '1705436828267579'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_279_100.jpg
+    md5: 469e18c42684265ba58d7539e964672f
+    size: 5150
+    cloud:
+      test_storage:
+        etag: 08e4fef3a2dfe283031001
+        version_id: '1705436828729188'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_27_100.jpg
+    md5: 1827491230c6be78f3b13ae26b3b0bdd
+    size: 5483
+    cloud:
+      test_storage:
+        etag: 08faf5bfa3dfe283031001
+        version_id: '1705436829973242'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_280_100.jpg
+    md5: f2930572fa267a2f9d80a1df985cf767
+    size: 5135
+    cloud:
+      test_storage:
+        etag: 08a7ed8aa3dfe283031001
+        version_id: '1705436829103783'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_281_100.jpg
+    md5: 8cc2d9b18e6876efb49603fd9c7a491d
+    size: 5132
+    cloud:
+      test_storage:
+        etag: 08a9e1f0a2dfe283031001
+        version_id: '1705436828676265'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_282_100.jpg
+    md5: 91a5840dc0d2fb884f9f0883a3aeb9ef
+    size: 5098
+    cloud:
+      test_storage:
+        etag: 08f191efa2dfe283031001
+        version_id: '1705436828649713'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_283_100.jpg
+    md5: c9b756a342dc632b2d31bbca98e178cb
+    size: 5109
+    cloud:
+      test_storage:
+        etag: 08dabfc1a3dfe283031001
+        version_id: '1705436829999066'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_284_100.jpg
+    md5: f02ff3394b67962cfbbaaade745028b1
+    size: 5115
+    cloud:
+      test_storage:
+        etag: 08a098a4a3dfe283031001
+        version_id: '1705436829518880'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_285_100.jpg
+    md5: 030724149050e2df29e5573145f70dd5
+    size: 5137
+    cloud:
+      test_storage:
+        etag: 08beb1e5a2dfe283031001
+        version_id: '1705436828489918'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_286_100.jpg
+    md5: 718eb8d197edccc479cc1d2f959fc776
+    size: 5149
+    cloud:
+      test_storage:
+        etag: 08edc4eba2dfe283031001
+        version_id: '1705436828590701'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_287_100.jpg
+    md5: 062055dc5266fd1ac0c3ae1dd864d9c1
+    size: 5157
+    cloud:
+      test_storage:
+        etag: 08c1c1f1a2dfe283031001
+        version_id: '1705436828688577'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_288_100.jpg
+    md5: 70c2bd4c81f3a12f7a9d064c034b5ca3
+    size: 5141
+    cloud:
+      test_storage:
+        etag: 08f2dddfa2dfe283031001
+        version_id: '1705436828397298'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_289_100.jpg
+    md5: 570ad93d840133d9203f21e53213102c
+    size: 5143
+    cloud:
+      test_storage:
+        etag: 08a9ea84a3dfe283031001
+        version_id: '1705436829005097'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_28_100.jpg
+    md5: 18a60598be2dc88f3d5decd1ccb70b69
+    size: 5409
+    cloud:
+      test_storage:
+        etag: 08c4b0e5a2dfe283031001
+        version_id: '1705436828489796'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_290_100.jpg
+    md5: 7df895a508d97475f7300cde97e0b29c
+    size: 5126
+    cloud:
+      test_storage:
+        etag: 0881ebc5a3dfe283031001
+        version_id: '1705436830070145'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_291_100.jpg
+    md5: ac8a0690c58d7bf2651c03e12194f208
+    size: 5201
+    cloud:
+      test_storage:
+        etag: 08d6cf95a3dfe283031001
+        version_id: '1705436829280214'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_292_100.jpg
+    md5: 7600c7533b1e7e53fdefc1670894df87
+    size: 5212
+    cloud:
+      test_storage:
+        etag: 08a4d1c0a3dfe283031001
+        version_id: '1705436829984932'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_293_100.jpg
+    md5: 14ffb32c623dd1c2e58d404f9c142028
+    size: 5209
+    cloud:
+      test_storage:
+        etag: 08f886e5a2dfe283031001
+        version_id: '1705436828484472'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_294_100.jpg
+    md5: cf3d47fadab03e6cc3c78ba5f45076af
+    size: 5242
+    cloud:
+      test_storage:
+        etag: 08ffcab2a3dfe283031001
+        version_id: '1705436829754751'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_295_100.jpg
+    md5: c943c50e093e7715dfc63d8a5aac285a
+    size: 5284
+    cloud:
+      test_storage:
+        etag: 08c599e6a2dfe283031001
+        version_id: '1705436828503237'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_296_100.jpg
+    md5: 1c8e851265ab48461296a211410371e9
+    size: 5247
+    cloud:
+      test_storage:
+        etag: 08b4b68ca3dfe283031001
+        version_id: '1705436829129524'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_297_100.jpg
+    md5: 444459692a3cb62a83f4215f75266e03
+    size: 5251
+    cloud:
+      test_storage:
+        etag: 0892eea1a3dfe283031001
+        version_id: '1705436829480722'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_298_100.jpg
+    md5: 779ef9531229f6b1ee92baf8ecd45417
+    size: 5248
+    cloud:
+      test_storage:
+        etag: 08dd90b2a3dfe283031001
+        version_id: '1705436829747293'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_299_100.jpg
+    md5: c1872d61407d2372ce4c8dabe229efc1
+    size: 5293
+    cloud:
+      test_storage:
+        etag: 08cec8b5a3dfe283031001
+        version_id: '1705436829803598'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_29_100.jpg
+    md5: cd7a17783b8d656b1e5b6268eaa483f2
+    size: 5471
+    cloud:
+      test_storage:
+        etag: 0897b6eaa2dfe283031001
+        version_id: '1705436828572439'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_2_100.jpg
+    md5: 82e1199f9b9dc7f0f27d5531e6d953d7
+    size: 5458
+    cloud:
+      test_storage:
+        etag: 08ffbbaaa3dfe283031001
+        version_id: '1705436829621759'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_300_100.jpg
+    md5: 382d4d98fac3e3e9e362ed591c38844d
+    size: 5312
+    cloud:
+      test_storage:
+        etag: 08bcae8fa3dfe283031001
+        version_id: '1705436829177660'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_301_100.jpg
+    md5: 562fe733cacab958b75dcc4eedb9c731
+    size: 5283
+    cloud:
+      test_storage:
+        etag: 088de68aa3dfe283031001
+        version_id: '1705436829102861'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_302_100.jpg
+    md5: 1836d9f9cd8f83288eda12b9ad05e6da
+    size: 5319
+    cloud:
+      test_storage:
+        etag: 089ab29ca3dfe283031001
+        version_id: '1705436829391130'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_303_100.jpg
+    md5: 085e10d77397833e9128adf10a9d30b8
+    size: 5325
+    cloud:
+      test_storage:
+        etag: 0886978aa3dfe283031001
+        version_id: '1705436829092742'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_304_100.jpg
+    md5: 1405d90cdb185de4eddca9f1f8c73169
+    size: 5332
+    cloud:
+      test_storage:
+        etag: 08e9e984a3dfe283031001
+        version_id: '1705436829005033'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_305_100.jpg
+    md5: 5f6a4e125e4a23e35354cbf436d830b2
+    size: 5321
+    cloud:
+      test_storage:
+        etag: 08bccba7a3dfe283031001
+        version_id: '1705436829574588'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_306_100.jpg
+    md5: 9e71a46214de312dfdf97ef1d8624251
+    size: 5312
+    cloud:
+      test_storage:
+        etag: 08f9fce7a2dfe283031001
+        version_id: '1705436828532345'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_307_100.jpg
+    md5: dc4415c26c5c89e861b6ea541387d86f
+    size: 5338
+    cloud:
+      test_storage:
+        etag: 08d8adefa2dfe283031001
+        version_id: '1705436828653272'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_308_100.jpg
+    md5: a2972aba8a9274c5f641510a356e1ac6
+    size: 5340
+    cloud:
+      test_storage:
+        etag: 08cd8daaa3dfe283031001
+        version_id: '1705436829615821'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_309_100.jpg
+    md5: 96c630f4dcafbb569ed8062092bc1763
+    size: 5327
+    cloud:
+      test_storage:
+        etag: 0880bd83a3dfe283031001
+        version_id: '1705436828982912'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_30_100.jpg
+    md5: 2852cd64f2a6e3a2e1bb93393c76dcd3
+    size: 5394
+    cloud:
+      test_storage:
+        etag: 08c1afeda2dfe283031001
+        version_id: '1705436828620737'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_310_100.jpg
+    md5: f6ba309c325f128ad8bebab722270cd6
+    size: 5334
+    cloud:
+      test_storage:
+        etag: 08c397ada3dfe283031001
+        version_id: '1705436829666243'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_311_100.jpg
+    md5: 7f5157642be4f8d0f7bfb5c77476fd27
+    size: 5320
+    cloud:
+      test_storage:
+        etag: 08f1c5f2a2dfe283031001
+        version_id: '1705436828705521'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_312_100.jpg
+    md5: 73d200c260f3c63587a38c742934771a
+    size: 5405
+    cloud:
+      test_storage:
+        etag: 0887879aa3dfe283031001
+        version_id: '1705436829352839'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_313_100.jpg
+    md5: d5c8a44f156e562445153ce9db5d58aa
+    size: 5365
+    cloud:
+      test_storage:
+        etag: 08b6c3c3a3dfe283031001
+        version_id: '1705436830032310'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_314_100.jpg
+    md5: b9601be62bed350cab6e95d7e5df7442
+    size: 5397
+    cloud:
+      test_storage:
+        etag: 08c1aa84a3dfe283031001
+        version_id: '1705436828996929'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_315_100.jpg
+    md5: cda542b3231368959f434517fbd8392f
+    size: 5434
+    cloud:
+      test_storage:
+        etag: 08ed8385a3dfe283031001
+        version_id: '1705436829008365'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_316_100.jpg
+    md5: 224036750997f0af9b1e4aeebf703f2e
+    size: 5388
+    cloud:
+      test_storage:
+        etag: 08a1d0eea2dfe283031001
+        version_id: '1705436828641313'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_317_100.jpg
+    md5: 42f781c28fc56be464f7b06df737ae34
+    size: 5478
+    cloud:
+      test_storage:
+        etag: 08a2d2ada3dfe283031001
+        version_id: '1705436829673762'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_318_100.jpg
+    md5: 7d18b295c033ef9fa7b8a809ef1cb606
+    size: 5480
+    cloud:
+      test_storage:
+        etag: 088adc91a3dfe283031001
+        version_id: '1705436829216266'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_319_100.jpg
+    md5: 92d1820bc3caa37efb353d8025bd515c
+    size: 5498
+    cloud:
+      test_storage:
+        etag: 0891aebca3dfe283031001
+        version_id: '1705436829914897'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_31_100.jpg
+    md5: bebe7547972a658d9ae6fd7cb78ff1f7
+    size: 5386
+    cloud:
+      test_storage:
+        etag: 08f8acb9a3dfe283031001
+        version_id: '1705436829865592'
+  - relpath: raw/fruits-360_dataset/fruits-360/Training/Apple Braeburn/r_320_100.jpg
+    md5: 55c5169018b353ee7595ca795b860f62
+    size: 5411
+    cloud:
+      test_storage:
+        etag: 08e1cafba2dfe283031001
+        version_id: '1705436828853601'
+  - relpath: raw/fruits-360_dataset/fruits-360/readme.md
+    md5: ccc4bda7b79672dd48d5891e7afc41dc
+    size: 8187
+    cloud:
+      test_storage:
+        etag: 08aec2d8a2dfe283031001
+        version_id: '1705436828279086'
