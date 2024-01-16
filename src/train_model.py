@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from torch import nn, optim
 import hydra
 import logging
-import wandb
+#import wandb
 
 log = logging.getLogger(__name__)
 
@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 def train(config):
     """Train the model on resnet50"""
     model_name = 'resnet50'
-
+    #os.getcwd)
     #wandb.init(project="group_17", config=config)
 
     # Get the hyperparameters from the config file
@@ -120,4 +120,5 @@ def train(config):
     torch.save(model.state_dict(), save_path)
     log.info("Model saved.")
 
+print(os.getcwd())
 train()
