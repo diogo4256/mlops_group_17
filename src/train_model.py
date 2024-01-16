@@ -16,8 +16,6 @@ def train(config):
     """Train the model on resnet50"""
     model_name = 'resnet50'
 
-    #wandb.init(project="group_17", config=config)
-
     # Get the hyperparameters from the config file
     hparams = config.train
     log.info(f"Hyperparameters: {hparams}")
@@ -26,7 +24,6 @@ def train(config):
     log.info(f"Loading model: {model_name}")
 
     model = timm.create_model(model_name, pretrained=False)  
-    model.Dropout = nn.Dropout(hparams['dropout_rate'])
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
     subfolder = os.path.join(hparams['processed_dataset'], hparams['dataset_name'])
 
@@ -60,7 +57,7 @@ def train(config):
     log.info("DataLoader created.")
 
     log.info("Setting up loss function and optimizer...")
-    criterion = nn.NLLLoss()
+    criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"], weight_decay=hparams["weight_decay"])
     optimizer.zero_grad()
     log.info("Loss function and optimizer set up.")
@@ -87,14 +84,14 @@ def train(config):
             optimizer.step()
             running_loss += loss.item()
             # Log the loss
-            #wandb.log({"loss": loss.item()})
+            log.info({"loss": loss.item()})
         else:
             count += 1
             error.append(running_loss / len(trainloader))
             steps.append(count)
             
             # Log the training loss
-            #wandb.log({"training_loss": running_loss/len(trainloader)})
+            log.info({"training_loss": running_loss/len(trainloader)})
         
         log.info(f"Epoch {e}")
     
