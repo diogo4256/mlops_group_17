@@ -44,7 +44,7 @@ def retrieve_from_api(path_extract, kaggle_dataset):
     log.info("API authentication successful.")
     
     log.info(f"Downloading files for dataset: {kaggle_dataset}")
-    api.dataset_download_files(kaggle_dataset , os.path.join(path_extract) , 'zips')
+    api.dataset_download_files(kaggle_dataset , os.path.join(path_extract, 'zips'))
     log.info("File download complete.")
     
     log.info("Extracting files...")
