@@ -1,7 +1,6 @@
 import torch
 import timm
 import os
-import hydra
 from torch.utils.data import Dataset, DataLoader
 
 class CustomDataset(Dataset):
@@ -17,27 +16,26 @@ class CustomDataset(Dataset):
         label = self.labels[index]
         return image, label
 
-@hydra.main(config_path="config", config_name="config.yaml")
-def predict(config):
+
+def predict(data_folder):
     """Make predictions with the trained model"""
     model_name = 'resnet50'
 
     # Load the model
     model = timm.create_model(model_name, pretrained=False)
-    root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
+    root = os.getcwd()
     save_path = os.path.join(root, "models/trained_model.pth")
     model.load_state_dict(torch.load(save_path))
     model.eval()
 
     # Load the images
-    subfolder = os.path.join(config.test['processed_dataset'], config.test['dataset_name'])
-    data_folder = os.path.join(root, subfolder)
     images = torch.load(os.path.join(data_folder, "fruit_training_images.pt"))
     labels = torch.load(os.path.join(data_folder, "fruit_training_labels.pt"))
 
     # Create a DataLoader
     dataset = CustomDataset(images, labels)
-    dataloader = DataLoader(dataset, batch_size=config.test["batch_size"])
+    batch_size = 64
+    dataloader = DataLoader(dataset, batch_size=batch_size)
 
     # Make predictions and calculate accuracy
     correct = 0
@@ -50,7 +48,8 @@ def predict(config):
             correct += (predicted == labels).sum().item()
 
     print('Accuracy of the model on the test images: {} %'.format(100 * correct / total))
+    return(100 * correct / total)
 
 
 if __name__ == "__main__":
-    predict()
+    predict("/Users/pawel/Desktop/ML_OPS_PROJ/mlops_group_17/data/processed/Apple Pink Lady")
