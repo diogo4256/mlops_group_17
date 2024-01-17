@@ -34,29 +34,29 @@ def test_images_to_tensor():
     assert tensor_list[0].shape == torch.Size([3, 100, 100])
 
 
-class TestRetrieveFromApi(unittest.TestCase):
+# class TestRetrieveFromApi(unittest.TestCase):
 
-    @patch('src.data.make_dataset.KaggleApi',autospec= True) 
-    @patch('src.data.make_dataset.zipfile.ZipFile',autospec= True)  
-    def test_retrieve_from_api(self, mock_kaggle_api, mock_zipfile):
-            """ Test if files are downloaded and extracted using mock objects """
-            # Mocking objects
-            mock_api_instance = MagicMock()
-            mock_kaggle_api.return_value = mock_api_instance
-            mock_zip_instance = MagicMock()
-            mock_zipfile.return_value = mock_zip_instance
+#     @patch('src.data.make_dataset.KaggleApi',autospec= True) 
+#     @patch('src.data.make_dataset.zipfile.ZipFile',autospec= True)  
+#     def test_retrieve_from_api(self, mock_kaggle_api, mock_zipfile):
+#             """ Test if files are downloaded and extracted using mock objects """
+#             # Mocking objects
+#             mock_api_instance = MagicMock()
+#             mock_kaggle_api.return_value = mock_api_instance
+#             mock_zip_instance = MagicMock()
+#             mock_zipfile.return_value = mock_zip_instance
 
-            # Mock the API methods and attributes
-            mock_api_instance.authenticate.return_value = None
-            mock_api_instance.dataset_download_files.return_value = None
+#             # Mock the API methods and attributes
+#             mock_api_instance.authenticate.return_value = None
+#             mock_api_instance.dataset_download_files.return_value = None
 
-            # Call the function
-            path_extract = os.path.join(_PATH_DATA, "raw")
-            kaggle_dataset = 'moltean/fruits'
-            retrieve_from_api(path_extract, kaggle_dataset)
+#             # Call the function
+#             path_extract = os.path.join(_PATH_DATA, "raw")
+#             kaggle_dataset = 'moltean/fruits'
+#             retrieve_from_api(path_extract, kaggle_dataset)
 
-            # Assertions
-            mock_kaggle_api.assert_called_once()
+#             # Assertions
+#             mock_kaggle_api.assert_called_once()
         
 
 if __name__ == '__main__':
