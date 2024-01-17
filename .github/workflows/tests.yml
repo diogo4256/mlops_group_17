@@ -31,6 +31,9 @@ jobs:
           echo $KAGGLE_CREDENTIALS > ~/.kaggle/kaggle.json
           chmod 600 ~/.kaggle/kaggle.json
       - name: Test with pytest
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_API_KEY: ${{ secrets.KAGGLE_API_KEY }}
         run: |
           pip install pytest
           pytest -v

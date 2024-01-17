@@ -4,3 +4,4 @@ defaults:
   - make_data: make_data
   - train: train
   - test: test
+  - wandb: wandb

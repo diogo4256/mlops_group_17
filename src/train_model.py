@@ -7,95 +7,24 @@ from torch import nn, optim
 import hydra
 import logging
 import wandb
+import omegaconf
 
 log = logging.getLogger(__name__)
+class CustomDataset(Dataset):
+    def __init__(self, images, labels, transform=None):
+        self.images = images
+        self.labels = labels
 
+    def __len__(self):
+        return len(self.images)
 
-@hydra.main(config_path="config", config_name="config.yaml", version_base=None)
-def train(config):
-    """Train the model on resnet50"""
-    model_name = 'resnet50'
+    def __getitem__(self, index):
+        image = self.images[index]
+        label = self.labels[index]
 
-    # Get the hyperparameters from the config file
-    hparams = config.train
-    log.info(f"Hyperparameters: {hparams}")
-
-
-    log.info(f"Loading model: {model_name}")
-
-    model = timm.create_model(model_name, pretrained=False)  
-    root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
-    subfolder = os.path.join(hparams['processed_dataset'], hparams['dataset_name'])
-
-    # Use os.path.join to join the paths
-    data_folder = os.path.join(root, subfolder)
-    log.info(f"Data folder: {data_folder}")
-
-    log.info("Loading images and labels...")
-    images = torch.load(os.path.join(data_folder, "fruit_training_images.pt"))
-    labels = torch.load(os.path.join(data_folder, "fruit_training_labels.pt"))
-    log.info("Images and labels loaded.")
-
-    class CustomDataset(Dataset):
-        def __init__(self, images, labels, transform=None):
-            self.images = images
-            self.labels = labels
-
-        def __len__(self):
-            return len(self.images)
-
-        def __getitem__(self, index):
-            image = self.images[index]
-            label = self.labels[index]
-
-            return image, label
-
-    log.info("Creating DataLoader...")
-    dataset = CustomDataset(images, labels)
+        return image, label
     
-    trainloader = DataLoader(dataset, batch_size=hparams["batch_size"], shuffle=hparams["shuffle"])
-    log.info("DataLoader created.")
-
-    log.info("Setting up loss function and optimizer...")
-    criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"], weight_decay=hparams["weight_decay"])
-    optimizer.zero_grad()
-    log.info("Loss function and optimizer set up.")
-    
-    error = []
-    steps = []
-    count = 0
-    log.info("Starting training...")
-    for e in range(hparams["epochs"]):
-        running_loss = 0
-        for images, labels in trainloader:
-
-            log_probs = model(images)
-
-            # Calculate the loss
-            labels = labels.long()
-            loss = criterion(log_probs, labels)
-
-            # Backward pass
-            optimizer.zero_grad()
-            loss.backward()
-
-            # Update weights
-            optimizer.step()
-            running_loss += loss.item()
-            # Log the loss
-            log.info({"loss": loss.item()})
-        else:
-            count += 1
-            error.append(running_loss / len(trainloader))
-            steps.append(count)
-            
-            # Log the training loss
-            log.info({"training_loss": running_loss/len(trainloader)})
-        
-        log.info(f"Epoch {e}")
-    
-    log.info("Training complete.")
+def plot_training_loss(error, steps, root):
     log.info("Plotting training loss...")
     plt.figure()
     plt.plot(steps, error)
@@ -107,14 +36,80 @@ def train(config):
         os.path.join(root, fig_path)
     )
     log.info("Plot saved.")
+
+def load_data(root, hparams):
+    log.info("Loading data...")
+    subfolder = os.path.join(hparams['processed_dataset'], hparams['dataset_name'])
+    data_folder = os.path.join(root, subfolder)
+    images = torch.load(os.path.join(data_folder, "fruit_training_images.pt"))
+    labels = torch.load(os.path.join(data_folder, "fruit_training_labels.pt"))
+    dataset = CustomDataset(images, labels)
+    trainloader = DataLoader(dataset, batch_size=hparams["batch_size"], shuffle=hparams["shuffle"])
+    log.info("Data loaded.")
+    return trainloader
+
+def setup_model_and_optimizer(hparams):
+    log.info("Setting up model and optimizer...")
+    model = timm.create_model('resnet50', pretrained=False)
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"], weight_decay=hparams["weight_decay"])
+    log.info("Model and optimizer set up.")
+    return model, criterion, optimizer
+
+def train_one_epoch(model, criterion, optimizer, trainloader):
+    log.info("Training for one epoch...")
+    running_loss = 0
+    for images, labels in trainloader:
+        wandb.log({"example_image": wandb.Image(images[0])})
+        log_probs = model(images)
+        labels = labels.long()
+        loss = criterion(log_probs, labels)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
+        wandb.log({"loss": loss.item()})
+        
+    log.info("Training for one epoch completed.")
+    # Log the training loss
+    wandb.log({"training_loss": running_loss/len(trainloader)}) 
+    return running_loss
+
+@hydra.main(config_path="config", config_name="config.yaml", version_base=None)
+def train(config):
+    log.info("Starting training...")
     
-    save_path = os.path.join(root, "models/trained_model.pth")
+    wandbconfig = config.wandb
+    wandb.config = omegaconf.OmegaConf.to_container(
+        wandbconfig, resolve=True, throw_on_missing=True
+    )
 
-    # Ensure the directory exists
+    # Get the API key from the environment variables
+    wandb_api_key = os.environ['WANDB_API_KEY']
+
+    # Use the API key when initializing wandb
+    wandb.login(key=wandb_api_key)
+    wandb.init(project=wandbconfig["project"], entity=wandbconfig["entity"])
+    
+    hparams = config.train
+    root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
+    trainloader = load_data(root, hparams)
+    model, criterion, optimizer = setup_model_and_optimizer(hparams)
+
+    error = []
+    steps = []
+    for e in range(hparams["epochs"]):
+        running_loss = train_one_epoch(model, criterion, optimizer, trainloader)
+        error.append(running_loss / len(trainloader))
+        steps.append(e+1)
+        log.info(f"Epoch {e} completed.")
+
+    plot_training_loss(error, steps, root)
+
+    save_path = os.path.join(root, hparams["model_savepath"])
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
-
-    log.info(f"Saving model to {save_path}...")
     torch.save(model.state_dict(), save_path)
-    log.info("Model saved.")
+    log.info("Training completed.")
 
-train()
+if __name__ == "__main__":
+    train()
