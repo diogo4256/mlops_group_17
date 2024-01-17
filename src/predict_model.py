@@ -4,6 +4,7 @@ import os
 from torch.utils.data import Dataset, DataLoader
 from PIL import Image
 from torchvision import transforms
+import pickle
 
 class CustomDataset(Dataset):
     def __init__(self, images, labels=None, transform=None):
@@ -28,6 +29,12 @@ def load_image(image_path):
     """Load a single image."""
     image = Image.open(image_path)
     return image
+
+def load_folder_names_and_labels():
+    """Load the dictionary of number to labels from the pickle file."""
+    with open('./data/processed/reduced/folder_names_and_labels.pkl', 'rb') as f:
+        folder_names_and_labels = pickle.load(f)
+    return folder_names_and_labels
 
 def predict(data_folder, mode='batch'):
     """Make predictions with the trained model"""
@@ -66,13 +73,17 @@ def predict(data_folder, mode='batch'):
     # Make predictions and calculate accuracy
     correct = 0
     total = 0
+    # dictionary of number to labels
+    label_dict = load_folder_names_and_labels()
     with torch.no_grad():
         for data in dataloader:
             if mode == 'single':
                 images = data
                 outputs = model(images)
                 _, predicted = torch.max(outputs.data, 1)
+                predicted_label = label_dict[predicted.item()] # predicted.item() is the number
                 print('Predicted label for the image:', predicted.item())
+                print('Predicted label for the image:', predicted_label)
             else:
                 images, labels = data
                 outputs = model(images)
@@ -82,12 +93,15 @@ def predict(data_folder, mode='batch'):
 
     if mode != 'single':
         print('Accuracy of the model on the test images: {} %'.format(100 * correct / total))
+        predicted_labels = [label_dict[label.item()] for label in predicted]
         print(predicted)
+        print(predicted_labels)
         return(100 * correct / total)
     
     else:
-        return(predicted.item())
+        predicted_label = label_dict[predicted.item()]
+        return(predicted_label)
 
 
 if __name__ == "__main__":
-    predict()
+    predict("data/processed/Apricot")

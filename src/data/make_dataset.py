@@ -7,8 +7,22 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 from PIL import Image
 import hydra
 import logging
+import pickle
 
 log = logging.getLogger(__name__)
+
+
+def save_folder_names_and_labels(root, path_extract, raw_dataset,dataset_name):
+    folder_path = os.path.join(root, path_extract, raw_dataset)
+    folder_names = os.listdir(folder_path)
+    root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
+
+    folder_names_and_labels = {}
+    for i, folder_name in enumerate(folder_names):
+        folder_names_and_labels[i] = folder_name
+
+    with open(os.path.join(root,'data/processed',dataset_name,'folder_names_and_labels.pkl'), 'wb') as f:
+        pickle.dump(folder_names_and_labels, f)
 
 @hydra.main(config_path="../config", config_name="config.yaml")
 def main(config):
@@ -16,6 +30,8 @@ def main(config):
     hparams = config.make_data
     log.info(f"Hyperparameters: {hparams}")
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
+
+    save_folder_names_and_labels(root, hparams["path_extract"], hparams["raw_dataset"],hparams["dataset_name"])
     
     log.info("Starting data retrieval from API...")
     #retrieve_from_api(os.path.join(root, hparams["path_extract"]), hparams["kaggle_dataset"])
@@ -25,8 +41,8 @@ def main(config):
                             transforms.Normalize((0,), (1,))])
     
     log.info("Loading and transforming images...")
-    training_images = images_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"]), transform=transform)
-    training_labels = labels_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"]))
+    training_images = images_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"], hparams["dataset_name"]), transform=transform)
+    training_labels = labels_to_tensor(os.path.join(root, hparams["path_extract"], hparams["raw_dataset"]), dataset_name=hparams["dataset_name"])
     log.info("Image loading and transformation complete.")
     
     os.makedirs(os.path.dirname(os.path.join(root, hparams["processed_dataset"])), exist_ok=True)
