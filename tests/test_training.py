@@ -1,3 +1,4 @@
+import omegaconf
 from tests import _PROJECT_ROOT
 import os
 import torch
@@ -57,16 +58,18 @@ def test_setup_model_and_optimizer():
     assert optimizer.defaults['lr'] == 0.01
     assert optimizer.defaults['weight_decay'] == 0.0005
     
+@patch('wandb.log')
 @patch('torch.utils.data.DataLoader', autospec=True)
 @patch('torch.nn.CrossEntropyLoss', autospec=True)
 @patch('torch.optim.SGD', autospec=True)
 @patch('torch.nn.Module', autospec=True)
-def test_train_one_epoch(mock_module, mock_optimizer, mock_criterion, mock_trainloader):
+def test_train_one_epoch(mock_module, mock_optimizer, mock_criterion, mock_trainloader, mock_wandb_log):
     # Arrange
     model = mock_module
     criterion = mock_criterion
     optimizer = mock_optimizer
     trainloader = mock_trainloader
+    trainloader.__len__.return_value = 10
 
     # Act
     result = train.train_one_epoch(model, criterion, optimizer, trainloader)
@@ -74,6 +77,7 @@ def test_train_one_epoch(mock_module, mock_optimizer, mock_criterion, mock_train
     # Assert
     assert isinstance(result, float) or isinstance(result, int)
     
+@patch('wandb.log')
 @patch('src.train_model.plot_training_loss', autospec=True)
 @patch('src.train_model.train_one_epoch', autospec=True)
 @patch('src.train_model.setup_model_and_optimizer', autospec=True)
@@ -82,7 +86,7 @@ def test_train_one_epoch(mock_module, mock_optimizer, mock_criterion, mock_train
 @patch('torch.save', autospec=True)
 def test_train(mock_torch_save, mock_get, mock_load_data, 
                mock_setup_model_and_optimizer, mock_train_one_epoch, 
-               mock_plot_training_loss):
+               mock_plot_training_loss, mock_wandb_log):
     # Arrange
     mock_get.return_value.runtime.cwd = '.'
     mock_load_data.return_value = [torch.rand(10, 3, 224, 224), torch.rand(10)]
@@ -90,11 +94,16 @@ def test_train(mock_torch_save, mock_get, mock_load_data,
     mock_model.state_dict.return_value = MagicMock()
     mock_setup_model_and_optimizer.return_value = (mock_model, MagicMock(), MagicMock())
     mock_train_one_epoch.return_value = 0.5
-    config = MagicMock()
+    config = omegaconf.OmegaConf.create()
     
     config.train = {
         'epochs': 10,
         'model_savepath': 'models/trained_model.pth'
+    }
+    
+    config.wandb = {
+        'project': 'fruit-tests',
+        'entity': 'diogo-adegas'
     }
 
     # Act
