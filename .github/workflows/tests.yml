@@ -23,6 +23,9 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements_tests.txt
       - name: Test with pytest
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_API_KEY: ${{ secrets.KAGGLE_API_KEY }}
         run: |
           pip install pytest
           pytest -v
