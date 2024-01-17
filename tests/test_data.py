@@ -1,10 +1,10 @@
 from tests import _PATH_DATA
 import os
 import torch
-from src.data.make_dataset import retrieve_from_api, images_to_tensor, labels_to_tensor
+from src.data.make_dataset import images_to_tensor, labels_to_tensor
 import torchvision.transforms as transforms
 import pytest
-from kaggle.api.kaggle_api_extended import KaggleApi
+#from kaggle.api.kaggle_api_extended import KaggleApi
 import unittest
 from unittest.mock import patch, MagicMock
 
