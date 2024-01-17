@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
-      KAGGLE_API_KEY: ${{ secrets.KAGGLE_API_KEY }}
+      KAGGLE_CREDENTIALS: ${{ secrets.KAGGLE_CREDENTIALS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
