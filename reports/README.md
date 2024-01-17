@@ -2,13 +2,12 @@
 layout: default
 nav_exclude: true
 ---
-
 # Exam template for 02476 Machine Learning Operations
 
 This is the report template for the exam. Please only remove the text formatted as with three dashes in front and behind
 like:
 
-```--- question 1 fill here ---```
+``--- question 1 fill here ---``
 
 where you instead should add your answers. Any other changes may have unwanted consequences when your report is auto
 generated in the end of the course. For questions where you are asked to include images, start by adding the image to
@@ -50,36 +49,36 @@ end of the project.
 
 ### Week 1
 
-* [ ] Create a git repository
-* [ ] Make sure that all team members have write access to the github repository
-* [ ] Create a dedicated environment for you project to keep track of your packages
-* [ ] Create the initial file structure using cookiecutter
-* [ ] Fill out the `make_dataset.py` file such that it downloads whatever data you need and
-* [ ] Add a model file and a training script and get that running
-* [ ] Remember to fill out the `requirements.txt` file with whatever dependencies that you are using
-* [ ] Remember to comply with good coding practices (`pep8`) while doing the project
-* [ ] Do a bit of code typing and remember to document essential parts of your code
-* [ ] Setup version control for your data or part of your data
-* [ ] Construct one or multiple docker files for your code
-* [ ] Build the docker files locally and make sure they work as intended
-* [ ] Write one or multiple configurations files for your experiments
-* [ ] Used Hydra to load the configurations and manage your hyperparameters
-* [ ] When you have something that works somewhat, remember at some point to to some profiling and see if
-      you can optimize your code
-* [ ] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
-      consider running a hyperparameter optimization sweep.
+* [X] Create a git repository
+* [X] Make sure that all team members have write access to the github repository
+* [X] Create a dedicated environment for you project to keep track of your packages
+* [X] Create the initial file structure using cookiecutter
+* [X] Fill out the `make_dataset.py` file such that it downloads whatever data you need and
+* [X] Add a model file and a training script and get that running
+* [X] Remember to fill out the `requirements.txt` file with whatever dependencies that you are using
+* [X] Remember to comply with good coding practices (`pep8`) while doing the project
+* [X] Do a bit of code typing and remember to document essential parts of your code
+* [X] Setup version control for your data or part of your data
+* [X] Construct one or multiple docker files for your code
+* [X] Build the docker files locally and make sure they work as intended
+* [X] Write one or multiple configurations files for your experiments
+* [X] Used Hydra to load the configurations and manage your hyperparameters
+* [X] When you have something that works somewhat, remember at some point to to some profiling and see if
+  you can optimize your code
+* [X] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
+  consider running a hyperparameter optimization sweep.
 * [ ] Use Pytorch-lightning (if applicable) to reduce the amount of boilerplate in your code
 
 ### Week 2
 
-* [ ] Write unit tests related to the data part of your code
-* [ ] Write unit tests related to model construction and or model training
-* [ ] Calculate the coverage.
-* [ ] Get some continuous integration running on the github repository
-* [ ] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
-* [ ] Create a trigger workflow for automatically building your docker images
-* [ ] Get your model training in GCP using either the Engine or Vertex AI
-* [ ] Create a FastAPI application that can do inference using your model
+* [X] Write unit tests related to the data part of your code
+* [X] Write unit tests related to model construction and or model training
+* [X] Calculate the coverage.
+* [X] Get some continuous integration running on the github repository
+* [X] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
+* [X] Create a trigger workflow for automatically building your docker images
+* [X] Get your model training in GCP using either the Engine or Vertex AI
+* [X] Create a FastAPI application that can do inference using your model
 * [ ] If applicable, consider deploying the model locally using torchserve
 * [ ] Deploy your model in GCP using either Functions or Run as the backend
 
@@ -101,13 +100,15 @@ end of the project.
 ## Group information
 
 ### Question 1
+
 > **Enter the group number you signed up on <learn.inside.dtu.dk>**
 >
 > Answer:
 
---- question 1 fill here ---
+17
 
 ### Question 2
+
 > **Enter the study number for each member in the group**
 >
 > Example:
@@ -116,9 +117,10 @@ end of the project.
 >
 > Answer:
 
---- question 2 fill here ---
+s223521, s233349, s233537 , s182821
 
 ### Question 3
+
 > **What framework did you choose to work with and did it help you complete the project?**
 >
 > Answer length: 100-200 words.
@@ -129,7 +131,7 @@ end of the project.
 >
 > Answer:
 
---- question 3 fill here ---
+Our project is built within the PyTorch framework, and it has significantly facilitated the entire project lifecycle. Data preparation, model, training and predictions are built on top of the Pytorch library. The PyTorch ecosystem provided us a robust foundation, enabling us to efficiently implement our models. The models themselves are sourced from the PyTorch Image Models package, available at [PyTorch Image Models](https://github.com/huggingface/pytorch-image-models). This choice of framework not only streamlined the implementation process but also offered us extensive community support and a variaty of pre-built models. The flexibility and scalability of PyTorch have proven instrumental in meeting the project's objectives, showcasing the framework's effectiveness in tackling machine learning operations challenges.
 
 ## Coding environment
 
@@ -148,7 +150,7 @@ end of the project.
 >
 > Answer:
 
---- question 4 fill here ---
+In our project, we managed our dependencies through a `requirements.txt` file. This is a simple text file that contains a list of all the packages that we use and was auto-generated using the package pipreqs which automatically scanned our project and created a requirements file specific to it. To ensure consistency across team members, the following steps are recommended for a new member to replicate the environment. Firstly, clone the repository, navigate to the project directory and verify that the `requirements.txt` file exists. Optionally, create and activate a virtual environment to isolate dependencies. Activate the environment and install the dependencies using `pip install -r requirements.txt`. This process guarantees that the new team member's environment mirrors the project's dependencies accurately. 
 
 ### Question 5
 
@@ -163,7 +165,7 @@ end of the project.
 > *experiments.*
 > Answer:
 
---- question 5 fill here ---
+From the cookiecutter template we have filled out all the folders except the docs folder, the notebooks folder and the visualizations folder inside the {{cookiecutter.project_name}} folder which in our case is called "src". Furthermore there is a folder called "mlops_group17.egg-info" which is generated from the command $(PYTHON_INTERPRETER) -m pip install -e . in our Makefile. We also have another additional folder called "outputs" which is generated through hydra. Inside the src folder we have the models, the config files and the make_dataset.py which imports our dataset inside the "data" folder. Lastly, inside the tests folder we have the unit tests related to the data part of our code and to model training.
 
 ### Question 6
 
@@ -174,7 +176,7 @@ end of the project.
 >
 > Answer:
 
---- question 6 fill here ---
+In our project, we implemented code quality and formatting rules using Ruff. These rules are crucial in larger projects for several reasons. Firstly, consistent code formatting enhances readability, making it easier for team members to understand and collaborate on the codebase. It ensures a uniform structure, reducing confusion and potential errors caused by inconsistent styling. Code quality rules, on the other hand, help identify potential issues early in the development process, ensuring that the code meets certain standards and is less likely to have errors.
 
 ## Version control
 
@@ -193,7 +195,8 @@ end of the project.
 >
 > Answer:
 
---- question 7 fill here ---
+*In total we have implemented X tests. Primarily we are testing ... and ... as these the most critical parts of our*
+*application but also ... .*
 
 ### Question 8
 
@@ -250,7 +253,7 @@ end of the project.
 >
 > Example:
 > *We have organized our CI into 3 separate files: one for doing ..., one for running ... testing and one for running*
-> *... . In particular for our ..., we used ... .An example of a triggered workflow can be seen here: <weblink>*
+> *... . In particular for our ..., we used ... .An example of a triggered workflow can be seen here: `<weblink>`*
 >
 > Answer:
 
@@ -316,7 +319,7 @@ end of the project.
 >
 > Example:
 > *For our project we developed several images: one for training, inference and deployment. For example to run the*
-> *training docker image: `docker run trainer:latest lr=1e-3 batch_size=64`. Link to docker file: <weblink>*
+> *training docker image: `docker run trainer:latest lr=1e-3 batch_size=64`. Link to docker file: `<weblink>`*
 >
 > Answer:
 
