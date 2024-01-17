@@ -84,7 +84,7 @@ def predict(data_folder, mode='batch'):
         print('Accuracy of the model on the test images: {} %'.format(100 * correct / total))
         print(predicted)
         return(100 * correct / total)
-    
+
     else:
         return(predicted.item())
 

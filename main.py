@@ -6,6 +6,7 @@ app = FastAPI()
 
 class Item(BaseModel):
     data_folder: str
+    mode: str = "batch"
 
 @app.post("/predict")
 async def predict(item: Item):
