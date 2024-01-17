@@ -7,6 +7,7 @@ from torch import nn, optim
 import hydra
 import logging
 import wandb
+import omegaconf
 
 log = logging.getLogger(__name__)
 class CustomDataset(Dataset):
@@ -59,6 +60,7 @@ def train_one_epoch(model, criterion, optimizer, trainloader):
     log.info("Training for one epoch...")
     running_loss = 0
     for images, labels in trainloader:
+        wandb.log({"example_image": wandb.Image(images[0])})
         log_probs = model(images)
         labels = labels.long()
         loss = criterion(log_probs, labels)
@@ -66,12 +68,29 @@ def train_one_epoch(model, criterion, optimizer, trainloader):
         loss.backward()
         optimizer.step()
         running_loss += loss.item()
+        wandb.log({"loss": loss.item()})
+        
     log.info("Training for one epoch completed.")
+    # Log the training loss
+    wandb.log({"training_loss": running_loss/len(trainloader)}) 
     return running_loss
 
 @hydra.main(config_path="config", config_name="config.yaml", version_base=None)
 def train(config):
     log.info("Starting training...")
+    
+    wandbconfig = config.wandb
+    wandb.config = omegaconf.OmegaConf.to_container(
+        wandbconfig, resolve=True, throw_on_missing=True
+    )
+
+    # Get the API key from the environment variables
+    wandb_api_key = os.environ['WANDB_API_KEY']
+
+    # Use the API key when initializing wandb
+    wandb.login(key=wandb_api_key)
+    wandb.init(project=wandbconfig["project"], entity=wandbconfig["entity"])
+    
     hparams = config.train
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
     trainloader = load_data(root, hparams)
