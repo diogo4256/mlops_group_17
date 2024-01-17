@@ -12,6 +12,7 @@ jobs:
 
     env:
       KAGGLE_CREDENTIALS: ${{ secrets.KAGGLE_CREDENTIALS }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -24,6 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -r requirements_tests.txt
+      - name: Setup Kaggle API Credentials
+        run: |
+          mkdir ~/.kaggle
+          echo $KAGGLE_CREDENTIALS > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
       - name: Test with pytest
         run: |
           pip install pytest
