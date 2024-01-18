@@ -277,7 +277,7 @@ Our continuous integration (CI) setup is structured into workflows to ensure com
 >
 > Answer:
 
---- question 12 fill here ---
+We configured experiments using config files, maintaining flexibility and reproducibility. An example is our use of Hydra for configuration management. To run an experiment, we execute a command like: `python my_script.py -m experiment_config.yaml`. In the YAML file, parameters such as learning rate and batch size are specified. This approach enhances experiment tracking and allows easy adjustment of parameters without modifying the script, promoting efficient experimentation.
 
 ### Question 13
 
@@ -292,7 +292,8 @@ Our continuous integration (CI) setup is structured into workflows to ensure com
 >
 > Answer:
 
---- question 13 fill here ---
+i have no idea
+
 
 ### Question 14
 
@@ -324,7 +325,12 @@ Our continuous integration (CI) setup is structured into workflows to ensure com
 >
 > Answer:
 
---- question 15 fill here ---
+
+In our experiments, Docker played a pivotal role in creating containerized environments for consistent and reproducible execution. We crafted distinct Docker images tailored for training, inference, and deployment stages. To illustrate, running the training Docker image could be initiated with a command like:
+
+docker run trainer:latest --lr 1e-3 --batch_size 64
+
+Each Docker image encapsulates the necessary dependencies, libraries, and configurations, ensuring uniformity across various stages of the project. For an in-depth look at our Docker setup, you can refer to our [Dockerfile](). This file delineates the steps involved in building the Docker image, showcasing how we encapsulated the environment to facilitate seamless and reproducible experimentation and deployment.
 
 ### Question 16
 
@@ -339,7 +345,7 @@ Our continuous integration (CI) setup is structured into workflows to ensure com
 >
 > Answer:
 
---- question 16 fill here ---
+hmmmm
 
 ## Working in the cloud
 
@@ -356,7 +362,7 @@ Our continuous integration (CI) setup is structured into workflows to ensure com
 >
 > Answer:
 
---- question 17 fill here ---
+In our project, we harnessed the capabilities of several Google Cloud Platform (GCP) services to streamline various aspects of our workflow. Google Cloud Storage (GCS) served as our robust object storage solution for managing large datasets efficiently. Additionally, services like Cloud Build, and Cloud Monitoring enhanced our data analytics, continuous integration, and monitoring processes, respectively. This strategic use of GCP services empowered us to focus on developing and deploying machine learning models with enhanced scalability and automation.
 
 ### Question 18
 
