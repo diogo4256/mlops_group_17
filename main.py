@@ -10,5 +10,5 @@ class Item(BaseModel):
 
 @app.post("/predict")
 async def predict(item: Item):
-    prediction = predict_model.predict(item.data_folder)
+    prediction = predict_model.predict(item.data_folder, item.mode)
     return {"accuracy": prediction}
