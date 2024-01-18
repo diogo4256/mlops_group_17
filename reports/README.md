@@ -150,7 +150,7 @@ Our project is built within the PyTorch framework, and it has significantly faci
 >
 > Answer:
 
-In our project, we managed our dependencies through a `requirements.txt` file. This is a simple text file that contains a list of all the packages that we use and was auto-generated using the package pipreqs which automatically scanned our project and created a requirements file specific to it. To ensure consistency across team members, the following steps are recommended for a new member to replicate the environment. Firstly, clone the repository, navigate to the project directory and verify that the `requirements.txt` file exists. Optionally, create and activate a virtual environment to isolate dependencies. Activate the environment and install the dependencies using `pip install -r requirements.txt`. This process guarantees that the new team member's environment mirrors the project's dependencies accurately. 
+In our project, we managed our dependencies through a `requirements.txt` file. This is a simple text file that contains a list of all the packages that we use and was auto-generated using the package pipreqs which automatically scanned our project and created a requirements file specific to it. To ensure consistency across team members, the following steps are recommended for a new member to replicate the environment. Firstly, clone the repository, navigate to the project directory and verify that the `requirements.txt` file exists. Optionally, create and activate a virtual environment to isolate dependencies. Activate the environment and install the dependencies using `pip install -r requirements.txt`. This process guarantees that the new team member's environment mirrors the project's dependencies accurately.
 
 ### Question 5
 
@@ -195,8 +195,7 @@ In our project, we implemented code quality and formatting rules using Ruff. The
 >
 > Answer:
 
-*In total we have implemented X tests. Primarily we are testing ... and ... as these the most critical parts of our*
-*application but also ... .*
+In total, we have implemented seven tests across the files inside the "tests" folder. In the test_data.py file, we have two tests: the test_images_to_tensor which checks if the length of the tensor list matches the number of image files and also checks if the shape of the first tensor in the list is correct and furthermore the test_retrieve_from_api which calls the `retrieve_from_api` function with mock objects. The test_training.py file includes multiple test cases for the training module including test_custom_dataset, test_load_data, test_setup_model_and_optimizer, test_train_one_epoch and test_train.
 
 ### Question 8
 
@@ -211,7 +210,7 @@ In our project, we implemented code quality and formatting rules using Ruff. The
 >
 > Answer:
 
---- question 8 fill here ---
+The total code coverage of our project stands at 65%, including all our source code. While this percentage indicates a substantial coverage, the remaining 35% highlights potential untested paths that demand thorough exploration. Achieving 100% code coverage is valuable, but it doesn't assure absolute error-free code. Complete coverage ensures that every line is executed under specific conditions, yet it may not cover all scenarios, edge cases, or intricate interactions between components. Furthermore, maintaining a balance between coverage and thoughtful testing strategies is essential for robust code quality.
 
 ### Question 9
 
@@ -226,7 +225,7 @@ In our project, we implemented code quality and formatting rules using Ruff. The
 >
 > Answer:
 
---- question 9 fill here ---
+Yes, our workflow involved branches and pull requests. Apart from the main branch and the develop branch, we utilized five additional branches to manage different aspects of our development process. We made additional branches including unit_test (to include the unit tests), another for creating the Fast API, one for monitoring and data drifting and one for setting up the cloud. To merge code in Git, we typically use the "git merge" command. The common workflow involved navigating to the branch where the changes should have been merged (e.g., the main branch or develop branch) and then using the "git merge" command followed by the name of the branch containing the changes. Additionally, if the changes are developed in a separate feature branch, pull requests were used. Pull requests allowed for code review and discussion before the changes were merged into the target branch, ensuring a more controlled and collaborative approach to incorporating new code.
 
 ### Question 10
 
@@ -241,7 +240,7 @@ In our project, we implemented code quality and formatting rules using Ruff. The
 >
 > Answer:
 
---- question 10 fill here ---
+Yes, we employed DVC (Data Version Control) to manage data in our project, and it significantly enhanced our workflow by providing version control for datasets. DVC allowed us to track, share, and manage large files efficiently. This versioning capability was crucial for reproducibility, as we could precisely reproduce any experiment by referencing the specific dataset version. DVC's integration with Git also helped us a lot. By keeping track of changes in both code and data, we could create a comprehensive record of our project's evolution. DVC's support for remote storage further ensured that datasets were not only versioned locally but could also be shared and accessed by team members, resulting to a more organized and collaborative data management process in our project.
 
 ### Question 11
 
@@ -257,7 +256,9 @@ In our project, we implemented code quality and formatting rules using Ruff. The
 >
 > Answer:
 
---- question 11 fill here ---
+#138 words
+
+Our continuous integration (CI) setup is structured into workflows to ensure comprehensive testing and maintain code quality. The first workflow focuses on unit testing, utilizing the `unittest` framework. We ensure compatibility with Python 3.10.13, a version specified in the workflow. By defining specific versions, we aim to maintain consistency across different environments and prevent potential compatibility issues. To validate the integration of third-party services, such as Kaggle, we have a setup step for configuring Kaggle API credentials securely. This allows our tests to interact with external services while maintaining the confidentiality of sensitive information. For a detailed example of our CI workflow, you can refer to this [here](https://github.com/diogo4256/mlops_group_17/blob/develop/.github/workflows/tests.yml). This file illustrates the steps taken in our CI process, including setting up Python, installing dependencies, and executing tests.
 
 ## Running code and tracking experiments
 
