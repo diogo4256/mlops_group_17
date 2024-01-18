@@ -5,6 +5,18 @@ from torch.utils.data import Dataset, DataLoader
 from PIL import Image
 from torchvision import transforms
 import pickle
+from google.cloud import storage
+
+def download_file_from_gcs(bucket_name, blob_name, destination_path, file_name):
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(bucket_name)
+    blob = bucket.blob(blob_name)
+    final_path = os.path.join(destination_path, file_name)
+    blob.download_to_filename(final_path)
+    return final_path
+
+
+
 
 class CustomDataset(Dataset):
     def __init__(self, images, labels=None, transform=None):
@@ -30,21 +42,35 @@ def load_image(image_path):
     image = Image.open(image_path)
     return image
 
-def load_folder_names_and_labels():
+def load_folder_names_and_labels(dict_path):
     """Load the dictionary of number to labels from the pickle file."""
-    with open('./data/processed/folder_names_and_labels.pkl', 'rb') as f:
+    with open(dict_path, 'rb') as f:
         folder_names_and_labels = pickle.load(f)
     return folder_names_and_labels
 
 def predict(data_folder, mode='single'):
     """Make predictions with the trained model"""
+    bucket_name = 'fruit_bucket_mlops'
+    blob_name = 'models/trained_model.pth'
+    destination_path = '/models'
+    file_name = 'trained_model.pth'
+
+    model_path = download_file_from_gcs(bucket_name, blob_name, destination_path, file_name)
+
+    bucket_name = 'fruit_bucket_mlops'
+    blob_name = 'data/processed/folder_names_and_labels.pkl'
+    destination_path = '/models'
+    file_name = 'folder_names_and_labels.pkl'
+
+    dict_path = download_file_from_gcs(bucket_name, blob_name, destination_path, file_name)
+
     model_name = 'resnet50'
 
     # Load the model
     model = timm.create_model(model_name, pretrained=False)
     root = os.getcwd()
-    save_path = os.path.join(root, "models/trained_model.pth")
-    model.load_state_dict(torch.load(save_path))
+    #save_path = "gs://fruit_bucket_mlops/models/trained_model.pth"
+    model.load_state_dict(torch.load(model_path))
     model.eval()
 
     # Preprocess the image
@@ -74,7 +100,7 @@ def predict(data_folder, mode='single'):
     correct = 0
     total = 0
     # dictionary of number to labels
-    label_dict = load_folder_names_and_labels()
+    label_dict = load_folder_names_and_labels(dict_path)
     with torch.no_grad():
         for data in dataloader:
             if mode == 'single':
