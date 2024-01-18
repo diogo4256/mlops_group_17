@@ -6,6 +6,7 @@ from PIL import Image
 from torchvision import transforms
 import pickle
 
+
 class CustomDataset(Dataset):
     def __init__(self, images, labels=None, transform=None):
         self.images = images
@@ -25,20 +26,23 @@ class CustomDataset(Dataset):
         else:
             return image
 
+
 def load_image(image_path):
     """Load a single image."""
     image = Image.open(image_path)
     return image
 
+
 def load_folder_names_and_labels():
     """Load the dictionary of number to labels from the pickle file."""
-    with open('./data/processed/reduced/folder_names_and_labels.pkl', 'rb') as f:
+    with open("./data/processed/reduced/folder_names_and_labels.pkl", "rb") as f:
         folder_names_and_labels = pickle.load(f)
     return folder_names_and_labels
 
-def predict(data_folder, mode='batch'):
+
+def predict(data_folder, mode="single"):
     """Make predictions with the trained model"""
-    model_name = 'resnet50'
+    model_name = "resnet50"
 
     # Load the model
     model = timm.create_model(model_name, pretrained=False)
@@ -48,14 +52,16 @@ def predict(data_folder, mode='batch'):
     model.eval()
 
     # Preprocess the image
-    preprocess = transforms.Compose([
-        transforms.Resize(256),
-        transforms.CenterCrop(224),
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ])
+    preprocess = transforms.Compose(
+        [
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+        ]
+    )
 
-    if mode == 'single':
+    if mode == "single":
         # Load a single image
         image_path = os.path.join(root, data_folder)
         images = [load_image(image_path)]
@@ -67,7 +73,7 @@ def predict(data_folder, mode='batch'):
 
     # Create a DataLoader
     dataset = CustomDataset(images, labels, transform=preprocess)
-    batch_size = 1 if mode == 'single' else images.shape[0] // 10
+    batch_size = 1 if mode == "single" else images.shape[0] // 10
     dataloader = DataLoader(dataset, batch_size=batch_size)
 
     # Make predictions and calculate accuracy
@@ -77,13 +83,13 @@ def predict(data_folder, mode='batch'):
     label_dict = load_folder_names_and_labels()
     with torch.no_grad():
         for data in dataloader:
-            if mode == 'single':
+            if mode == "single":
                 images = data
                 outputs = model(images)
                 _, predicted = torch.max(outputs.data, 1)
-                predicted_label = label_dict[predicted.item()] # predicted.item() is the number
-                print('Predicted label for the image:', predicted.item())
-                print('Predicted label for the image:', predicted_label)
+                predicted_label = label_dict[predicted.item()]  # predicted.item() is the number
+                print("Predicted label for the image:", predicted.item())
+                print("Predicted label for the image:", predicted_label)
             else:
                 images, labels = data
                 outputs = model(images)
@@ -91,16 +97,16 @@ def predict(data_folder, mode='batch'):
                 total += labels.size(0)
                 correct += (predicted == labels).sum().item()
 
-    if mode != 'single':
-        print('Accuracy of the model on the test images: {} %'.format(100 * correct / total))
+    if mode != "single":
+        print("Accuracy of the model on the test images: {} %".format(100 * correct / total))
         predicted_labels = [label_dict[label.item()] for label in predicted]
         print(predicted)
         print(predicted_labels)
-        return(100 * correct / total)
-    
+        return 100 * correct / total
+
     else:
         predicted_label = label_dict[predicted.item()]
-        return(predicted_label)
+        return predicted_label
 
 
 if __name__ == "__main__":

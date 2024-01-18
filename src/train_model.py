@@ -14,18 +14,17 @@ log = logging.getLogger(__name__)
 @hydra.main(config_path="config", config_name="config.yaml", version_base=None)
 def train(config):
     """Train the model on resnet50"""
-    model_name = 'resnet50'
+    model_name = "resnet50"
 
     # Get the hyperparameters from the config file
     hparams = config.train
     log.info(f"Hyperparameters: {hparams}")
 
-
     log.info(f"Loading model: {model_name}")
 
-    model = timm.create_model(model_name, pretrained=False)  
+    model = timm.create_model(model_name, pretrained=False)
     root = hydra.core.hydra_config.HydraConfig.get().runtime.cwd
-    subfolder = os.path.join(hparams['processed_dataset'], hparams['dataset_name'])
+    subfolder = os.path.join(hparams["processed_dataset"], hparams["dataset_name"])
 
     # Use os.path.join to join the paths
     data_folder = os.path.join(root, subfolder)
@@ -52,7 +51,7 @@ def train(config):
 
     log.info("Creating DataLoader...")
     dataset = CustomDataset(images, labels)
-    
+
     trainloader = DataLoader(dataset, batch_size=hparams["batch_size"], shuffle=hparams["shuffle"])
     log.info("DataLoader created.")
 
@@ -61,7 +60,7 @@ def train(config):
     optimizer = optim.SGD(model.parameters(), lr=hparams["learning_rate"], weight_decay=hparams["weight_decay"])
     optimizer.zero_grad()
     log.info("Loss function and optimizer set up.")
-    
+
     error = []
     steps = []
     count = 0
@@ -69,7 +68,6 @@ def train(config):
     for e in range(hparams["epochs"]):
         running_loss = 0
         for images, labels in trainloader:
-
             log_probs = model(images)
 
             # Calculate the loss
@@ -89,12 +87,12 @@ def train(config):
             count += 1
             error.append(running_loss / len(trainloader))
             steps.append(count)
-            
+
             # Log the training loss
-            log.info({"training_loss": running_loss/len(trainloader)})
-        
+            log.info({"training_loss": running_loss / len(trainloader)})
+
         log.info(f"Epoch {e}")
-    
+
     log.info("Training complete.")
     log.info("Plotting training loss...")
     plt.figure()
@@ -103,11 +101,9 @@ def train(config):
 
     fig_path = "reports/figures/training_loss.png"
     log.info(f"Saving plot to {fig_path}...")
-    plt.savefig(
-        os.path.join(root, fig_path)
-    )
+    plt.savefig(os.path.join(root, fig_path))
     log.info("Plot saved.")
-    
+
     save_path = os.path.join(root, "models/trained_model.pth")
 
     # Ensure the directory exists
@@ -116,5 +112,6 @@ def train(config):
     log.info(f"Saving model to {save_path}...")
     torch.save(model.state_dict(), save_path)
     log.info("Model saved.")
+
 
 train()
