@@ -517,4 +517,12 @@ in progress
 >
 > Answer:
 
-Student s233349 was in charge of setting up the initial cookie cutter project and developing of the code for importing our dataset from kaggle and our model from the Image Python Models. Student s233537 focused on cloud infrastructure, specializing in training our models and deploying them efficiently. Student s223531 assisted with reducing the boilerplate code. and with managing unit tests as well as other essential checks through GitHub Actions. Student s182821 also assisted with unit testing and model deployment as well as calculating the coverage percentage.
+Student s233349 was in charge of setting up the initial cookie cutter project and developing of the code for importing our dataset from kaggle, wandb and logging, as well as our model from the Image Python Models.
+
+Student s233537 focused on cloud infrastructure, specializing in training our models, docker, container triggers and deploying them efficiently. 
+
+Student s223531 assisted with reducing the boilerplate code. and with managing unit tests as well as other essential checks through GitHub Actions. 
+
+Student s182821 also assisted with unit testing, profiling, model deployment, the predict script as well as calculating the coverage percentage.
+
+Overall, all members contributed to code through feature branches.
