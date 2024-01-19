@@ -340,7 +340,7 @@ In conclusion, keeping track of all experiments allowed us to fine-tune the mode
 
 In our experiments, Docker played a pivotal role in creating containerized environments for consistent and reproducible execution. We crafted distinct Docker images tailored for training, inference, and deployment stages. To illustrate, running the training Docker image could be initiated with a command like:
 
-docker run trainer:latest 
+docker run trainer:latest
 
 Each Docker image encapsulates the necessary dependencies, libraries, and configurations, ensuring uniformity across various stages of the project. For an in-depth look at our Docker setup, you can refer to our [Dockerfile](../dockerfiles/train_model.dockerfile). This file delineates the steps involved in building the Docker image, showcasing how we encapsulated the environment to facilitate seamless and reproducible experimentation and deployment.
 
@@ -517,4 +517,4 @@ in progress
 >
 > Answer:
 
-in progres
+Student s233349 was in charge of setting up the initial cookie cutter project and developing of the code for importing our dataset from kaggle and our model from the Image Python Models. Student s233537 focused on cloud infrastructure, specializing in training our models and deploying them efficiently. Student s223531 assisted with reducing the boilerplate code. and with managing unit tests as well as other essential checks through GitHub Actions. Student s182821 also assisted with unit testing and model deployment as well as calculating the coverage percentage.
