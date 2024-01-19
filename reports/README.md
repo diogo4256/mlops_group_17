@@ -80,13 +80,13 @@ end of the project.
 * [X] Get your model training in GCP using either the Engine or Vertex AI
 * [X] Create a FastAPI application that can do inference using your model
 * [ ] If applicable, consider deploying the model locally using torchserve
-* [ ] Deploy your model in GCP using either Functions or Run as the backend
+* [X] Deploy your model in GCP using either Functions or Run as the backend
 
 ### Week 3
 
 * [ ] Check how robust your model is towards data drifting
 * [ ] Setup monitoring for the system telemetry of your deployed model
-* [ ] Setup monitoring for the performance of your deployed model
+* [X] Setup monitoring for the performance of your deployed model
 * [ ] If applicable, play around with distributed data loading
 * [ ] If applicable, play around with distributed model training
 * [ ] Play around with quantization, compilation and pruning for you trained models to increase inference speed
@@ -94,8 +94,8 @@ end of the project.
 ### Additional
 
 * [ ] Revisit your initial project description. Did the project turn out as you wanted?
-* [ ] Make sure all group members have a understanding about all parts of the project
-* [ ] Uploaded all your code to github
+* [X] Make sure all group members have a understanding about all parts of the project
+* [X] Uploaded all your code to github
 
 ## Group information
 
@@ -131,7 +131,7 @@ s223521, s233349, s233537 , s182821
 >
 > Answer:
 
-Our project is built within the PyTorch framework, and it has significantly facilitated the entire project lifecycle. Data preparation, model, training and predictions are built on top of the Pytorch library. The PyTorch ecosystem provided us a robust foundation, enabling us to efficiently implement our models. The models themselves are sourced from the PyTorch Image Models package, available at [PyTorch Image Models](https://github.com/huggingface/pytorch-image-models). This choice of framework not only streamlined the implementation process but also offered us extensive community support and a variaty of pre-built models. The flexibility and scalability of PyTorch have proven instrumental in meeting the project's objectives, showcasing the framework's effectiveness in tackling machine learning operations challenges.
+Our project is built within the PyTorch framework, and it has significantly facilitated the entire project lifecycle. Data preparation, model, training and predictions are built on top of the Pytorch library. The PyTorch ecosystem provided us a robust foundation, enabling us to efficiently implement our models. The models themselves are sourced from the PyTorch Image Models package, available at [PyTorch Image Models](https://github.com/huggingface/pytorch-image-models) specifically the ResNet-50 (untrained). This choice of framework not only streamlined the implementation process but also offered us extensive community support and a variaty of pre-built models. The flexibility and scalability of PyTorch have proven instrumental in meeting the project's objectives, showcasing the framework's effectiveness in tackling machine learning operations challenges.
 
 ## Coding environment
 
@@ -152,6 +152,8 @@ Our project is built within the PyTorch framework, and it has significantly faci
 
 In our project, we managed our dependencies through a `requirements.txt` file. This is a simple text file that contains a list of all the packages that we use and was auto-generated using the package pipreqs which automatically scanned our project and created a requirements file specific to it. To ensure consistency across team members, the following steps are recommended for a new member to replicate the environment. Firstly, clone the repository, navigate to the project directory and verify that the `requirements.txt` file exists. Optionally, create and activate a virtual environment to isolate dependencies. Activate the environment and install the dependencies using `pip install -r requirements.txt`. This process guarantees that the new team member's environment mirrors the project's dependencies accurately.
 
+#add the other requirements maybe
+
 ### Question 5
 
 > **We expect that you initialized your project using the cookiecutter template. Explain the overall structure of your**
@@ -165,7 +167,7 @@ In our project, we managed our dependencies through a `requirements.txt` file. T
 > *experiments.*
 > Answer:
 
-From the cookiecutter template we have filled out all the folders except the docs folder, the notebooks folder and the visualizations folder inside the {{cookiecutter.project_name}} folder which in our case is called "src". Furthermore there is a folder called "mlops_group17.egg-info" which is generated from the command $(PYTHON_INTERPRETER) -m pip install -e . in our Makefile. We also have another additional folder called "outputs" which is generated through hydra. Inside the src folder we have the models, the config files and the make_dataset.py which imports our dataset inside the "data" folder. Lastly, inside the tests folder we have the unit tests related to the data part of our code and to model training.
+From the cookiecutter template we have filled out all the folders except the docs folder, the notebooks folder and the visualizations folder inside the {{cookiecutter.project_name}} folder which in our case is called "src", so we chose the src-layout instead of the flat-layout. Furthermore there is a folder called "mlops_group17.egg-info" which is generated from the command $(PYTHON_INTERPRETER) -m pip install -e . in our Makefile. We also have another additional folder called "outputs" folder which is generated through hydra. Inside the src folder we have the models, predict_model.py, the config files and the make_dataset.py which imports our dataset inside the "data" folder. Lastly, inside the tests folder we have the unit tests related to the data part of our code and to model training.
 
 ### Question 6
 
@@ -195,7 +197,7 @@ In our project, we implemented code quality and formatting rules using Ruff. The
 >
 > Answer:
 
-In total, we have implemented seven tests across the files inside the "tests" folder. In the test_data.py file, we have two tests: the test_images_to_tensor which checks if the length of the tensor list matches the number of image files and also checks if the shape of the first tensor in the list is correct and furthermore the test_retrieve_from_api which calls the `retrieve_from_api` function with mock objects. The test_training.py file includes multiple test cases for the training module including test_custom_dataset, test_load_data, test_setup_model_and_optimizer, test_train_one_epoch and test_train.
+In total, we have implemented seven tests across the files inside the "tests" folder. In the test_data.py file, we have two tests: the test_images_to_tensor which checks if the length of the tensor list matches the number of image files and also checks if the shape of the first tensor in the list is correct and furthermore the test_retrieve_from_api which calls the `retrieve_from_api` function with mock objects. The test_training.py file includes multiple test cases for the training module including test_custom_dataset, test_load_data, test_setup_model_and_optimizer, test_train_one_epoch and test_train and each of them correspond to a function within the training and data preparation code.
 
 ### Question 8
 
@@ -210,7 +212,7 @@ In total, we have implemented seven tests across the files inside the "tests" fo
 >
 > Answer:
 
-The total code coverage of our project stands at 65%, including all our source code. While this percentage indicates a substantial coverage, the remaining 35% highlights potential untested paths that demand thorough exploration. Achieving 100% code coverage is valuable, but it doesn't assure absolute error-free code. Complete coverage ensures that every line is executed under specific conditions, yet it may not cover all scenarios, edge cases, or intricate interactions between components. Furthermore, maintaining a balance between coverage and thoughtful testing strategies is essential for robust code quality.
+The total code coverage of our project stands at 65%, including all our source code except the init files. While this percentage indicates a substantial coverage, the remaining 35% highlights potential untested paths that demand thorough exploration. Achieving 100% code coverage is valuable, but it doesn't assure absolute error-free code. Complete coverage ensures that every line is executed under specific conditions, yet it may not cover all scenarios, edge cases, or intricate interactions between components. Furthermore, maintaining a balance between coverage and thoughtful testing strategies is essential for robust code quality.
 
 ### Question 9
 
@@ -225,7 +227,7 @@ The total code coverage of our project stands at 65%, including all our source c
 >
 > Answer:
 
-Yes, our workflow involved branches and pull requests. Apart from the main branch and the develop branch, we utilized five additional branches to manage different aspects of our development process. We made additional branches including unit_test (to include the unit tests), another for creating the Fast API, one for monitoring and data drifting and one for setting up the cloud. To merge code in Git, we typically use the "git merge" command. The common workflow involved navigating to the branch where the changes should have been merged (e.g., the main branch or develop branch) and then using the "git merge" command followed by the name of the branch containing the changes. Additionally, if the changes are developed in a separate feature branch, pull requests were used. Pull requests allowed for code review and discussion before the changes were merged into the target branch, ensuring a more controlled and collaborative approach to incorporating new code.
+Yes, our workflow involved branches and pull requests. Apart from the main branch and the develop branch, we utilized feature branches to manage different aspects of our development process. We made additional branches including unit_test (to include the unit tests), another for creating the Fast API, one for WandB, docker and one for setting up the cloud. To merge code in Github, we used the pull requests. Additionally, if the changes are developed in a separate feature branch, pull requests were used. Pull requests allowed for code review and discussion before the changes were merged into the target branch, ensuring a more controlled and collaborative approach to incorporating new code. When developing on our local branches we used git command like "git push" etc.
 
 ### Question 10
 
@@ -240,7 +242,7 @@ Yes, our workflow involved branches and pull requests. Apart from the main branc
 >
 > Answer:
 
-Yes, we employed DVC (Data Version Control) to manage data in our project, and it significantly enhanced our workflow by providing version control for datasets. DVC allowed us to track, share, and manage large files efficiently. This versioning capability was crucial for reproducibility, as we could precisely reproduce any experiment by referencing the specific dataset version. DVC's integration with Git also helped us a lot. By keeping track of changes in both code and data, we could create a comprehensive record of our project's evolution. DVC's support for remote storage further ensured that datasets were not only versioned locally but could also be shared and accessed by team members, resulting to a more organized and collaborative data management process in our project.
+Yes, we employed DVC (Data Version Control) to manage data in our project. DVC helped us with uploading and managing changes of the data on the google cloud storage (at some point we needed to reduce our dataset size) and making sure each member of the group can get a current version of the data. Besides this, we faced a number of issues despite following the steps from the exercises. The primary benefit of it was that it offered a centralised way to access our data. DVC's support for remote storage further ensured that datasets were not only versioned locally but could also be shared and accessed by team members, resulting to a more organized and collaborative data management process in our project.
 
 ### Question 11
 
@@ -256,9 +258,9 @@ Yes, we employed DVC (Data Version Control) to manage data in our project, and i
 >
 > Answer:
 
-#138 words
+#133 words
 
-Our continuous integration (CI) setup is structured into workflows to ensure comprehensive testing and maintain code quality. The first workflow focuses on unit testing, utilizing the `unittest` framework. We ensure compatibility with Python 3.10.13, a version specified in the workflow. By defining specific versions, we aim to maintain consistency across different environments and prevent potential compatibility issues. To validate the integration of third-party services, such as Kaggle, we have a setup step for configuring Kaggle API credentials securely. This allows our tests to interact with external services while maintaining the confidentiality of sensitive information. For a detailed example of our CI workflow, you can refer to this [here](https://github.com/diogo4256/mlops_group_17/blob/develop/.github/workflows/tests.yml). This file illustrates the steps taken in our CI process, including setting up Python, installing dependencies, and executing tests.
+Our continuous integration (CI) setup is structured into workflows to ensure comprehensive testing and maintain code quality. The first workflow focuses on unit testing. We ensure compatibility with Python 3.10.13, a version specified in the workflow. By defining specific versions, we aim to maintain consistency across different environments and prevent potential compatibility issues. To validate the integration of third-party services, such as Kaggle, we have a setup step for configuring Kaggle API credentials as "github secrets". This allows our tests to interact with external services while maintaining the confidentiality of sensitive information. We run our code on all three different operating systems and we did not make use of caching. For a detailed example of our CI workflow, you can refer to this [here](https://github.com/diogo4256/mlops_group_17/actions/runs/7560474939). The tests.yalm file illustrates the steps taken in our CI process, including setting up Python, installing dependencies, and executing tests.
 
 ## Running code and tracking experiments
 
@@ -277,7 +279,16 @@ Our continuous integration (CI) setup is structured into workflows to ensure com
 >
 > Answer:
 
-We configured experiments using config files, maintaining flexibility and reproducibility. An example is our use of Hydra for configuration management. To run an experiment, we execute a command like: `python my_script.py -m experiment_config.yaml`. In the YAML file, parameters such as learning rate and batch size are specified. This approach enhances experiment tracking and allows easy adjustment of parameters without modifying the script, promoting efficient experimentation.
+We configured experiments using config files, maintaining flexibility and reproducibility. An example is our use of Hydra for configuration management. We used config files for all main scripts like training, make_dataset etc. We use it to pass on not only the hyperparameters but also the paths. The following is an example of a config file.
+
+shuffle: True
+batch_size: 64
+learning_rate: 0.003
+epochs: 10
+weight_decay: 0.0005
+dropout_rate: 0.5
+processed_dataset: "data/processed/"
+dataset_name: 'small_sample'
 
 ### Question 13
 
@@ -293,7 +304,6 @@ We configured experiments using config files, maintaining flexibility and reprod
 > Answer:
 
 i have no idea
-
 
 ### Question 14
 
@@ -324,7 +334,6 @@ i have no idea
 > *training docker image: `docker run trainer:latest lr=1e-3 batch_size=64`. Link to docker file: `<weblink>`*
 >
 > Answer:
-
 
 In our experiments, Docker played a pivotal role in creating containerized environments for consistent and reproducible execution. We crafted distinct Docker images tailored for training, inference, and deployment stages. To illustrate, running the training Docker image could be initiated with a command like:
 
