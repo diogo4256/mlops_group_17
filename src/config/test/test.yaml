@@ -1,0 +1,5 @@
+# hyperparameters for testing the model
+
+processed_dataset: "data/processed/"
+dataset_name: 'small_sample'
+batch_size: 64
