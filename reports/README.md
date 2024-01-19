@@ -486,6 +486,8 @@ We managed to keep our expenditures low, despite having to train the model on th
 >
 > Answer: 
 
+![project_architecture](figures/architecture_diagram.png)
+
 Our system starts with an non-pretrained resnet model and a kaggle dataset consisting of images of fruits. We used conda to track our virtual environments, pytorch to train the model, and integrated git for version control, hydra for configurations/hyperparamethers and wandb logging into our code. We also added unit tests using the pytest framework, and docker for containerizing our system. We use cloud storage to store our dataset and our trained model, container registry for keeping docker containers, and vertex ai to run the user-queried predictions on a deployed Cloud Run instance of the previously created docker container using the FastAPI framework. Everytime we want to develop a feature independently from our colleagues, we create a branch. When we are comfortable with our changes and want to send them to the develop branch, we create a pull request that has to be approved by the other contributers. General pushing and pull requests trigger our unit tests, that are performed independently by a github actions runner. After the code is on develop and ready to deploy, we create a docker container and push it to google cloud's container registry. From there we create a cloud run instance that runs this docker container and gives it a domain, from which anyone can login and query it for a prediction. Upon every query, the input file goes through our trained model in the predict code in our deployed container, and returns the prediction if it's a single image, or an accuracy percentage in case of an image folder.
 
 ### Question 26
