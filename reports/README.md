@@ -117,7 +117,7 @@ end of the project.
 >
 > Answer:
 
-s223521, s233349, s233537 , s182821
+s223531, s233349, s233537 , s182821
 
 ### Question 3
 
@@ -151,8 +151,6 @@ Our project is built within the PyTorch framework, and it has significantly faci
 > Answer:
 
 In our project, we managed our dependencies through a `requirements.txt` file. This is a simple text file that contains a list of all the packages that we use and was auto-generated using the package pipreqs which automatically scanned our project and created a requirements file specific to it. To ensure consistency across team members, the following steps are recommended for a new member to replicate the environment. Firstly, clone the repository, navigate to the project directory and verify that the `requirements.txt` file exists. Optionally, create and activate a virtual environment to isolate dependencies. Activate the environment and install the dependencies using `pip install -r requirements.txt`. This process guarantees that the new team member's environment mirrors the project's dependencies accurately.
-
-#add the other requirements maybe
 
 ### Question 5
 
@@ -212,7 +210,7 @@ In total, we have implemented seven tests across the files inside the "tests" fo
 >
 > Answer:
 
-The total code coverage of our project stands at 65%, including all our source code except the init files. While this percentage indicates a substantial coverage, the remaining 35% highlights potential untested paths that demand thorough exploration. Achieving 100% code coverage is valuable, but it doesn't assure absolute error-free code. Complete coverage ensures that every line is executed under specific conditions, yet it may not cover all scenarios, edge cases, or intricate interactions between components. Furthermore, maintaining a balance between coverage and thoughtful testing strategies is essential for robust code quality.
+The total code coverage of our project stands at 65%, including all our source code but omitting the init files. While this percentage indicates a substantial coverage, the remaining 35% highlights potential untested paths that demand thorough exploration. The files that we covered concerned the train_model.py and make_dataset.py scritps. Achieving 100% code coverage is valuable, but it doesn't assure absolute error-free code. Complete coverage ensures that every line is executed under specific conditions, yet it may not cover all scenarios, edge cases, or intricate interactions between components. Furthermore, maintaining a balance between coverage and thoughtful testing strategies is essential for robust code quality.
 
 ### Question 9
 
@@ -258,9 +256,7 @@ Yes, we employed DVC (Data Version Control) to manage data in our project. DVC h
 >
 > Answer:
 
-#133 words
-
-Our continuous integration (CI) setup is structured into workflows to ensure comprehensive testing and maintain code quality. The first workflow focuses on unit testing. We ensure compatibility with Python 3.10.13, a version specified in the workflow. By defining specific versions, we aim to maintain consistency across different environments and prevent potential compatibility issues. To validate the integration of third-party services, such as Kaggle, we have a setup step for configuring Kaggle API credentials as "github secrets". This allows our tests to interact with external services while maintaining the confidentiality of sensitive information. We run our code on all three different operating systems and we did not make use of caching. For a detailed example of our CI workflow, you can refer to this [here](https://github.com/diogo4256/mlops_group_17/actions/runs/7560474939). The tests.yalm file illustrates the steps taken in our CI process, including setting up Python, installing dependencies, and executing tests.
+Our continuous integration (CI) setup is structured into workflows to ensure comprehensive testing and maintain code quality. The first workflow focuses on unit testing. We ensure compatibility with Python 3.10.13, a version specified in the workflow. By defining specific versions, we aim to maintain consistency across different environments and prevent potential compatibility issues. To validate the integration of third-party services, such as Kaggle, we have a setup step for configuring Kaggle API credentials as "github secrets". We have implemented these secrets for our wandb integration on the unittests as well. Moreover, we used github's built-in standard runners for its execution. This allows our tests to interact with external services while maintaining the confidentiality of sensitive information. We run our code on all three different operating systems and we did not make use of caching. For a detailed example of our CI workflow, you can refer to this [here](https://github.com/diogo4256/mlops_group_17/actions/runs/7560474939). The tests.yalm file illustrates the steps taken in our CI process, including setting up Python, installing dependencies, and executing tests. In conclusion, we managed to set up the continuous integration pipeline (CI) into our project that would test any potential issues related to the individual functions in our training and data prep scripts.
 
 ## Running code and tracking experiments
 
@@ -303,7 +299,7 @@ dataset_name: 'small_sample'
 >
 > Answer:
 
-i have no idea
+Whenever an experiment was executed in the output folder, a directory with the timestamp of our execution was created containing the log file from the experiment and regarding reproducibility a .hydra driectory that included the config files saved. This workflow allowed us to keep track of every experiment configuration and re-run it with the same hyperparameters as input to future runs. Once we believed that an experiment must be repeated with a particular set of hyperparameters, this approach of storing the config files proved to be efficient and with minimal loss of crucial information. However, to reduce the amount of files being pushed to the repository we decided to include the /outputs folder in the .gitignore file. For a small team like ours this approach enabled us to achieve reproducibility, even though not all experiments were pushed to the repository. We individually kept track of the most interesting configurations.
 
 ### Question 14
 
@@ -320,7 +316,14 @@ i have no idea
 >
 > Answer:
 
---- question 14 fill here ---
+As seen in the attached figures on our first image we have a number of experiments that were ran with different configurations on W&B, it can be seen that our first experiments (purple line) were wrongly ran with negative log likelihood (NLL), however we utilized cross-entropy loss afterwards and we received a decreasing loss as expected.
+![wandb_multiple_exps](figures/wandb_1.png)
+
+In our experiments we chose to track metrics like loss and training loss. They are crucial, since they provide insights into the performance and efficiency of the model being trained. The loss graph helps in understanding how well the model is learning from the training data over epochs or iterations. A decreasing loss value indicates that the model is learning and improving its performance, while an increasing or stagnant value may suggest issues with learning. Tracking these metrics allows for timely interventions to adjust hyperparameters or model architecture to achieve optimal performance. In the second W&B image a detailed overview of our most recent experiment/trained model is shown. Apart from the loss metrics one of the currently trained fruits is shown at the bottom.
+
+![wandb_training_latest_exp](figures/wandb_2.png)
+
+In conclusion, keeping track of all experiments allowed us to fine-tune the model configuration, realise the error in our initial loss function implementation and after applying the correction we validated that the loss values followed the expected values (positive declining trend).
 
 ### Question 15
 
@@ -337,9 +340,9 @@ i have no idea
 
 In our experiments, Docker played a pivotal role in creating containerized environments for consistent and reproducible execution. We crafted distinct Docker images tailored for training, inference, and deployment stages. To illustrate, running the training Docker image could be initiated with a command like:
 
-docker run trainer:latest --lr 1e-3 --batch_size 64
+docker run trainer:latest 
 
-Each Docker image encapsulates the necessary dependencies, libraries, and configurations, ensuring uniformity across various stages of the project. For an in-depth look at our Docker setup, you can refer to our [Dockerfile](). This file delineates the steps involved in building the Docker image, showcasing how we encapsulated the environment to facilitate seamless and reproducible experimentation and deployment.
+Each Docker image encapsulates the necessary dependencies, libraries, and configurations, ensuring uniformity across various stages of the project. For an in-depth look at our Docker setup, you can refer to our [Dockerfile](../dockerfiles/train_model.dockerfile). This file delineates the steps involved in building the Docker image, showcasing how we encapsulated the environment to facilitate seamless and reproducible experimentation and deployment.
 
 ### Question 16
 
@@ -354,7 +357,7 @@ Each Docker image encapsulates the necessary dependencies, libraries, and config
 >
 > Answer:
 
-hmmmm
+The Debugging process varied among members,however since we all used VS Code as our preferred editor we utilized its built-in functionalities, e.g. the breakpoints and debugger. Moreover, we added a plethora of logs by using the logging library that kept track of our execution steps. When it comes to profiling, we attempted to do a single profiling run by using Pytorch Profiler and tensorboard to visualise the CPU performance (our laptops did not include GPUs). The backward convolution step was the most time-consuming, however we did not achieve any major optimisations and cProfile would help our code with optimising the runtime of the standalone functions we created.
 
 ## Working in the cloud
 
@@ -371,7 +374,7 @@ hmmmm
 >
 > Answer:
 
-In our project, we harnessed the capabilities of several Google Cloud Platform (GCP) services to streamline various aspects of our workflow. Google Cloud Storage (GCS) served as our robust object storage solution for managing large datasets efficiently. Additionally, services like Cloud Build, and Cloud Monitoring enhanced our data analytics, continuous integration, and monitoring processes, respectively. This strategic use of GCP services empowered us to focus on developing and deploying machine learning models with enhanced scalability and automation.
+In our project, we harnessed the capabilities of several Google Cloud Platform (GCP) services, those were: Cloud Storage (Bucket), Compute Engine, Vertex AI, Cloud Build, Container Registry and Cloud Run. Google Cloud Storage (GCS) served as our robust object storage solution by using Buckets for managing large datasets efficiently. Vertex AI was used for the training of our model along with its built-in VM instance for computational resources. We set up triggers using Cloud Build services, however due to time limitations we could not integrate into our CI pipeline. For storing our docker images we used Container Registry. Cloud run was finally used to deploy our model which successfully integrated our FastAPI framework. This strategic use of GCP services empowered us to focus on developing and deploying machine learning models with enhanced scalability and automation.
 
 ### Question 18
 
@@ -386,7 +389,7 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 18 fill here ---
+We have set up a VM instance using compute engine to test the capabilities of google cloud services. However, we didn't end up using the created instance once we found out the functionality of setting up individual VMs for training using Vertex AI. For the training jobs in Vertex AI we ended up using n1-highmem-2 machine type with a built-in container stored in the Container Registry. We have made effort to utilize the possibility of using GPU provided by Google Cloud services, however due to the errors we were facing and the time consuming nature of the debugging process we ended up limiting ourselves to CPU usage only.
 
 ### Question 19
 
@@ -395,7 +398,7 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 19 fill here ---
+![google_cloud_bucket](figures/google_cloud_storage_1.png)
 
 ### Question 20
 
@@ -404,7 +407,7 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 20 fill here ---
+![container_registry](figures/container_registry.png)
 
 ### Question 21
 
@@ -413,7 +416,8 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 21 fill here ---
+As mentioned before we did not manage to get the triggers to work properly for the CI/CD.
+![cloud_build](figures/cloud_build.png)
 
 ### Question 22
 
@@ -429,7 +433,10 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 22 fill here ---
+We deployed our model solely on the cloud, using the aforementioned Cloud Run service. We wrapped our model into an application using the FastAPI framework. Due to time restrictions our deployed application currently can only access the data stored on our Google Cloud Storage Bucket and provide predictions to the client. Given more time we would utilise FastAPIs capability to include UploadFile in order to provide external images as our input and produce the respective image prediction. To invoke the service a user would have to access this link https://mlopsdeploy2-76bqhjq42a-ew.a.run.app\docs , provide the path to the data they want to predict and the mode arguement which differentiates between a batch of images or a single image and the returns the predicted label.
+
+![cloud_deployed](figures/deployed_application_1.png)
+![cloud_deployed_prediction](figures/deployed_application_prediction.png)
 
 ### Question 23
 
@@ -444,7 +451,7 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 23 fill here ---
+We made use of Google Cloud's built-in monitoring systems and also set up SLOs to monitor the latency. However, we did not manage to set up a more advanced third-party monitoring or telemetry system. If advanced monitoring was implemented it would be vital for sustaining the longevity of our ML application. By tracking performance metrics, such as accuracy and data drift, to ensure model consistency over time. Detecting changes in resource utilization and addressing potential errors improves system scalability. Regular monitoring also allows for proactive issue resolution, preventing downtime and maintaining reliability. It aids in identifying anomalies, enhancing security, and meeting regulatory compliance. Integrating monitoring into our CI/CD pipelines ensures thorough evaluations before deployment, while user interactions provide insights for continual application improvement. Ultimately, monitoring would safeguard against unforeseen challenges and support the continual evolution of our fruit type prediction system.
 
 ### Question 24
 
@@ -458,7 +465,7 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 24 fill here ---
+We managed to keep our expenditures low, despite having to train the model on the cloud multiple times using our datasets that were located on the bucket. The final cost of our project is $10.94. The service that costed the most was Cloud Storage at $4 due to the size of the data, while the second most costly service was Vertex AI at around $3.70 due to multiple long training runs.
 
 ## Overall discussion of project
 
@@ -479,7 +486,7 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 25 fill here ---
+IN PROGEES
 
 ### Question 26
 
@@ -493,7 +500,7 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 26 fill here ---
+in progress
 
 ### Question 27
 
@@ -510,4 +517,4 @@ In our project, we harnessed the capabilities of several Google Cloud Platform (
 >
 > Answer:
 
---- question 27 fill here ---
+in progres
