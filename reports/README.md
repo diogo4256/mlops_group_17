@@ -481,12 +481,12 @@ We managed to keep our expenditures low, despite having to train the model on th
 >
 > Example:
 >
-> *The starting point of the diagram is our local setup, where we integrated ... and ... and ... into our code.*
+> *The starting point of the diagram is our local setup, where we integrated ... and ... and ... into our code.
 > *Whenever we commit code and puch to github, it auto triggers ... and ... . From there the diagram shows ...*
 >
-> Answer:
+> Answer: 
 
-IN PROGEES
+Our system starts with an non-pretrained resnet model and a kaggle dataset consisting of images of fruits. We used conda to track our virtual environments, pytorch to train the model, and integrated git for version control, hydra for configurations/hyperparamethers and wandb logging into our code. We also added unit tests using the pytest framework, and docker for containerizing our system. We use cloud storage to store our dataset and our trained model, container registry for keeping docker containers, and vertex ai to run the user-queried predictions on a deployed Cloud Run instance of the previously created docker container using the FastAPI framework. Everytime we want to develop a feature independently from our colleagues, we create a branch. When we are comfortable with our changes and want to send them to the develop branch, we create a pull request that has to be approved by the other contributers. General pushing and pull requests trigger our unit tests, that are performed independently by a github actions runner. After the code is on develop and ready to deploy, we create a docker container and push it to google cloud's container registry. From there we create a cloud run instance that runs this docker container and gives it a domain, from which anyone can login and query it for a prediction. Upon every query, the input file goes through our trained model in the predict code in our deployed container, and returns the prediction if it's a single image, or an accuracy percentage in case of an image folder.
 
 ### Question 26
 
@@ -498,9 +498,9 @@ IN PROGEES
 > Example:
 > *The biggest challenges in the project was using ... tool to do ... . The reason for this was ...*
 >
-> Answer:
+> Answer: 
 
-in progress
+The biggest challenges in our project were, in the initial stage, getting DVC to work in gdrive for everyone. We tried several approaches and fix attempts, but after the data was fully pushed (it took a long time to push it because it was a very big image dataset), there were cache related errors for the non-pushers that we weren't able to fix in due time. Despite having followed all guidelines and after asking in slack with no improvements, eventually we just moved on and used dvc with google bucket, because it was taking too much of our time (also because it took so much time to add and push each time) and we had exhausted all the different approaches we could think of - creating a fresh google cloud account, reinitializing the dvc repos, etc. Another big challenge was creating docker triggers for the continuous integration in GitHub Actions. We also spent a lot of time in this and eventually had to move on with other tasks. The trigger was actually triggering the build we wanted, so the theory was there, but then the build kept running indefinitely. We weren't able to debug it, so we had to scrap it and move on to pushing the docker container to gcloud without it being covered in the continuous integration part of our system.
 
 ### Question 27
 
